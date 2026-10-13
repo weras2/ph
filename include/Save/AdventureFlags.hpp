@@ -221,7 +221,7 @@ public:
     void func_ov00_02097ff4(bool param1, bool param2);
     unk32 func_ov00_02098058();
     bool func_ov00_02098064(unk32 param1);
-    bool func_ov00_02098074(unk32 param1, unk16 param2, unk32 param3, unk32 param4, bool param5);
+    bool func_ov00_02098074(unk32 param1, u16 param2, unk32 param3, unk32 param4, bool param5);
     bool func_ov00_0209809c();
     bool func_ov00_020980ac();
     void func_ov00_020980bc(s32 param1);

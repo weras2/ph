@@ -309,7 +309,7 @@ ARM bool AdventureFlags::func_ov00_02098064(unk32 param1) {
     return this->mCutsceneHandler->func_ov000_02098694(param1);
 }
 
-ARM bool AdventureFlags::func_ov00_02098074(unk32 param1, unk16 param2, unk32 param3, unk32 param4, bool param5) {
+ARM bool AdventureFlags::func_ov00_02098074(unk32 param1, u16 param2, unk32 param3, unk32 param4, bool param5) {
     return this->mCutsceneHandler->func_ov000_020987c4(param1, param2, param3, param4, param5);
 }
 
