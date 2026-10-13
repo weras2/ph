@@ -445,17 +445,15 @@ ARM bool LinkStateInteract::vfunc_34(Vec3p *param1) {
         } else {
             var_r5 = CoDivide64By32(temp_r0 - 0x2000, 0x5000);
         }
-        s32 playerAngle = *this->GetPlayerAngle();
-        u16 var_r1      = ((((s64) var_r5) << 14) + 0x800) >> 12;
-        s32 var_r3      = ((s64) COS(var_r1)) * 0xb33;
-        s32 var_r9      = ((s64) SIN(var_r1)) * 0xb33;
-        s32 var_r2      = ((s64) SIN(playerAngle));
-        s32 var_ip      = ((s64) COS(playerAngle));
-
-        // WIP xyz values
-        param1->x += var_r3;
-        param1->y += var_r9;
-        param1->z += var_ip;
+        u16 *playerAngle = this->GetPlayerAngle();
+        u16 pitch        = MUL_Q20(var_r5, 0x4000);
+        s32 horizontal   = MUL_Q20(COS(pitch), FLOAT_TO_Q20(0.7));
+        s32 vertical     = MUL_Q20(SIN(pitch), FLOAT_TO_Q20(0.7));
+        s32 x            = MUL_Q20(SIN(*playerAngle), horizontal);
+        s32 z            = MUL_Q20(COS(*playerAngle), horizontal);
+        param1->x += x;
+        param1->y += vertical;
+        param1->z += z;
     } else {
         param1->y += 0xB33;
     }
@@ -583,7 +581,7 @@ ARM void LinkStateInteract::func_ov00_020ab97c(Vec3p *target) {
 
 extern "C" unk32 func_ov017_0215dff0(Actor *param1, Vec3p *param2);
 extern "C" unk32 func_ov017_0215e338(Actor *param1, Vec3p *param2);
-ARM void LinkStateInteract::func_ov00_020ab9b8(s32 param1, bool param2) {
+ARM void LinkStateInteract::func_ov00_020ab9b8(u32 param1, bool param2) {
     Actor *grabActor = this->GetGrabActor();
     if (grabActor == NULL) {
         return;
@@ -613,10 +611,12 @@ ARM void LinkStateInteract::func_ov00_020ab9b8(s32 param1, bool param2) {
         sp0.z = 0;
 
         u16 playerAngle = *this->GetPlayerAngle();
-        s32 temp_r1_3   = MUL_Q20(param1, FLOAT_TO_Q20(0.16));
+        s32 temp_r1_3   = MUL_Q20((s32) param1, FLOAT_TO_Q20(0.16));
 
-        sp0.x += MUL_Q20(SIN(playerAngle), temp_r1_3);
-        sp0.z += MUL_Q20(COS(playerAngle), temp_r1_3);
+        s32 sin = SIN(playerAngle);
+        s32 cos = COS(playerAngle);
+        sp0.x += MUL_Q20(sin, temp_r1_3);
+        sp0.z += MUL_Q20(cos, temp_r1_3);
         grabActor->Drop(&sp0);
     }
     this->GetGrabActorRef()->Reset();
