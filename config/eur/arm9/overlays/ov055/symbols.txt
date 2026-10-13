@@ -32,4 +32,3 @@ data_ov055_0219986c kind:data(any) addr:0x0219986c
 data_ov055_02199890 kind:data(any) addr:0x02199890
 @859 kind:bss addr:0x021998a0 local
 _ZN9EquipBomb12gModelRenderE kind:bss addr:0x021998ac
-data_ov055_021998f0 kind:bss addr:0x021998f0 ambiguous
