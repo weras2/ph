@@ -13,7 +13,7 @@ void func_ov000_020b41c4(ModelRender *param1);
 void func_020197fc(void *param1, s32 param2);
 }
 extern s16 data_02053f54[];
-extern const Vec3p data_ov000_020dd364;
+static const Vec3p data_ov000_020dd364 = {0, 0x199, 0x9b};
 extern unk8 data_027e037c[];
 
 ARM void EquipShield::vfunc_00() {}

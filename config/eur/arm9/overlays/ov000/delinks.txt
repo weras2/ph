@@ -158,6 +158,7 @@ src/00_Core/Game/GameModePlay.cpp:
 
 src/00_Core/Player/EquipShield.cpp:
     .text       start:0x020c06d4 end:0x020c0b64
+    .rodata     start:0x020dd364 end:0x020dd370
     .data       start:0x020e7000 end:0x020e7098
 
 src/00_Core/Render/ModelRender.cpp:

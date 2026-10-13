@@ -3762,7 +3762,7 @@ data_ov000_020dd296 kind:data(any) addr:0x020dd296
 data_ov000_020dd298 kind:data(any) addr:0x020dd298
 data_ov000_020dd29c kind:data(any) addr:0x020dd29c
 data_ov000_020dd2a0 kind:data(any) addr:0x020dd2a0
-data_ov000_020dd364 kind:data(any) addr:0x020dd364
+data_ov000_020dd364 kind:data(any) addr:0x020dd364 local
 sUnkTable kind:data(any) addr:0x020dd370
 data_ov000_020dd3f8 kind:data(any) addr:0x020dd3f8
 data_ov000_020dd408 kind:data(any) addr:0x020dd408
