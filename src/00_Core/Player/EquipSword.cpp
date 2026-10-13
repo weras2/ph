@@ -72,10 +72,10 @@ public:
 
 static char *gShipParts[8] = {"anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg"};
 
-static const Vec3p data_ov000_020dd268         = {0x19a, 0, FLOAT_TO_Q20(0.5)};
-static const Vec3p data_ov000_020dd274         = {0, 0, FLOAT_TO_Q20(1.0)};
-static const Vec3p data_ov000_020dd280         = {0x8cd, 0x666, 0};
-static const EquipSword_Params sSwordParams[9] = {
+static const Vec3p data_ov000_020dd268  = {0x19a, 0, FLOAT_TO_Q20(0.5)};
+static const Vec3p data_ov000_020dd274  = {0, 0, FLOAT_TO_Q20(1.0)};
+static const Vec3p data_ov000_020dd280  = {0x8cd, 0x666, 0};
+const EquipSword_Params sSwordParams[9] = {
     {0x1333, 0x8cd, 1228, 4096, 4, 0, 0, 0x8000},    {0x1266, 0x800, 819, 3072, 4, 0, 45511, 54613},
     {0x1266, 0x800, 819, 3277, 4, 0, 23666, -43691}, {0x1800, 0x733, 0, 4096, 4, 0, 0, 0},
     {0x1333, 0x99a, 273, 4096, 6, 0, 0, 0x8000},     {0x1000, 0xb33, 0, 4096, 8, 0, 0xc000, -0x20000},
@@ -407,7 +407,8 @@ ARM bool EquipSword::GetHitbox(Cylinder *hitbox) const {
     if (mUnk_4c <= 0) {
         return false;
     }
-    hitbox->pos = *((EquipSword *) this)->GetPlayerPos();
+    Vec3p pos   = *((EquipSword *) this)->GetPlayerPos();
+    hitbox->pos = pos;
     ((EquipSword *) this)->func_ov000_020c0550(&hitbox->pos, mUnk_44);
     hitbox->size = sSwordParams[mUnk_40].mHitboxSize;
     return true;
