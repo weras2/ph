@@ -10,26 +10,27 @@ _ZN10EquipScoop20func_ov054_021980e24EP5Vec3p kind:function(arm,size=0x28) addr:
 _ZN10EquipScoop8vfunc_38Ei kind:function(arm,size=0x94) addr:0x02198e4c
 _Z19func_ov054_02198ee0iPi kind:function(arm,size=0xc) addr:0x02198ee0
 _ZN13LinkStateItem19func_ov054_02198eecEv kind:function(arm,size=0x10) addr:0x02198eec
-_ZN13LinkStateItem19func_ov054_02198efcEiij kind:function(arm,size=0x3cc) addr:0x02198efc
-_ZN13LinkStateItem19func_ov054_021992c8Eiij kind:function(arm,size=0x518) addr:0x021992c8
+_ZN13LinkStateItem19func_ov054_02198efcEi kind:function(arm,size=0x3cc) addr:0x02198efc
+_ZN13LinkStateItem19func_ov054_021992c8Ev kind:function(arm,size=0x518) addr:0x021992c8
 _Z13GetEquipScoopv kind:function(arm,size=0x10) addr:0x021997e0
 _ZN13LinkStateItem14StopUsingScoopEv kind:function(arm,size=0xe4) addr:0x021997f0
-_Z19func_ov054_021998d4iiij kind:function(arm,size=0x40) addr:0x021998d4
-data_ov054_02199914 kind:data(any) addr:0x02199914
-__sinit_EquipScoop.cpp kind:function(arm,size=0x30) addr:0x02199924
-.p__sinit_ov054_02199924 kind:data(word) addr:0x02199954
-data_ov054_02199960 kind:data(any) addr:0x02199960
-data_ov054_02199964 kind:data(any) addr:0x02199964
-data_ov054_02199968 kind:data(any) addr:0x02199968
-data_ov054_0219996c kind:data(any) addr:0x0219996c
-data_ov054_02199970 kind:data(any) addr:0x02199970
-data_ov054_02199974 kind:data(any) addr:0x02199974
-data_ov054_02199978 kind:data(any) addr:0x02199978
-data_ov054_0219997c kind:data(any) addr:0x0219997c
-data_ov054_02199980 kind:data(any) addr:0x02199980
-data_ov054_021999c8 kind:data(any) addr:0x021999c8
-data_ov054_021999d8 kind:data(any) addr:0x021999d8
-data_ov054_021999e8 kind:data(any) addr:0x021999e8
-data_ov054_02199a00 kind:data(any) addr:0x02199a00
-@870 kind:bss addr:0x02199a20
+_ZN16ScoopActorFilter6FilterEP5Actor kind:function(arm,size=0x40) addr:0x021998d4
+data_ov054_02199914 kind:data(any) addr:0x02199914 local
+__sinit_EquipScoop.cpp kind:function(arm,size=0x30) addr:0x02199924 local
+.p__sinit_EquipScoop.cpp kind:data(word) addr:0x02199954 local
+@2399 kind:data(any) addr:0x02199960 local
+@2398 kind:data(any) addr:0x02199964 local
+@2397 kind:data(any) addr:0x02199968 local
+@2396 kind:data(any) addr:0x0219996c local
+@2395 kind:data(any) addr:0x02199970 local
+@2394 kind:data(any) addr:0x02199974 local
+@2393 kind:data(any) addr:0x02199978 local
+@2392 kind:data(any) addr:0x0219997c local
+gShipParts kind:data(any) addr:0x02199980 local
+data_ov054_021999a0 kind:data(any) addr:0x021999a0 local
+data_ov054_021999c8 kind:data(any) addr:0x021999c8 local
+data_ov054_021999d8 kind:data(any) addr:0x021999d8 local
+data_ov054_021999e8 kind:data(any) addr:0x021999e8 local
+_ZTV16ScoopActorFilter kind:data(any) addr:0x021999f8
+@2391 kind:bss addr:0x02199a20 local
 _ZN10EquipScoop12gModelRenderE kind:bss addr:0x02199a2c

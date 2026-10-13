@@ -15,9 +15,10 @@ public:
     /* 9 */ unk8 mUnk_9[3];
     /* c */
 
-    /* 00 */ virtual void vfunc_00() override;
+    // The destructor is declared first so that the vtable is emitted with it (in ov014)
     /* 04 */ virtual ~EquipScoop() override;
     /* 0c */ virtual ItemFlag GetId() const override;
+    /* 00 */ virtual void vfunc_00() override;
     /* 14 */ virtual bool IsUsable(unk32 param1) const override;
     /* 18 */ virtual void vfunc_18() override;
     /* 30 */ virtual void vfunc_30() override;

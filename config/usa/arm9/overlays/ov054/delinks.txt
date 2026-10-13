@@ -4,3 +4,11 @@
     .ctor       start:0x021998b4 end:0x021998b8 kind:rodata align:4
     .data       start:0x021998c0 end:0x02199980 kind:data align:32
     .bss        start:0x02199980 end:0x02199a00 kind:bss align:32
+
+src/54_Scoop/Player/EquipScoop.cpp:
+    .text       start:0x02198c60 end:0x02199874
+    .rodata     start:0x02199874 end:0x02199884
+    .init       start:0x02199884 end:0x021998b4
+    .ctor       start:0x021998b4 end:0x021998b8
+    .data       start:0x021998c0 end:0x02199980
+    .bss        start:0x02199980 end:0x02199a00

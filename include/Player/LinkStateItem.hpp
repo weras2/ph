@@ -28,7 +28,7 @@ public:
     /* 44 */ unk32 mUnk_44;
     /* 48 */ void *mUnk_48;
     /* 4c */ unk32 mUnk_4c;
-    /* 50 */ unk32 mUnk_50[2];
+    /* 50 */ s32 mUnk_50[2];
     /* 58 */ unk32 mUnk_58;
     /* 5c */ s32 mUnk_5c;
     /* 60 */
@@ -61,10 +61,10 @@ public:
     bool func_ov005_02106894(s32 param1, s32 param2);
     void func_ov005_02106980(unk32 param, s32 param2, s32 *param3);
     bool func_ov005_02106a50();
-    bool func_ov005_02106bbc(Vec3p *param1, unk32 param2, u32 param3);
+    bool func_ov005_02106bbc(Vec3p *param1);
 
-    bool func_ov054_02198efc(s32 param1, unk32 param2, u32 param3);
-    bool func_ov054_021992c8(unk32 param1, unk32 param2, u32 param3);
+    bool func_ov054_02198efc(s32 param1);
+    void func_ov054_021992c8();
     void StopUsingScoop();
 
     void func_ov054_02198eec();

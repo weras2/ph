@@ -4,6 +4,7 @@
 #include "types.h"
 
 #include "Actor/Actor.hpp"
+#include "Map/TilePos.hpp"
 #include "Physics/Cylinder.hpp"
 #include "Unknown/UnkStruct_ov000_020b1528.hpp"
 
@@ -64,8 +65,7 @@ public:
     /* 0ba */ bool mUnk_0ba;
     /* 0bb */ unk8 mUnk_0bb[0x5];
     /* 0c0 */ unk32 mUnk_0c0;
-    /* 0c4 */ u8 mUnk_0c4;
-    /* 0c5 */ u8 mUnk_0c5;
+    /* 0c4 */ TilePos mUnk_0c4;
     /* 0c6 */ s16 mUnk_0c6;
     /* 0c8 */ unk16 mUnk_0c8;
     /* 0ca */ u16 mUnk_0ca;
