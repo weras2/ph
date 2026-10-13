@@ -9,9 +9,9 @@
 
 class MapData : public SysObject {
 public:
-    /* 00 */ char mUnk_00;
+    /* 00 */ u8 mUnk_00;
     /* 01 */ s8 mMap;
-    /* 02 */ unk16 mUnk_02;
+    /* 02 */ u16 mUnk_02;
     /* 04 */ u16 mUnk_04;
     /* 06 */ unk8 mUnk_06[2];
     /* 08 */ unk32 mUnk_08;
