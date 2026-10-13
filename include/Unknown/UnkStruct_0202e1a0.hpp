@@ -15,7 +15,7 @@ struct UnkStruct_0202e1a0 {
     /* 18 */
 
     UnkStruct_0202e1a0();
-    void func_0202e1c4();
+    void func_0202e1c4(s32 param1);
     void func_0202e1e8();
     bool func_0202e310(s32 param1);
     unk32 func_0202e544();

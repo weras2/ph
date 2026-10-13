@@ -99,8 +99,21 @@ struct Struct_027e0db0 {
 };
 extern Struct_027e0db0 data_027e0db0;
 
+struct UnkStruct_02035064_78;
+
+struct UnkClass_027e0cbc_04 {
+    /* 0 */ unk32 mUnk_0;
+    /* 4 */ unk32 mUnk_4;
+    /* 8 */ UnkStruct_02035064_78 *mUnk_8;
+    /* c */
+};
+
 class UnkClass_027e0cbc {
 public:
+    /* 0 */ unk32 mUnk_0;
+    /* 4 */ UnkClass_027e0cbc_04 **mUnk_4;
+    /* 8 */
+
     void func_0203d57c();
     void func_0203d5c0();
     void func_0203d64c(s32);

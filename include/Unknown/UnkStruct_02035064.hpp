@@ -5,6 +5,26 @@
 
 #include "Unknown/UnkStruct_0202e1a0.hpp"
 
+struct UnkStruct_02035064_74_0c {
+    /* 0 */ unk32 mUnk_0;
+    /* 4 */ u16 mUnk_4;
+    /* 6 */ unk16 mUnk_6;
+    /* 8 */
+};
+
+struct UnkStruct_02035064_74 {
+    /* 00 */ u16 mUnk_00;
+    /* 02 */ unk8 mUnk_02[0xa];
+    /* 0c */ UnkStruct_02035064_74_0c *mUnk_0c;
+    /* 10 */
+};
+
+struct UnkStruct_02035064_78 {
+    /* 0 */ unk32 mUnk_0;
+    /* 4 */ unk32 mUnk_4;
+    /* 8 */
+};
+
 class UnkStruct_02035064 {
 public:
     /* 00 (vtable) */
@@ -16,7 +36,7 @@ public:
     /* 14 */ u32 mUnk_14;
     /* 18 */ unk32 mUnk_18;
     /* 1c */ unk32 mUnk_1c;
-    /* 20 */ u32 *mUnk_20;
+    /* 20 */ UnkStruct_02035064_74 *mUnk_20;
     /* 24 */ unk32 mUnk_24;
     /* 28 */ unk32 mUnk_28;
     /* 2c */ unk32 mUnk_2c;
@@ -33,12 +53,12 @@ public:
     /* 54 */ unk32 mUnk_54;
     /* 58 */ unk32 mUnk_58;
     /* 5c */ UnkStruct_0202e1a0 mUnk_5c;
-    /* 74 */ u16 *mUnk_74;
-    /* 78 */ s32 *mUnk_78;
+    /* 74 */ UnkStruct_02035064_74 *mUnk_74;
+    /* 78 */ UnkStruct_02035064_78 *mUnk_78;
     /* 7c */ u32 mUnk_7c;
     /* 80 */ s16 mUnk_80;
-    /* 82 */ unk16 mUnk_82;
-    /* 84 */ unk16 mUnk_84;
+    /* 82 */ s16 mUnk_82;
+    /* 84 */ s16 mUnk_84;
     /* 86 */ bool mUnk_86;
     /* 87 */ unk8 mUnk_87;
     /* 88 */
@@ -55,7 +75,7 @@ public:
     void func_02034a1c(unk32, unk32, struct UnkStruct_01ffbe34 *);
     void func_02034b0c(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5, unk32 param_6);
     void func_020350b0();
-    void func_020350b4(s32 param1, unk32 param2, unk8 param3, unk16 param4, unk16 param5);
+    void func_020350b4(s32 param1, unk32 param2, unk8 param3, s16 param4, s16 param5);
     void func_0203516c();
     void func_020351b8(bool param1, bool param2, bool param3, bool param4);
     void func_020352d8();
