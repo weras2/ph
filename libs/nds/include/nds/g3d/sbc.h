@@ -1,7 +1,13 @@
 #pragma once
 #include "g3d.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 extern void PushGeometryCommand(u32 command, void *data, s32 length);
+#ifdef __cplusplus
+}
+#endif
 
 typedef enum G3d_SBC_Commands {
     G3D_SBC_CMD_NOP = 0x0,

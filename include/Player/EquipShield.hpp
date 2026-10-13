@@ -3,19 +3,25 @@
 #include "types.h"
 
 #include "Player/EquipItem.hpp"
+#include "Render/ModelRender.hpp"
+#include "Unknown/UnkStruct_ov000_020c0c08.hpp"
 
 class EquipShield : public EquipItem {
 public:
     /* 00 (base) */
-    /* 09 */ unk8 mUnk_09[5];
-    /* 0e */ unk16 mUnk_0e;
-    /* 10 */ void *mUnk_10;
-    /* 14 */ void *mUnk_14;
-    /* 18 */ unk8 mUnk_18[4];
-    /* 1c */ void *mUnk_1c;
-    /* 20 */ void *mUnk_20;
-    /* 24 */ void *mUnk_24;
-    /* 28 */ void *mUnk_28;
+    /* 09 */ bool mUnk_09;
+    /* 0a */ bool mUnk_0a;
+    /* 0b */ bool mUnk_0b;
+    /* 0c */ bool mUnk_0c;
+    /* 0d */ bool mUnk_0d;
+    /* 0e */ s16 mUnk_0e;
+    /* 10 */ ModelRender *mUnk_10;
+    /* 14 */ UnkStruct_ov000_020c0c08 *mUnk_14;
+    /* 18 */ unk32 mUnk_18;
+    /* 1c */ ModelRender *mUnk_1c;
+    /* 20 */ UnkStruct_ov000_020c0c08 *mUnk_20;
+    /* 24 */ UnkStruct_ov000_020c0c08 *mUnk_24;
+    /* 28 */ UnkStruct_ov000_020c0c08 *mUnk_28;
     /* 2c */
 
 public:

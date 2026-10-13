@@ -5103,15 +5103,16 @@ data_ov000_020e6f60 kind:data(any) addr:0x020e6f00
 data_ov000_020e6f64 kind:data(any) addr:0x020e6f04
 data_ov000_020e6f90 kind:data(any) addr:0x020e6f30
 data_ov000_020e6fb0 kind:data(any) addr:0x020e6f50
-data_ov000_020e7000 kind:data(any) addr:0x020e6fa0
-data_ov000_020e7004 kind:data(any) addr:0x020e6fa4
-data_ov000_020e7008 kind:data(any) addr:0x020e6fa8
-data_ov000_020e700c kind:data(any) addr:0x020e6fac
-data_ov000_020e7010 kind:data(any) addr:0x020e6fb0
-data_ov000_020e7014 kind:data(any) addr:0x020e6fb4
-data_ov000_020e7018 kind:data(any) addr:0x020e6fb8
-data_ov000_020e701c kind:data(any) addr:0x020e6fbc
-data_ov000_020e7048 kind:data(any) addr:0x020e6fe8
+@1364 kind:data(any) addr:0x020e6fa0 local
+@1363 kind:data(any) addr:0x020e6fa4 local
+@1362 kind:data(any) addr:0x020e6fa8 local
+@1361 kind:data(any) addr:0x020e6fac local
+@1360 kind:data(any) addr:0x020e6fb0 local
+@1359 kind:data(any) addr:0x020e6fb4 local
+@1358 kind:data(any) addr:0x020e6fb8 local
+@1357 kind:data(any) addr:0x020e6fbc local
+gShipParts kind:data(any) addr:0x020e6fc0 local
+_ZTV11EquipShield kind:data(any) addr:0x020e6fe0
 _ZTV15ActorWisdomNavi kind:data(any) addr:0x020e7038
 vtable_ov000_020e7198 kind:data(any) addr:0x020e7130
 data_ov000_020e71a0 kind:data(any) addr:0x020e7140
