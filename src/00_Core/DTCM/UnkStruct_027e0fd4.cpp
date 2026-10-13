@@ -7,7 +7,7 @@ s32 func_ov000_020b4b60(s32 a, s32 b) {}
 UnkStruct_027e0fd4::UnkStruct_027e0fd4() {}
 UnkStruct_027e0fd4::~UnkStruct_027e0fd4() {}
 void UnkStruct_027e0fd4::vfunc_1c() {}
-s32 UnkStruct_027e0fd4::func_Ov000_020b4c2c() {}
+s16 UnkStruct_027e0fd4::func_Ov000_020b4c2c() {}
 void UnkStruct_027e0fd4::func_ov000_020b4c4c(Vec3p *param1, s32 size) {}
 void UnkStruct_027e0fd4::func_ov000_020b4d00() {}
 unk32 UnkStruct_027e0fd4::func_ov000_020b4d28(u32 *param1, s32 *param2, s32 *param3) {}

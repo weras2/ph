@@ -106,7 +106,7 @@ public:
     /* 20 */
 
     UnkStruct_027e0fd4();
-    s32 func_Ov000_020b4c2c();
+    s16 func_Ov000_020b4c2c();
     void func_ov000_020b4c4c(Vec3p *param1, s32 size);
     void func_ov000_020b4d00();
     unk32 func_ov000_020b4d28(u32 *param1, s32 *param2, s32 *param3);

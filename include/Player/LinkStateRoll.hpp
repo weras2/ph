@@ -9,15 +9,15 @@ class LinkStateRoll : public LinkStateBase {
 public:
     /* 00 (base) */
     /* 0c */ unk16 mUnk_0c;
-    /* 0e */ unk8 mUnk_0a[2];
+    /* 0e */ unk16 mUnk_0e;
     /* 10 */ unk16 mUnk_10;
     /* 12 */ s16 mUnk_12;
     /* 14 */ s16 mUnk_14;
     /* 16 */ u16 mUnk_16;
-    /* 18 */ unk8 mUnk_18[2];
+    /* 18 */ unk16 mUnk_18;
     /* 1a */ unk16 mUnk_1a;
-    /* 1c */ unk8 mUnk_1c[4];
-    /* 20 */ unk32 mUnk_20;
+    /* 1c */ s32 mUnk_1c;
+    /* 20 */ s32 mUnk_20;
     /* 24 */ unk8 mUnk_24[2];
     /* 26 */ unk16 mUnk_26;
     /* 28 */ unk8 mUnk_28[4];
@@ -26,7 +26,7 @@ public:
     /* 44 */ ActorRef mUnk_44[0x8];
     /* 84 */ void *mUnk_84;
     /* 88 */ unk32 mUnk_88;
-    /* 8c */ unk8 mUnk_8c[0xc];
+    /* 8c */ Vec3p mUnk_8c;
     /* 98 */
 
     /* 00 */ virtual void vfunc_00() override;
