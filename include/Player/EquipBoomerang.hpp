@@ -4,21 +4,30 @@
 #include "types.h"
 
 #include "Actor/ActorRef.hpp"
+#include "Map/TilePos.hpp"
 #include "Player/EquipItem.hpp"
+#include "Render/ModelRender.hpp"
 
 class Actor;
 
+struct EquipBoomerang_Point {
+    /* 00 */ Vec3p mPos;
+    /* 0c */ unk32 mUnk_0c;
+    /* 10 */
+};
+
 class EquipBoomerang : public EquipItem {
-private:
+public:
     /* 00 (base) */
     /* 09 */ u8 mUnk_09[3];
-    /* 0c */ void *mUnk_0c;
+    /* 0c */ ModelRender *mUnk_0c;
     /* 10 */ ActorRef mRef;
-    /* 18 */ u8 mUnk_18[8];
-    /* 20 */ u32 mUnk_20;
-    /* 24 */ u32 mUnk_24;
-    /* 28 */ u32 mUnk_28;
-    /* 2c */ u16 mUnk_2c;
+    /* 18 */ s32 mUnk_18;
+    /* 1c */ s32 mUnk_1c;
+    /* 20 */ unk32 mUnk_20;
+    /* 24 */ unk32 mUnk_24;
+    /* 28 */ EquipBoomerang_Point *mUnk_28;
+    /* 2c */ s16 mUnk_2c;
     /* 2e */ unk8 mUnk_2e[2];
     /* 30 */
 
@@ -41,14 +50,14 @@ public:
     void func_ov014_0213d184();
     void func_ov014_0213d1b0();
 
-    void func_ov053_02199014();
-    void func_ov053_02199020();
-    s32 func_ov053_0219902c(s32 param1);
+    static void func_ov053_02199014(void *param1);
+    static void func_ov053_02199020(void *param1);
+    EquipBoomerang_Point *func_ov053_0219902c(s32 param1);
     void func_ov053_02199038();
-    void func_ov053_021990f0(unk16 param1);
+    void func_ov053_021990f0(TilePos param1);
     bool func_ov053_02199128(s32 *param1);
     void func_ov053_02199168();
     void func_ov053_021991ec();
-    bool func_ov053_02199410(s32 param1);
+    void func_ov053_02199410(s32 param1);
     bool func_ov053_021994cc(Vec3p *param1);
 };

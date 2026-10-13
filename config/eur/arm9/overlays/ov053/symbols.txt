@@ -13,7 +13,7 @@ _ZN14EquipBoomerang19func_ov053_0219902cEi kind:function(arm,size=0xc) addr:0x02
 _ZN14EquipBoomerang19func_ov053_02199038Ev kind:function(arm,size=0x2c) addr:0x02199038
 _ZN14EquipBoomerang8vfunc_18Ev kind:function(arm,size=0x6c) addr:0x02199064
 _ZN14EquipBoomerang8vfunc_1cEv kind:function(arm,size=0x20) addr:0x021990d0
-_ZN14EquipBoomerang19func_ov053_021990f0Es kind:function(arm,size=0x38) addr:0x021990f0
+_ZN14EquipBoomerang19func_ov053_021990f0E7TilePos kind:function(arm,size=0x38) addr:0x021990f0
 _ZN14EquipBoomerang19func_ov053_02199128EPi kind:function(arm,size=0x14) addr:0x02199128
 _ZN14EquipBoomerang8vfunc_30Ev kind:function(arm,size=0x2c) addr:0x0219913c
 _ZN14EquipBoomerang19func_ov053_02199168Ev kind:function(arm,size=0x84) addr:0x02199168
@@ -26,16 +26,16 @@ func_ov053_02199700 kind:function(arm,size=0x1c) addr:0x02199700
 func_ov053_0219971c kind:function(arm,size=0x14) addr:0x0219971c
 func_ov053_02199730 kind:function(arm,size=0x4c) addr:0x02199730
 func_ov053_0219977c kind:function(arm,size=0x294) addr:0x0219977c
-func_ov053_02199a10 kind:function(arm,size=0x10) addr:0x02199a10
-func_ov053_02199a20 kind:function(arm,size=0xa8) addr:0x02199a20
-func_ov053_02199ac8 kind:function(arm,size=0xb0) addr:0x02199ac8
-func_ov053_02199b78 kind:function(arm,size=0x1c) addr:0x02199b78
-func_ov053_02199b94 kind:function(arm,size=0xa0) addr:0x02199b94
-func_ov053_02199c34 kind:function(arm,size=0x14) addr:0x02199c34
-func_ov053_02199c48 kind:function(arm,size=0x80) addr:0x02199c48
-func_ov053_02199cc8 kind:function(arm,size=0x2c0) addr:0x02199cc8
-func_ov053_02199f88 kind:function(arm,size=0x14) addr:0x02199f88
-func_ov053_02199f9c kind:function(arm,size=0x1c) addr:0x02199f9c
+_Z17GetEquipBoomerangv kind:function(arm,size=0x10) addr:0x02199a10
+_ZN27ActorBoomerang_Unk_0219a15c8vfunc_18EPi kind:function(arm,size=0xa8) addr:0x02199a20
+_ZN14ActorBoomerangC1Ev kind:function(arm,size=0xb0) addr:0x02199ac8
+_ZN18ActorBoomerang_170D1Ev kind:function(arm,size=0x1c) addr:0x02199b78
+_ZN14ActorBoomerang4InitEv kind:function(arm,size=0xa0) addr:0x02199b94
+_ZN18ActorBoomerang_170C1Ev kind:function(arm,size=0x14) addr:0x02199c34
+_ZN14ActorBoomerang19func_ov053_02199c48Et kind:function(arm,size=0x80) addr:0x02199c48
+_ZN14ActorBoomerang19func_ov053_02199cc8EP5Vec3p kind:function(arm,size=0x2c0) addr:0x02199cc8
+_ZN27ActorBoomerang_Unk_0219a15cD1Ev kind:function(arm,size=0x14) addr:0x02199f88
+_ZN27ActorBoomerang_Unk_0219a15cD0Ev kind:function(arm,size=0x1c) addr:0x02199f9c
 data_ov053_02199fb8 kind:data(any) addr:0x02199fb8
 __sinit_ov053_02199fc4 kind:function(arm,size=0xac) addr:0x02199fc4
 .p__sinit_ov053_02199fc4 kind:data(word) addr:0x0219a070
@@ -53,17 +53,16 @@ data_ov053_0219a0ec kind:data(any) addr:0x0219a0ec
 data_ov053_0219a0f4 kind:data(any) addr:0x0219a0f4
 data_ov053_0219a104 kind:data(any) addr:0x0219a104
 data_ov053_0219a10c kind:data(any) addr:0x0219a10c ambiguous
-data_ov053_0219a114 kind:data(any) addr:0x0219a114
-data_ov053_0219a118 kind:data(any) addr:0x0219a118
-data_ov053_0219a11c kind:data(any) addr:0x0219a11c
-data_ov053_0219a120 kind:data(any) addr:0x0219a120
-data_ov053_0219a124 kind:data(any) addr:0x0219a124
-data_ov053_0219a128 kind:data(any) addr:0x0219a128
-data_ov053_0219a12c kind:data(any) addr:0x0219a12c
-data_ov053_0219a130 kind:data(any) addr:0x0219a130
-data_ov053_0219a14c kind:data(any) addr:0x0219a14c ambiguous
-data_ov053_0219a15c kind:data(any) addr:0x0219a15c
-data_ov053_0219a16c kind:data(any) addr:0x0219a16c ambiguous
+@1816 kind:data(any) addr:0x0219a114 local
+@1815 kind:data(any) addr:0x0219a118 local
+@1814 kind:data(any) addr:0x0219a11c local
+@1813 kind:data(any) addr:0x0219a120 local
+@1812 kind:data(any) addr:0x0219a124 local
+@1811 kind:data(any) addr:0x0219a128 local
+@1810 kind:data(any) addr:0x0219a12c local
+@1809 kind:data(any) addr:0x0219a130 local
+gShipParts kind:data(any) addr:0x0219a134 local
+_ZTV27ActorBoomerang_Unk_0219a15c kind:data(any) addr:0x0219a154
 data_ov053_0219a180 kind:bss addr:0x0219a180
 data_ov053_0219a18c kind:bss addr:0x0219a18c ambiguous
 data_ov053_0219a1b0 kind:bss addr:0x0219a1b0
@@ -75,6 +74,6 @@ data_ov053_0219a5bc kind:bss addr:0x0219a5bc
 data_ov053_0219a5c4 kind:bss addr:0x0219a5c4
 data_ov053_0219a5e4 kind:bss addr:0x0219a5e4
 data_ov053_0219a5f0 kind:bss addr:0x0219a5f0
-data_ov053_0219a670 kind:bss addr:0x0219a670
-data_ov053_0219a674 kind:bss addr:0x0219a674
-data_ov053_0219a680 kind:bss addr:0x0219a680
+_ZGVsUnk$1927 kind:bss addr:0x0219a670 local
+@1930 kind:bss addr:0x0219a674 local
+sUnk$1927 kind:bss addr:0x0219a680 local
