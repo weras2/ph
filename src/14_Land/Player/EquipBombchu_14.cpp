@@ -1,8 +1,8 @@
-#include "Player/EquipBombchu.hpp"
 #include "Actor/ActorManager.hpp"
 #include "DTCM/UnkStruct_027e077c.hpp"
 #include "DTCM/UnkStruct_027e0f64.hpp"
 #include "Message/MsgProc.hpp"
+#include "Player/EquipBombchu.hpp"
 #include "Player/PlayerBase.hpp"
 
 extern void *data_027e0d3c;
