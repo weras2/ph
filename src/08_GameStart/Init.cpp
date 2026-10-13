@@ -64,12 +64,17 @@ ARM UnkStruct_027e0d54::UnkStruct_027e0d54() {
     this->mUnk_16 = 0;
 }
 
+struct UnkStruct_ov008_02112f28 {
+    /* 00 */ u16 mUnk_00;
+    /* 02 */ u16 mUnk_02;
+    /* 04 */ u16 mUnk_04[13];
+    /* 1e */ u16 mUnk_1e;
+    /* 20 */
+};
+
 ARM void UnkStruct_027e0d54::func_ov008_02112f28() {
-    unk16 local_e;
-    u16 local_2a; // sp, #0x16
-    u16 local_2c; // sp, #0x14
+    UnkStruct_ov008_02112f28 local_2c;
     bool bVar1;
-    u16 auStack_28[13];
 
     UnkStruct_027e0d54_08 *pUnk_00 = new(data_027e0ce0[0], 4) UnkStruct_027e0d54_08();
 
@@ -83,51 +88,21 @@ ARM void UnkStruct_027e0d54::func_ov008_02112f28() {
     this->mUnk_14 = func_0200c76c();
     func_020400f4(this->mUnk_14);
 
-    local_2c = 0x21;
-    local_2a = 0;
-    local_e  = 0;
-    bVar1    = true;
+    local_2c.mUnk_00 = 0x21;
+    local_2c.mUnk_02 = 0;
+    local_2c.mUnk_1e = 0;
+    bVar1            = true;
 
-    Fill16(0, auStack_28, sizeof(auStack_28));
+    Fill16(0, local_2c.mUnk_04, sizeof(local_2c.mUnk_04));
 
     if (func_02040528(0x1302) == 0) {
         this->mUnk_10 = func_020400c0();
+    } else if (func_02040464(0x7EA00, (u16 *) &local_2c, sizeof(local_2c), 0, 0, 0, 6, 1, 0) == 0) {
+        this->mUnk_10 = func_020400c0();
     } else {
-        if (func_02040464(0x7EA00, &local_2c, 0x20, 0, 0, 0, 6, 1, 0) == 0) {
-            this->mUnk_10 = func_020400c0();
-        } else {
-            unk32 sVar6 = 0xC2E4;
-            bool bVar10 = local_2a == 0xC2E4;
-            unk32 sVar3 = local_2a;
-            // unk16 sVar3;
-            // unk32 sVar6;
-            // bool bVar1 = false;
-
-            // if (local_2a == 0xC2E4 || local_e != 0x1D3F) {
-            //     sVar3 = local_e;
-            //     sVar6 = 0x1D3F;
-            // }
-
-            if (bVar10) {
-                sVar6 = 0x1D3F;
-                sVar3 = local_e;
-            }
-
-            // bool bVar2 = sVar3 != sVar6;
-            // if (!bVar10 || bVar2) {
-            //     sVar6 = 0x1;
-            // }
-
-            bool uVar4 = 1;
-            if (bVar10 && !(sVar3 != 0x1D3F)) {
-                uVar4 = 0x0;
-            }
-
-            this->mUnk_0c = uVar4;
-
-            if (local_2c != 0x21) {
-                bVar1 = false;
-            }
+        this->mUnk_0c = !(local_2c.mUnk_02 == 0xC2E4 && local_2c.mUnk_1e == 0x1D3F);
+        if (local_2c.mUnk_00 != 0x21) {
+            bVar1 = false;
         }
     }
 
@@ -137,7 +112,7 @@ ARM void UnkStruct_027e0d54::func_ov008_02112f28() {
         this->mUnk_0f = 1;
     }
 
-    if (!this->mUnk_0c && bVar1) {
+    if (!this->mUnk_0c && !bVar1) {
         this->mUnk_0c = true;
     }
 }
@@ -369,19 +344,8 @@ ARM UnkStruct_020ee0a0::UnkStruct_020ee0a0() {
     this->mUnk_46 = 0x1F;
     this->mUnk_47 = 0x1F;
 
-    s32 uVar5 = 0x0;
-    s32 iVar2 = 0x4;
-    s32 iVar3 = 0x8;
-    s32 iVar4 = 0xc;
-
-    for (s32 iVar6 = 0; iVar6 < ARRAY_LEN(this->mUnk_14); iVar6++) {
-        s32 iVar1            = iVar6 * 0x4;
-        iVar6                = iVar6 + 0x1;
-        this->mUnk_14[iVar1] = uVar5 | iVar2 << 8 | iVar3 << 16 | iVar4 << 24;
-        iVar2                = iVar2 + 0x10;
-        uVar5                = uVar5 + 0x10;
-        iVar3                = iVar3 + 0x10;
-        iVar4                = iVar4 + 0x10;
+    for (s32 i = 0; i < ARRAY_LEN(this->mUnk_14); i++) {
+        this->mUnk_14[i] = (i * 16) | (i * 16 + 4) << 8 | (i * 16 + 8) << 16 | (i * 16 + 12) << 24;
     }
 }
 

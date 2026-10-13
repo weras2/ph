@@ -22,6 +22,13 @@
 
 #pragma dont_reuse_strings off
 
+struct UnkStruct_02031e1c {
+    /* 0 */ u32 mUnk_0;
+    /* 4 */ u32 mUnk_4;
+    /* 8 */ u32 mUnk_8;
+    /* c */
+};
+
 extern "C" {
 // SDK functions
 void func_02003f74(unk32);
@@ -29,8 +36,8 @@ void func_02003ce4(unk32);
 void func_02004730(unk32);
 
 unk32 *MountCompressedNarc(char *, char *, unk8 *, unk32, unk32);
-void func_02031e1c(u32 *, const char *);
-void func_02027ab4(unk32, u32 *, UNK_PTR, UNK_PTR, unk32, unk32, unk32, unk32);
+void func_02031e1c(UnkStruct_02031e1c *, const char *);
+void func_02027ab4(unk32, u32, u32, u32, unk32, unk32, unk32, unk32);
 unk32 func_02016fcc(unk32 *);
 void func_02004ba8();
 void func_02004b94();
@@ -54,12 +61,8 @@ ARM GameStart *GameStart::Create(GameModeId modeId) {
 ARM GameStart::GameStart(GameModeId modeId) :
     GameMode(modeId) {
     unk32 *uVar1;
-    unk32 local_14;
-    unk32 local_18;
-    u32 local_1c;
-    unk32 local_20;
-    unk32 local_24;
-    u32 local_28;
+    UnkStruct_02031e1c local_1c;
+    UnkStruct_02031e1c local_28;
 
     this->mUnk_008 = 0;
     this->mUnk_00c = 0;
@@ -77,8 +80,8 @@ ARM GameStart::GameStart(GameModeId modeId) :
     uVar1 = MountCompressedNarc("NLG", "Menu/Bg/NintendoLogo.bin", data_020691a0, 0xCC00, 1);
     func_02031e1c(&local_28, "NLG:nLogo");
     func_02031e1c(&local_1c, "NLG:rightTxt");
-    func_02027ab4(0, &local_28, &local_24, &local_20, 0, 0, 0, 2);
-    func_02027ab4(4, &local_1c, &local_18, &local_14, 0, 0, 0, 2);
+    func_02027ab4(0, local_28.mUnk_0, local_28.mUnk_4, local_28.mUnk_8, 0, 0, 0, 2);
+    func_02027ab4(4, local_1c.mUnk_0, local_1c.mUnk_4, local_1c.mUnk_8, 0, 0, 0, 2);
     func_02016fcc(uVar1);
 }
 
