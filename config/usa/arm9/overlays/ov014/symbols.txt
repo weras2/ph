@@ -861,7 +861,7 @@ _ZN14EquipBoomerang19func_ov014_0213d098Ev kind:function(arm,size=0x24) addr:0x0
 _ZN14EquipBoomerang19func_ov014_0213d0bcEP5Vec3p kind:function(arm,size=0xa0) addr:0x0213d018
 _ZN14EquipBoomerang8GetActorEv kind:function(arm,size=0x20) addr:0x0213d0b8
 _ZNK14EquipBoomerang5GetIdEv kind:function(arm,size=0x8) addr:0x0213d0d8
-_ZN14EquipBoomerang19func_ov014_0213d184Ev kind:function(arm,size=0x2c) addr:0x0213d0e0
+_ZN14EquipBoomerang19func_ov014_0213d184EPi kind:function(arm,size=0x2c) addr:0x0213d0e0
 _ZN14EquipBoomerang19func_ov014_0213d1b0Ev kind:function(arm,size=0x14) addr:0x0213d10c
 _ZN9EquipBombC2Ev kind:function(thumb,size=0x2c) addr:0x0213d120
 _ZNK9EquipBomb5GetIdEv kind:function(arm,size=0x8) addr:0x0213d14c
@@ -2016,16 +2016,17 @@ data_ov014_02158cb0 kind:data(any) addr:0x02158c10
 data_ov014_02158cf0 kind:data(any) addr:0x02158c50
 data_ov014_02158d1c kind:data(any) addr:0x02158c7c
 data_ov014_02158d58 kind:data(any) addr:0x02158cb8
-data_ov014_02158da8 kind:data(any) addr:0x02158d08
-data_ov014_02158dac kind:data(any) addr:0x02158d0c
-data_ov014_02158db0 kind:data(any) addr:0x02158d10
-data_ov014_02158db4 kind:data(any) addr:0x02158d14
-data_ov014_02158db8 kind:data(any) addr:0x02158d18
-data_ov014_02158dbc kind:data(any) addr:0x02158d1c
-data_ov014_02158dc0 kind:data(any) addr:0x02158d20
-data_ov014_02158dc4 kind:data(any) addr:0x02158d24
-_ZTV14EquipBoomerang kind:data(any) addr:0x02158d50
-_ZTV9EquipBomb kind:data(any) addr:0x02158da8
+@1511 kind:data(any) addr:0x02158d08 local
+@1510 kind:data(any) addr:0x02158d0c local
+@1509 kind:data(any) addr:0x02158d10 local
+@1508 kind:data(any) addr:0x02158d14 local
+@1507 kind:data(any) addr:0x02158d18 local
+@1506 kind:data(any) addr:0x02158d1c local
+@1505 kind:data(any) addr:0x02158d20 local
+@1504 kind:data(any) addr:0x02158d24 local
+gShipParts kind:data(any) addr:0x02158d28 local
+_ZTV14EquipBoomerang kind:data(any) addr:0x02158d48
+_ZTV9EquipBomb kind:data(any) addr:0x02158da0
 data_ov014_02158e9c kind:data(any) addr:0x02158dfc
 data_ov014_02158ea0 kind:data(any) addr:0x02158e00
 data_ov014_02158ea4 kind:data(any) addr:0x02158e04
