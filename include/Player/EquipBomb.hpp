@@ -20,9 +20,10 @@ public:
     /* 0c */ ActorRef mBombs[MAX_BOMB_ACTORS];
     /* 24 */
 
-    /* 00 */ virtual void vfunc_00() override;
+    // The destructor is declared first so that the vtable is emitted with it (in ov014)
     /* 04 */ virtual ~EquipBomb() override;
     /* 0c */ virtual ItemFlag GetId() const override;
+    /* 00 */ virtual void vfunc_00() override;
     /* 14 */ virtual bool IsUsable(unk32 param1) const override;
     /* 18 */ virtual void vfunc_18() override;
     /* 30 */ virtual void vfunc_30() override;

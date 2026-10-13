@@ -865,8 +865,8 @@ _ZN14EquipBoomerang19func_ov014_0213d184Ev kind:function(arm,size=0x2c) addr:0x0
 _ZN14EquipBoomerang19func_ov014_0213d1b0Ev kind:function(arm,size=0x14) addr:0x0213d10c
 _ZN9EquipBombC2Ev kind:function(thumb,size=0x2c) addr:0x0213d120
 _ZNK9EquipBomb5GetIdEv kind:function(arm,size=0x8) addr:0x0213d14c
-_ZN9EquipBombD1Ev kind:function(arm,size=0x1c) addr:0x0213d154
-_ZN9EquipBombD0Ev kind:function(arm,size=0x14) addr:0x0213d170
+_ZN9EquipBombD0Ev kind:function(arm,size=0x1c) addr:0x0213d154
+_ZN9EquipBombD1Ev kind:function(arm,size=0x14) addr:0x0213d170
 _ZN9EquipBomb8vfunc_50Ev kind:function(arm,size=0x8) addr:0x0213d184
 _Z19func_ov014_0213d230ii kind:function(arm,size=0x18) addr:0x0213d18c
 _Z19func_ov013_0213d248i kind:function(arm,size=0x14) addr:0x0213d1a4
@@ -2025,7 +2025,7 @@ data_ov014_02158dbc kind:data(any) addr:0x02158d1c
 data_ov014_02158dc0 kind:data(any) addr:0x02158d20
 data_ov014_02158dc4 kind:data(any) addr:0x02158d24
 _ZTV14EquipBoomerang kind:data(any) addr:0x02158d50
-_ZTV9EquipBomb kind:data(any) addr:0x02158da8
+_ZTV9EquipBomb kind:data(any) addr:0x02158da0
 data_ov014_02158e9c kind:data(any) addr:0x02158dfc
 data_ov014_02158ea0 kind:data(any) addr:0x02158e00
 data_ov014_02158ea4 kind:data(any) addr:0x02158e04
