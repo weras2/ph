@@ -1,6 +1,6 @@
-#include "Player/EquipBoomerang.hpp"
 #include "Actor/ActorManager.hpp"
 #include "Item/ItemManager.hpp"
+#include "Player/EquipBoomerang.hpp"
 #include "Player/PlayerLinkBase.hpp"
 #include "System/OverlayManager.hpp"
 
