@@ -29,6 +29,7 @@ public:
     /* 1c */
 
     UnkStruct_ov000_020beba8(unk32 param1);
+    inline UnkStruct_ov000_020beba8() {}
 
     bool func_ov014_02124034(UnkStruct_ov000_020beba8_08 *param1);
 };

@@ -9,7 +9,7 @@ EquipRope::~EquipRope() {}
 void EquipRope::vfunc_10() {}
 ItemFlag EquipRope::GetId() const {}
 bool EquipRope::func_ov014_0213d3d4(Vec3p *vec) {}
-void EquipRope::func_ov014_0213d404(unk32 *param1) {}
+void EquipRope::func_ov014_0213d404(Vec3p *param1) {}
 ActorRope *EquipRope::GetRopeActor() {}
 s32 EquipRope::func_ov14_0213d440(s32 actorId) {}
 s32 EquipRope::func_ov14_0213d480(s32 actorId) {}

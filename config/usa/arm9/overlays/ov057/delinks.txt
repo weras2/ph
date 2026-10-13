@@ -4,3 +4,18 @@
     .ctor       start:0x0219a970 end:0x0219a978 kind:rodata align:4
     .data       start:0x0219a980 end:0x0219aa60 kind:data align:32
     .bss        start:0x0219aa60 end:0x0219aaa0 kind:bss align:32
+
+src/57_Rope/Player/EquipRope.cpp:
+    .text       start:0x02198c60 end:0x0219a310
+    .rodata     start:0x0219a8f4 end:0x0219a900
+    .init       start:0x0219a900 end:0x0219a92c
+    .ctor       start:0x0219a970 end:0x0219a974
+    .data       start:0x0219a980 end:0x0219a9e0
+    .bss        start:0x0219aa60 end:0x0219aa7c
+
+src/57_Rope/Actor/Player/ActorRope.cpp:
+    .text       start:0x0219a310 end:0x0219a8f4
+    .init       start:0x0219a92c end:0x0219a970
+    .ctor       start:0x0219a974 end:0x0219a978
+    .data       start:0x0219a9e0 end:0x0219aa60
+    .bss        start:0x0219aa7c end:0x0219aaa0

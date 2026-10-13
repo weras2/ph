@@ -6,6 +6,7 @@
 
 #include "Actor/Actor.hpp"
 #include "Actor/ActorType.hpp"
+#include "Render/ModelRender.hpp"
 #include "Unknown/UnkStruct_ov000_020beba8.hpp"
 
 class ActorRope_Unk_0219a3b0 : public UnkStruct_ov000_020beba8 {
@@ -22,27 +23,36 @@ public:
         UnkStruct_ov000_020beba8(6) {}
 };
 
+extern "C" void func_ov000_020bd618(void *param1, ItemModel *param2, unk32 param3, unk32 param4);
+
+struct ActorRope_158 {
+    /* 0 */ unk8 mUnk_0[0xc];
+    /* c */
+
+    inline ActorRope_158(ItemModel *model) {
+        func_ov000_020bd618(this, model, 0, 0);
+    }
+};
+
 class ActorRope : public Actor {
 public:
     static ActorType gType;
 
     /* 000 (base) */
-    /* 158 */ unk8 mUnk_158[0xc];
-    /* 164 */ unk16 mUnk_164;
-    /* 166 */ unk16 mUnk_166;
-    /* 168 */ s16 mUnk_168;
+    /* 158 */ ActorRope_158 mUnk_158;
+    /* 164 */ s16 mUnk_164;
+    /* 166 */ s16 mUnk_166;
+    /* 168 */ u16 mUnk_168;
     /* 16a */ unk8 mUnk_16a;
     /* 16b */ unk8 mUnk_16b;
     /* 16c */ unk8 mUnk_16c;
     /* 16d */ unk8 mUnk_16d;
-    /* 16e */ unk16 mUnk_16e;
-    /* 170 */ u16 mUnk_170;
+    /* 16e */ s16 mUnk_16e;
+    /* 170 */ s16 mUnk_170;
     /* 172 */ unk8 mUnk_172[0x2];
     /* 174 */ Vec3p mUnk_174;
     /* 180 */ Vec3p mUnk_180;
-    /* 18c */ unk8 mUnk_18c[0x4];
-    /* 190 */ Vec3p mUnk_190;
-    /* 19c */ u32 mUnk_19c;
+    /* 18c */ Actor_UnkStruct_0a4 mUnk_18c;
     /* 1a0 */
 
     /* 00 */ virtual ~ActorRope() override;

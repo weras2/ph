@@ -50,7 +50,7 @@ void LinkStateBase::func_ov00_020a8a4c(const void *param1, unk32 param2) {}
 void LinkStateBase::func_ov00_020a8a90(unk32 param1) {}
 void LinkStateBase::func_ov00_020a8ab0(unk32 param1) {}
 void LinkStateBase::func_ov00_020a8ad0(unk32 param1) {}
-void LinkStateBase::func_ov00_020a8b04(s32 param1, bool param2) {}
+bool LinkStateBase::func_ov00_020a8b04(s32 param1, bool param2) {}
 unk32 LinkStateBase::func_ov00_020a8b3c(s32 param1) {}
 bool LinkStateBase::func_ov00_020a8b80() {}
 bool LinkStateBase::HasFlags_PlayerLinkBase_Unk48(u16 flags) {}
