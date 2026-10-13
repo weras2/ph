@@ -48,9 +48,10 @@ void SetBrightColor(u16 *, unk32);
 #define REG_B_2D_ENGINE (*(u16 *) 0x04001008)
 #define REG_B_MASTER_BRIGHT ((u16 *) 0x0400106C)
 
-const u16 data_020562e2[] = {
-    BTN_DUP,   BTN_DDOWN, BTN_DDOWN, BTN_DUP,    BTN_SELECT, BTN_B,     BTN_R,
-    BTN_START, BTN_DLEFT, BTN_DLEFT, BTN_DRIGHT, BTN_DLEFT,  BTN_START, BTN_DUP,
+// Button sequence that opens the debug screen; entry 0 accepts any button
+const u16 data_020562e0[] = {
+    0xFFF,     BTN_DUP,   BTN_DDOWN, BTN_DDOWN,  BTN_DUP,   BTN_SELECT, BTN_B,   BTN_R,
+    BTN_START, BTN_DLEFT, BTN_DLEFT, BTN_DRIGHT, BTN_DLEFT, BTN_START,  BTN_DUP, 0,
 };
 
 THUMB bool UnkStruct_02063220::func_0202f3f0(unk32 param1) {
@@ -247,21 +248,24 @@ THUMB void UnkStruct_02063220::func_0202f754(unk32 param1) {
                 data_027e08f8.func_0202f9a0(1);
             }
 
+            uVar4 = data_020562e0[this->mUnk_04];
             uVar1 = data_027e05f8.mUnk_2;
-            uVar4 = data_020562e2[this->mUnk_04];
             bVar5 = (uVar1 & uVar4) != 0;
 
-            if (bVar5) {
-                bVar6 = false;
-
-                if (((~uVar4 & 0xFFF) & (~uVar1 & 0xFFFF)) != 0 && (uVar1 & 0xFFF) != 0) {
-                    this->mUnk_04 = 0;
+            if (bVar5 && !(((u16) (~uVar4 & 0xFFF) & uVar1) != 0)) {
+                this->mUnk_04++;
+                if (this->mUnk_04 >= 13) {
+                    bVar6 = true;
+                    goto check;
                 }
+            } else if (!bVar5 && (uVar1 & 0xFFF) != 0) {
+                this->mUnk_04 = 0;
             }
+            bVar6 = false;
         }
 
-        this->mUnk_04++;
-        if (this->mUnk_04 >= 0xC ? 1 : 0) {
+    check:
+        if (bVar6) {
             this->func_0202f3f0(param1);
         }
 
