@@ -81,6 +81,9 @@ public:
 
     UnkStruct_0211ac0c();
     UnkStruct_0211ac0c(UnkStruct_020f2978 *param_1);
+    ~UnkStruct_0211ac0c() {
+        mUnk_04.Remove();
+    }
 
     void func_ov009_0211372c();
     void func_ov003_020fb26c();

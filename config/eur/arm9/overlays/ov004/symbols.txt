@@ -1,7 +1,7 @@
-func_ov004_02100ae0 kind:function(thumb,size=0x28) addr:0x02100ae0
+_ZN9FlagsUnk219func_ov004_02100ae0Ev kind:function(thumb,size=0x28) addr:0x02100ae0
 func_ov004_02100b08 kind:function(thumb,size=0x64) addr:0x02100b08
 func_ov004_02100b6c kind:function(thumb,size=0x60) addr:0x02100b6c
-func_ov004_02100bcc kind:function(thumb,size=0xa0) addr:0x02100bcc
+_ZN18UnkStruct_027e0d3819func_ov004_02100bccEv kind:function(thumb,size=0xa0) addr:0x02100bcc
 func_ov004_02100c6c kind:function(thumb,size=0x124) addr:0x02100c6c
 func_ov004_02100d90 kind:function(thumb,size=0x58) addr:0x02100d90
 func_ov004_02100de8 kind:function(thumb,size=0x78) addr:0x02100de8
