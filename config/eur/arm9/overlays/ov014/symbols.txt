@@ -1633,7 +1633,7 @@ data_ov014_0215419c kind:data(any) addr:0x0215419c
 data_ov014_021541d0 kind:data(any) addr:0x021541d0
 data_ov014_021541d4 kind:data(any) addr:0x021541d4
 __sinit_ActorArrow.cpp kind:function(arm,size=0x68) addr:0x021541ec
-__sinit_ActorBlast.cpp kind:function(arm,size=0x40) addr:0x02154254
+__sinit_ActorBlast.cpp kind:function(arm,size=0x40) addr:0x02154254 local
 __sinit_ActorBomb.cpp kind:function(arm,size=0x60) addr:0x02154294
 __sinit_ov014_021542f4 kind:function(arm,size=0x40) addr:0x021542f4
 __sinit_ActorRope.cpp kind:function(arm,size=0x40) addr:0x02154334
@@ -1712,7 +1712,7 @@ __sinit_ov014_0215579c kind:function(arm,size=0x40) addr:0x0215579c
 __sinit_ov014_021557dc kind:function(arm,size=0x38) addr:0x021557dc
 __sinit_ov014_02155814 kind:function(arm,size=0x38) addr:0x02155814
 .p__sinit_ov014_021541ec kind:data(word) addr:0x0215584c
-.p__sinit_ov014_02154254 kind:data(word) addr:0x02155850
+.p__sinit_ActorBlast.cpp kind:data(word) addr:0x02155850 local
 .p__sinit_ov014_02154294 kind:data(word) addr:0x02155854
 .p__sinit_ov014_021542f4 kind:data(word) addr:0x02155858
 .p__sinit_ov014_02154334 kind:data(word) addr:0x0215585c
@@ -1799,8 +1799,8 @@ data_ov014_021559b4 kind:data(any) addr:0x021559b4
 data_ov014_021559b8 kind:data(any) addr:0x021559b8
 data_ov014_021559bc kind:data(any) addr:0x021559bc
 _ZTV10ActorArrow kind:data(any) addr:0x021559e8
-_ZTV15ActorBlast_Unk1 kind:data(any) addr:0x02155aa4
-_ZTV10ActorBlast kind:data(any) addr:0x02155ac8
+_ZTV15ActorBlast_Unk1 kind:data(any) addr:0x02155a9c
+_ZTV10ActorBlast kind:data(any) addr:0x02155ac0
 data_ov014_02155b7c kind:data(any) addr:0x02155b7c
 data_ov014_02155b80 kind:data(any) addr:0x02155b80
 data_ov014_02155b84 kind:data(any) addr:0x02155b84
@@ -2192,7 +2192,7 @@ data_ov014_0215abc0 kind:bss addr:0x0215abc0
 _ZN10ActorArrow5gTypeE kind:bss addr:0x0215abcc
 data_ov014_0215abe0 kind:bss addr:0x0215abe0
 data_ov014_0215abec kind:bss addr:0x0215abec
-data_ov014_0215abfc kind:bss addr:0x0215abfc
+@1723 kind:bss addr:0x0215abfc local
 _ZN10ActorBlast5gTypeE kind:bss addr:0x0215ac08
 data_ov014_0215ac1c kind:bss addr:0x0215ac1c
 _ZN9ActorBomb5gTypeE kind:bss addr:0x0215ac28

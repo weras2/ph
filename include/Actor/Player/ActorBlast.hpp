@@ -13,7 +13,8 @@ public:
     static ActorType gType;
 
     /* 000 (base) */
-    /* 158 */ unk8 mUnk_158[0x4];
+    /* 158 */ bool mUnk_158;
+    /* 159 */ unk8 mUnk_159[0x3];
     /* 15c */ s32 mUnk_15c;
     /* 160 */ s32 mUnk_160;
     /* 164 */
@@ -29,14 +30,15 @@ public:
 };
 
 class ActorBlast_Unk1 : public UnkStruct_ov000_020beba8 {
+public:
     /* 00 (base) */
     /* 0c */ ActorBlast *mBlast;
     /* 10 */ Vec3p mUnk_10;
     /* 1c */ unk8 mUnk_1c[0x18];
-    /* 34 */ unk16 mUnk_34;
-    /* 36 */ unk16 mUnk_36;
-    /* 38 */ unk16 mUnk_38;
-    /* 3a */ unk16 mUnk_3a;
+    /* 34 */ s16 mUnk_34;
+    /* 36 */ s16 mUnk_36;
+    /* 38 */ s16 mUnk_38;
+    /* 3a */ s16 mUnk_3a;
     /* 3c */ unk16 mUnk_3c;
     /* 3e */ unk8 mUnk_3e[0x20];
     /* 5e */ unk8 mUnk_5e;
@@ -56,4 +58,24 @@ class ActorBlast_Unk1 : public UnkStruct_ov000_020beba8 {
     /* 00 */ virtual ~ActorBlast_Unk1();
     /* 10 */ virtual bool vfunc_10(s32 *param1);
     /* 18 */
+
+    inline ActorBlast_Unk1(ActorBlast *blast) :
+        UnkStruct_ov000_020beba8(2) {
+        mBlast  = blast;
+        mUnk_3c = 0;
+        mUnk_5e = 0;
+        mUnk_5f = 0;
+        mUnk_60 = 0;
+        mUnk_61 = 0;
+        mUnk_68 = 0;
+        mUnk_69 = 0;
+        mUnk_6a = 0;
+        mUnk_6b = 0;
+        mUnk_6c = 0;
+        mUnk_6d = 0;
+        mUnk_34 = -1;
+        mUnk_36 = -1;
+        mUnk_38 = -1;
+        mUnk_3a = -1;
+    }
 };
