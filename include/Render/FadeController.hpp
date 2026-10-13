@@ -22,7 +22,7 @@ struct FadeController {
 
     bool Has(FadeControl *control);
     static bool Contains(FadeControlEntry *needle, s32 length, FadeControl **haystack);
-    bool AddIfAbsent(FadeControl *control, unk32 param2, unk32 param3);
+    bool AddIfAbsent(FadeControl *control);
     static bool Add(FadeControlEntry *entry, s32 maxLength, s32 *length, FadeControl **list, bool allowDuplicates);
     void RemoveFadeControl(FadeControl *control);
     static bool Remove(FadeControlEntry *entry, s32 *length, FadeControl **list);
