@@ -6,29 +6,39 @@
 #include "Actor/ActorType.hpp"
 #include "Actor/Character/ActorCharacter.hpp"
 
+// Palette resource, colors are stored as RGB555
+struct ActorTetra_Palette {
+    /* 00 */ PAD(0x00, 0x2c);
+    /* 2c */ u32 mUnk_2c;
+    /* 30 */ u16 mNumColors;
+    /* 32 */ PAD(0x32, 0x38);
+    /* 38 */ u32 mColorsOffset;
+    /* 3c */
+};
+
 struct ActorTetra_4cc {
-    /* 000 */ PAD(0x000, 0x9c0);
+    /* 000 */ u16 mColors[0x4e0];
     /* 9c0 */
 };
 
 struct ActorTetra_4b0 {
-    /* 00 */ unk32 mUnk_00;
-    /* 04 */ unk32 mUnk_04;
-    /* 08 */ unk32 mUnk_08;
+    /* 00 */ s32 mBlend; // 0x1000 = fully mUnk_0c, 0 = fully mUnk_08
+    /* 04 */ s32 mPrevBlend;
+    /* 08 */ u16 *mUnk_08;
     /* 0c */ ActorTetra_4cc *mUnk_0c;
     /* 10 */ ActorTetra_4cc *mUnk_10;
-    /* 14 */ unk32 mUnk_14; // always sizeof(ActorTetra_4cc)?
-    /* 18 */ unk32 mUnk_18;
+    /* 14 */ u32 mSize;
+    /* 18 */ u32 mUnk_18;
     /* 1c */
 
-    inline ActorTetra_4b0(ActorTetra_4cc *unk_0c, ActorTetra_4cc *unk_10, unk32 size) :
-        mUnk_00(0),
-        mUnk_04(0),
+    inline ActorTetra_4b0(ActorTetra_4cc *unk_0c, ActorTetra_4cc *unk_10, u32 size) :
+        mBlend(0),
+        mPrevBlend(0),
         mUnk_0c(unk_0c),
         mUnk_10(unk_10),
-        mUnk_14(size) {}
+        mSize(size) {}
 
-    void func_ov031_02181610(unk32 param1, unk32 param2, unk32 param3, unk32 param4, u16 param5);
+    void func_ov031_02181610(ActorTetra_Palette *palette, s32 redScale, s32 greenScale, s32 blueScale, u16 color);
     void func_ov031_02181798();
 };
 
@@ -46,7 +56,7 @@ public:
     /* 00 */ virtual ~ActorTetra() override;
     /* 20 */ virtual void vfunc_20(bool param1) override;
     /* c4 */ virtual void vfunc_c4() override;
-    /* f4 */ virtual void vfunc_f4() override;
+    /* f4 */ virtual bool vfunc_f4() override;
     /* f8 */ virtual void vfunc_f8() override;
     /* fc */
 

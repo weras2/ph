@@ -295,14 +295,14 @@ public:
     /* 49a */ PAD(0x49a, 0x49c);
     /* 49c */
 
-    /* 00 */ virtual ~ActorGenericCharacter() override;
+    /* 00 */ ARM virtual ~ActorGenericCharacter() override {}
     /* 08 */ virtual bool Init() override;
     /* 68 */ virtual void vfunc_68(unk32 param1, UnkStruct_020397f8 *param2) override;
     /* 80 */ virtual void vfunc_80() override;
     /* 84 */ virtual void vfunc_84() override;
     /* c0 */ virtual bool vfunc_c0() override;
     /* c4 */ virtual void vfunc_c4() override;
-    /* f4 */ virtual void vfunc_f4() = 0;
+    /* f4 */ virtual bool vfunc_f4() = 0;
     /* f8 */ virtual void vfunc_f8();
     /* fc */
 
