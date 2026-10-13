@@ -77,7 +77,7 @@ ARM bool EquipBombchu_Unk_02198d00::vfunc_10(s32 *param1) {
     if ((*(s32 *) ((s32) param1 + 4) & 0x800) == 0) {
         return false;
     }
-    sUnk_02198d00.mUnk_10 = true;
+    sUnk_02198d00.mUnk_10.x = 1;
     return false;
 }
 
@@ -726,35 +726,32 @@ THUMB bool EquipBombchu::func_ov058_02199498(Vec3p *vec) {
 
 extern "C" void func_ov000_020a61ac(Vec3p *vec, s16 angle);
 ARM unk32 EquipBombchu::func_ov058_02199ef0(TilePos param1) {
-    s32 iVar1;
-    s32 iVar2;
-    s16 sVar3;
+    s32 height;
     s32 result;
-    Vec3p local_58;
-    Vec3p local_4c;
-    Vec3p local_40;
+    Vec3p center;
+    Vec3p pos;
+    Vec3p offset;
 
-    TilePos local_5c = param1;
-    gMapManager->func_ov00_02083c7c(&local_40, local_5c);
-    for (s32 iVar2 = 0; iVar2 < 4; iVar2++) {
-        sVar3      = 0;
-        local_58.x = 0;
-        local_58.y = 0;
-        local_58.z = 0x400;
-        func_ov000_020a61ac(&local_58, (int) sVar3);
-        local_4c.x = local_40.x;
-        local_4c.y = local_40.y;
-        local_4c.z = local_40.z;
-        Vec3p_Add(&local_4c, &local_58, &local_4c);
-        if (iVar2 == 0) {
-            result = gMapManager->func_ov00_02083f44(&local_4c, false);
+    gMapManager->func_ov00_02083c7c(&center, param1);
+    s32 angle = 0;
+    for (s32 i = 0; i < 4; i++) {
+        offset.x = 0;
+        offset.y = 0;
+        offset.z = 0x400;
+        func_ov000_020a61ac(&offset, (s16) angle);
+        pos.x = center.x;
+        pos.y = center.y;
+        pos.z = center.z;
+        Vec3p_Add(&pos, &offset, &pos);
+        if (i == 0) {
+            result = gMapManager->func_ov00_02083f44(&pos, false);
         } else {
-            iVar1 = gMapManager->func_ov00_02083f44(&local_4c, false);
-            if (result <= iVar1) {
-                result = iVar1;
+            height = gMapManager->func_ov00_02083f44(&pos, false);
+            if (result <= height) {
+                result = height;
             }
         }
-        sVar3 = sVar3 + 0x4000;
+        angle += 0x4000;
     }
     return result;
 }
