@@ -2015,7 +2015,7 @@ data_ov014_02158cac kind:data(any) addr:0x02158c0c
 data_ov014_02158cb0 kind:data(any) addr:0x02158c10
 data_ov014_02158cf0 kind:data(any) addr:0x02158c50
 data_ov014_02158d1c kind:data(any) addr:0x02158c7c
-data_ov014_02158d58 kind:data(any) addr:0x02158cb8
+_ZTV10EquipScoop kind:data(any) addr:0x02158cb0
 data_ov014_02158da8 kind:data(any) addr:0x02158d08
 data_ov014_02158dac kind:data(any) addr:0x02158d0c
 data_ov014_02158db0 kind:data(any) addr:0x02158d10

@@ -1,5 +1,9 @@
 #include "Player/EquipScoop.hpp"
 
-EquipScoop::EquipScoop() {}
-EquipScoop::~EquipScoop() {}
-ItemFlag EquipScoop::GetId() const {}
+THUMB EquipScoop::EquipScoop() {}
+
+THUMB EquipScoop::~EquipScoop() {}
+
+ARM ItemFlag EquipScoop::GetId() const {
+    return ItemFlag_Shovel;
+}
