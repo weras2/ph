@@ -24,16 +24,16 @@ _ZN25EquipBombchu_Unk_02198d00D0Ev kind:function(arm,size=0x1c) addr:0x0219a424
 _ZN25EquipBombchu_Unk_02198d00D1Ev kind:function(arm,size=0x14) addr:0x0219a440
 _ZN13LinkStateItem19func_ov058_0219a454Ev kind:function(arm,size=0x28) addr:0x0219a454
 _ZN13LinkStateItem19func_ov058_0219a47cEv kind:function(arm,size=0x13c) addr:0x0219a47c
-_Z15GetEquipBombchuv kind:function(arm,size=0x10) addr:0x0219a5b8 local
-func_ov058_0219a5c8 kind:function(arm,size=0xd4) addr:0x0219a5c8
-func_ov058_0219a69c kind:function(arm,size=0xd0) addr:0x0219a69c
-func_ov058_0219a76c kind:function(arm,size=0xb4) addr:0x0219a76c
-func_ov058_0219a820 kind:function(arm,size=0x178) addr:0x0219a820
-func_ov058_0219a998 kind:function(arm,size=0x138) addr:0x0219a998
-func_ov058_0219aad0 kind:function(arm,size=0x58) addr:0x0219aad0
-func_ov058_0219ab28 kind:function(thumb,size=0x184) addr:0x0219ab28
-func_ov058_0219acac kind:function(thumb,size=0x88) addr:0x0219acac
-func_ov058_0219ad34 kind:function(thumb,size=0x32) addr:0x0219ad34
+_Z15GetEquipBombchuv kind:function(arm,size=0x10) addr:0x0219a5b8
+_ZN24UnkStruct_ov058_0219afb019func_ov058_0219a5c8Ev kind:function(arm,size=0xd4) addr:0x0219a5c8
+_ZN24UnkStruct_ov058_0219afb08vfunc_00Ev kind:function(arm,size=0xd0) addr:0x0219a69c
+_ZN24UnkStruct_ov058_0219afb019func_ov058_0219a76cEt kind:function(arm,size=0xb4) addr:0x0219a76c
+_ZN24UnkStruct_ov058_0219afb08vfunc_04Eb kind:function(arm,size=0x178) addr:0x0219a820
+_ZN24UnkStruct_ov058_0219afb019func_ov058_0219a998Ev kind:function(arm,size=0x138) addr:0x0219a998
+_ZN24UnkStruct_ov058_0219afb019func_ov058_0219aad0Ev kind:function(arm,size=0x58) addr:0x0219aad0
+_ZN18UnkStruct_027e109819func_ov058_0219ab28Ev kind:function(thumb,size=0x184) addr:0x0219ab28
+_ZN18UnkStruct_027e109819func_ov058_0219acacEv kind:function(thumb,size=0x88) addr:0x0219acac
+_ZN18UnkStruct_027e109819func_ov058_0219ad34Ev kind:function(thumb,size=0x32) addr:0x0219ad34
 sEquipBombchu_Unk1 kind:data(any) addr:0x0219ad68 local
 __sinit_EquipBombchu.cpp kind:function(arm,size=0xfc) addr:0x0219ad80
 .p__sinit_ov058_0219ad80 kind:data(word) addr:0x0219ae7c
@@ -48,24 +48,26 @@ data_ov058_0219aebc kind:data(any) addr:0x0219aebc
 data_ov058_0219aec0 kind:data(any) addr:0x0219aec0
 _ZTV25EquipBombchu_Unk_02198d00 kind:data(any) addr:0x0219aeec
 data_ov058_0219af10 kind:data(any) addr:0x0219af10
-data_ov058_0219af18 kind:data(any) addr:0x0219af18
-data_ov058_0219af1c kind:data(any) addr:0x0219af1c
-data_ov058_0219af20 kind:data(any) addr:0x0219af20
-data_ov058_0219af24 kind:data(any) addr:0x0219af24
-data_ov058_0219af28 kind:data(any) addr:0x0219af28
-data_ov058_0219af2c kind:data(any) addr:0x0219af2c
-data_ov058_0219af30 kind:data(any) addr:0x0219af30
-data_ov058_0219af34 kind:data(any) addr:0x0219af34
+@2467 kind:data(any) addr:0x0219af18 local
+@2466 kind:data(any) addr:0x0219af1c local
+@2465 kind:data(any) addr:0x0219af20 local
+@2464 kind:data(any) addr:0x0219af24 local
+@2463 kind:data(any) addr:0x0219af28 local
+@2462 kind:data(any) addr:0x0219af2c local
+@2461 kind:data(any) addr:0x0219af30 local
+@2460 kind:data(any) addr:0x0219af34 local
+gShipParts kind:data(any) addr:0x0219af38 local
 data_ov058_0219af58 kind:data(any) addr:0x0219af58
-data_ov058_0219af68 kind:data(any) addr:0x0219af68
-data_ov058_0219af6c kind:data(any) addr:0x0219af6c
-data_ov058_0219af70 kind:data(any) addr:0x0219af70
-data_ov058_0219af74 kind:data(any) addr:0x0219af74
-data_ov058_0219af78 kind:data(any) addr:0x0219af78
-data_ov058_0219af7c kind:data(any) addr:0x0219af7c
-data_ov058_0219af80 kind:data(any) addr:0x0219af80
-data_ov058_0219af84 kind:data(any) addr:0x0219af84
-data_ov058_0219afb0 kind:data(any) addr:0x0219afb0
+@1521 kind:data(any) addr:0x0219af68 local
+@1520 kind:data(any) addr:0x0219af6c local
+@1519 kind:data(any) addr:0x0219af70 local
+@1518 kind:data(any) addr:0x0219af74 local
+@1517 kind:data(any) addr:0x0219af78 local
+@1516 kind:data(any) addr:0x0219af7c local
+@1515 kind:data(any) addr:0x0219af80 local
+@1514 kind:data(any) addr:0x0219af84 local
+gShipParts kind:data(any) addr:0x0219af88 local
+_ZTV24UnkStruct_ov058_0219afb0 kind:data(any) addr:0x0219afa8
 @911 kind:bss addr:0x0219afc0
 _ZN12EquipBombchu19gModelRenderBombchuE kind:bss addr:0x0219afcc
 @912 kind:bss addr:0x0219b028

@@ -101,6 +101,10 @@ extern Struct_027e0db0 data_027e0db0;
 
 class UnkClass_027e0cbc {
 public:
+    /* 00 */ unk8 mUnk_00[0x1c];
+    /* 1c */ s32 mUnk_1c;
+    /* 20 */
+
     void func_0203d57c();
     void func_0203d5c0();
     void func_0203d64c(s32);

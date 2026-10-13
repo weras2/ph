@@ -5985,7 +5985,7 @@ from:0x021511b8 kind:thumb_call_arm to:0x020cfe70 module:overlay(0)
 from:0x021511d2 kind:thumb_call_arm to:0x02035070 module:main
 from:0x021511e6 kind:thumb_call_arm to:0x02035070 module:main
 from:0x021511f6 kind:thumb_call_arm to:0x02035174 module:main
-from:0x02151200 kind:load to:0x0219af10 module:overlay(58)
+from:0x02151200 kind:load to:0x0219af08 add:0x8 module:overlay(58)
 from:0x02151204 kind:load to:0x02151210 module:overlay(14)
 from:0x02151208 kind:load to:0x0213c398 module:overlay(14)
 from:0x0215120c kind:load to:0x027e0c38 module:dtcm
