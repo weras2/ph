@@ -12,8 +12,9 @@ private:
     /* 10 */
 
 public:
-    /* 00 */ virtual void vfunc_00() override;
+    // The destructor is declared first so that the vtable is emitted with it (in ov014)
     /* 04 */ virtual ~EquipPotion() override;
+    /* 00 */ virtual void vfunc_00() override;
     /* 14 */ virtual bool IsUsable(unk32 param1) const override;
     /* 18 */ virtual void vfunc_18() override;
     /* 1c */ virtual void vfunc_1c() override;
