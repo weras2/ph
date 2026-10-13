@@ -7,6 +7,20 @@
 
 #include "Render/FadeControl.hpp"
 
+class CutsceneHandler_Player {
+public:
+    /* 00 */ virtual void vfunc_00();
+    /* 04 */ virtual void vfunc_04();
+    /* 08 */ virtual unk32 Start(void *param1);
+    /* 0c */ virtual bool Stop();
+    /* 10 */ virtual void vfunc_10();
+    /* 14 */ virtual void vfunc_14();
+    /* 18 */ virtual void vfunc_18();
+    /* 1c */ virtual void vfunc_1c();
+    /* 20 */ virtual void vfunc_20();
+    /* 24 */ virtual void Reset();
+};
+
 class CutsceneHandler {
 public:
     /* 00 */ u32 mFlags1;
@@ -20,11 +34,11 @@ public:
     /* 14 */ unk32 mCutsceneEnd;
     /* 18 */ unk32 mFreeze;
     /* 1c */ u32 mUnk_1c;
-    /* 20 */ unk8 mUnk_20;
-    /* 21 */ char mUnk_21;
-    /* 22 */ unk8 mUnk_22;
+    /* 20 */ u8 mUnk_20;
+    /* 21 */ u8 mUnk_21;
+    /* 22 */ u8 mUnk_22;
     /* 23 */ unk8 mUnk_23;
-    /* 24 */ unk16 mUnk_24;
+    /* 24 */ s16 mUnk_24;
     /* 26 */ unk8 mUnk_26[0x2];
     /* 28 */ s32 mUnk_28;
     /* 2c */ s32 mUnk_2c;
@@ -39,8 +53,7 @@ public:
     /* 4c */ Mat4x3p mUnk_4c;
     /* 7c */ FadeControl *mFadeControl;
     /* 80 */ s32 **mUnk_80;
-    /* 84 */ s32 *mUnk_84;
-    /* 88 */ s32 mUnk_88;
+    /* 84 */ CutsceneHandler_Player *mPlayers[2];
     /* 8c */
 
     void SetFlags(s32 value) {
@@ -54,11 +67,11 @@ public:
     bool SkipCutscene(s32 param1);
     unk32 func_ov000_020981b8(unk32 *param1);
     void func_ov000_020985c0();
-    void func_ov000_020985c4();
+    bool func_ov000_020985c4();
     void func_ov000_02098618(s32 param1, unk32 param2, void **param3);
     void func_ov000_02098658();
     bool func_ov000_02098694(unk32 param1);
-    bool func_ov000_020987c4(unk32 param1, unk16 param2, unk32 param3, unk32 param4, bool param5);
+    bool func_ov000_020987c4(unk32 param1, u16 param2, unk32 param3, unk32 param4, bool param5);
     bool func_ov000_02098834();
     bool func_ov000_02098860();
     unk32 func_ov000_02098890(unk32 param1, s32 param2);
