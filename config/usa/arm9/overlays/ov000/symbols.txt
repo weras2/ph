@@ -2657,11 +2657,11 @@ _ZN24UnkStruct_ov000_020beba88vfunc_18EPi kind:function(arm,size=0x50) addr:0x02
 _ZN24UnkStruct_ov000_020beba88vfunc_14EPt kind:function(arm,size=0x98) addr:0x020bed6c
 _ZN24UnkStruct_ov000_020beba8D1Ev kind:function(arm,size=0x14) addr:0x020bee04
 _ZN24UnkStruct_ov000_020beba8D0Ev kind:function(arm,size=0x1c) addr:0x020bee18
-func_ov000_020bee94 kind:function(arm,size=0x3c) addr:0x020bee34
-func_ov000_020beed0 kind:function(arm,size=0x40) addr:0x020bee70
-func_ov000_020bef10 kind:function(arm,size=0x8) addr:0x020beeb0
-func_ov000_020bef18 kind:function(arm,size=0xc8) addr:0x020beeb8
-func_ov000_020befe0 kind:function(arm,size=0x1c) addr:0x020bef80
+_ZN20EquipSword_HitFilter8vfunc_08EP27UnkStruct_ov000_020beba8_08 kind:function(arm,size=0x3c) addr:0x020bee34
+_ZN20EquipSword_HitFilter19func_ov000_020beed0EPj kind:function(arm,size=0x40) addr:0x020bee70
+_ZN20EquipSword_HitFilter8vfunc_0cEPs kind:function(arm,size=0x8) addr:0x020beeb0
+_ZN20EquipSword_HitFilter8vfunc_10EPi kind:function(arm,size=0xc8) addr:0x020beeb8
+_Z19func_ov000_020befe0P17EquipSword_EffectPs kind:function(arm,size=0x1c) addr:0x020bef80
 _ZN10EquipSword8vfunc_00Ev kind:function(arm,size=0x4) addr:0x020bef9c
 _ZNK10EquipSword5GetIdEv kind:function(arm,size=0x8) addr:0x020befa0
 _ZN10EquipSword19func_ov000_020bf008Ess kind:function(arm,size=0x20) addr:0x020befa8
@@ -2675,7 +2675,7 @@ _ZN10EquipSword19func_ov000_020bf330Ev kind:function(arm,size=0x1c4) addr:0x020b
 _ZN10EquipSword19func_ov000_020bf4f4Ev kind:function(arm,size=0x44) addr:0x020bf494
 _ZN10EquipSword8vfunc_30Ev kind:function(arm,size=0xa38) addr:0x020bf4d8
 _ZN10EquipSword12GetEquipRopeEv kind:function(arm,size=0x10) addr:0x020bff10
-_Z19func_ov000_020bff80Pv kind:function(arm,size=0x14) addr:0x020bff20
+_ZN20EquipSword_HitFilterD1Ev kind:function(arm,size=0x14) addr:0x020bff20
 _ZN10EquipSword8vfunc_38Ei kind:function(arm,size=0x248) addr:0x020bff34
 _ZNK10EquipSword9GetHitboxEP8Cylinder kind:function(arm,size=0x70) addr:0x020c017c
 _ZN10EquipSword19func_ov000_020c024cEP5Vec3pi kind:function(arm,size=0xcc) addr:0x020c01ec
@@ -2685,7 +2685,7 @@ _ZN10EquipSword19func_ov000_020c05ecEi kind:function(arm,size=0x5c) addr:0x020c0
 _ZN10EquipSword19func_ov000_020c0648Ev kind:function(arm,size=0x2c) addr:0x020c05e8
 _ZN10EquipSword8vfunc_2cEv kind:function(arm,size=0x3c) addr:0x020c0614
 _ZN10EquipSword19func_ov000_020c06b0Ei kind:function(arm,size=0x8) addr:0x020c0650
-_Z19func_ov000_020c06b8v kind:function(arm,size=0x1c) addr:0x020c0658
+_ZN20EquipSword_HitFilterD0Ev kind:function(arm,size=0x1c) addr:0x020c0658
 _ZN11EquipShield8vfunc_00Ev kind:function(arm,size=0x4) addr:0x020c0674
 _ZNK11EquipShield5GetIdEv kind:function(arm,size=0x8) addr:0x020c0678
 _ZNK11EquipShield8IsUsableEi kind:function(arm,size=0x2c) addr:0x020c0680
@@ -3752,16 +3752,10 @@ data_ov000_020dca28 kind:data(any) addr:0x020dc9c8
 data_ov000_020dca38 kind:data(any) addr:0x020dc9d8
 data_ov000_020dca3a kind:data(any) addr:0x020dc9da
 data_ov000_020dca3c kind:data(any) addr:0x020dc9dc
-data_ov000_020dd268 kind:data(any) addr:0x020dd208
-data_ov000_020dd274 kind:data(any) addr:0x020dd214
-data_ov000_020dd280 kind:data(any) addr:0x020dd220
-data_ov000_020dd28c kind:data(any) addr:0x020dd22c
-data_ov000_020dd290 kind:data(any) addr:0x020dd230
-data_ov000_020dd294 kind:data(any) addr:0x020dd234
-data_ov000_020dd296 kind:data(any) addr:0x020dd236
-data_ov000_020dd298 kind:data(any) addr:0x020dd238
-data_ov000_020dd29c kind:data(any) addr:0x020dd23c
-data_ov000_020dd2a0 kind:data(any) addr:0x020dd240
+data_ov000_020dd268 kind:data(any) addr:0x020dd208 local
+data_ov000_020dd274 kind:data(any) addr:0x020dd214 local
+data_ov000_020dd280 kind:data(any) addr:0x020dd220 local
+sSwordParams kind:data(any) addr:0x020dd22c local
 data_ov000_020dd364 kind:data(any) addr:0x020dd304
 sUnkTable kind:data(any) addr:0x020dd310
 data_ov000_020dd3f8 kind:data(any) addr:0x020dd398
@@ -5093,16 +5087,17 @@ data_ov000_020e6ea4 kind:data(any) addr:0x020e6e44
 data_ov000_020e6ea8 kind:data(any) addr:0x020e6e48
 data_ov000_020e6ed4 kind:data(any) addr:0x020e6e74
 data_ov000_020e6f2c kind:data(any) addr:0x020e6ecc
-data_ov000_020e6f48 kind:data(any) addr:0x020e6ee8
-data_ov000_020e6f4c kind:data(any) addr:0x020e6eec
-data_ov000_020e6f50 kind:data(any) addr:0x020e6ef0
-data_ov000_020e6f54 kind:data(any) addr:0x020e6ef4
-data_ov000_020e6f58 kind:data(any) addr:0x020e6ef8
-data_ov000_020e6f5c kind:data(any) addr:0x020e6efc
-data_ov000_020e6f60 kind:data(any) addr:0x020e6f00
-data_ov000_020e6f64 kind:data(any) addr:0x020e6f04
-data_ov000_020e6f90 kind:data(any) addr:0x020e6f30
-data_ov000_020e6fb0 kind:data(any) addr:0x020e6f50
+@1531 kind:data(any) addr:0x020e6ee8 local
+@1530 kind:data(any) addr:0x020e6eec local
+@1529 kind:data(any) addr:0x020e6ef0 local
+@1528 kind:data(any) addr:0x020e6ef4 local
+@1527 kind:data(any) addr:0x020e6ef8 local
+@1526 kind:data(any) addr:0x020e6efc local
+@1525 kind:data(any) addr:0x020e6f00 local
+@1524 kind:data(any) addr:0x020e6f04 local
+gShipParts kind:data(any) addr:0x020e6f08 local
+_ZTV20EquipSword_HitFilter kind:data(any) addr:0x020e6f28
+_ZTV10EquipSword kind:data(any) addr:0x020e6f48
 data_ov000_020e7000 kind:data(any) addr:0x020e6fa0
 data_ov000_020e7004 kind:data(any) addr:0x020e6fa4
 data_ov000_020e7008 kind:data(any) addr:0x020e6fa8

@@ -156,6 +156,11 @@ src/00_Core/Game/GameModePlay.cpp:
     .text       start:0x02079cc8 end:0x02079d7c
     .data       start:0x020e1fb8 end:0x020e1fe4
 
+src/00_Core/Player/EquipSword.cpp:
+    .text       start:0x020bee34 end:0x020c0674
+    .rodata     start:0x020dd208 end:0x020dd304
+    .data       start:0x020e6ee8 end:0x020e6fa0
+
 src/00_Core/Render/ModelRender.cpp:
     .text       start:0x020a950c end:0x020a9980
     .data       start:0x020e57b8 end:0x020e5800
