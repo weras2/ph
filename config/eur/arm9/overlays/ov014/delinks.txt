@@ -34,6 +34,6 @@ src/14_Land/Actor/Character/ActorCharacter.cpp:
 src/14_Land/Actor/Character/ActorGenericCharacter.cpp:
     .text       start:0x021476d0 end:0x02148234
 
-src/14_Land/Player/EquipBomb.cpp:
+src/14_Land/Player/EquipBomb_14.cpp:
     .text       start:0x0213d1c4 end:0x0213d230
     .data       start:0x02158e40 end:0x02158e9c
