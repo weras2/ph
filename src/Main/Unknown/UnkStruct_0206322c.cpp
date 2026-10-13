@@ -17,6 +17,10 @@ void GXS_LoadBG0Scr(u16 *data, unk32, u32 size);
 void CleanAndInvalidateDataCacheLines(void *, u32 size); // DC_FlushRange?
 void Fill16(unk32, void *, u32 size);
 int vsnprintf(char *s, size_t n, const char *format, va_list arg);
+bool func_02030758(s32 ch);
+bool func_020307dc(s32 ch);
+s32 func_02030730(s32 ch);
+s32 func_020306c0(char *str, s32 length);
 }
 
 THUMB void UnkStruct_0206322c::func_02030354(bool doTopScreen, bool doBottomScreen) {
@@ -57,6 +61,17 @@ THUMB void *UnkStruct_0206322c::func_02030408(void) {
     return this;
 }
 
+// Screen::data starts 6 halfwords into the Screen
+#define SCREEN_TILE(screen, x, y) (((u16 *) &(screen))[(x) + (y) * SCREEN_WIDTH + 6])
+
+extern "C" THUMB void func_02030420(UnkStruct_0206322c *param1, s32 x, s32 y, s32 tile, unk32 bottomScreen, s32 palette) {
+    if (!(u8) bottomScreen) {
+        SCREEN_TILE(param1->topScreen, x, y) = tile | palette << 12;
+    } else {
+        SCREEN_TILE(param1->bottomScreen, x, y) = tile | palette << 12;
+    }
+}
+
 THUMB void UnkStruct_0206322c::func_02030464(bool doTopScreen, bool doBottomScreen) {
     if (doTopScreen) {
         CleanAndInvalidateDataCacheLines(&this->topScreen.data, sizeof(this->topScreen.data));
@@ -79,7 +94,92 @@ THUMB void UnkStruct_0206322c::func_020304a8(bool doTopScreen, bool doBottomScre
     }
 }
 
-void DisplayDebugText(unk32 x, unk32 y, unk32 unkVal1, unk32 unkVal2, char *, unk32);
+extern "C" s32 func_020305ac(s32 x, s32 y, s32 palette, s32 ch, unk32 bottomScreen);
+
+THUMB void DisplayDebugText(unk32 x, unk32 y, unk32 align, unk32 palette, char *str, unk32 bottomScreen) {
+    s32 col = -1;
+    s32 ch;
+    s32 length = 0;
+    s32 startX = x;
+    u8 *s      = (u8 *) str;
+
+    if (*s == 0) {
+        return;
+    }
+
+    do {
+        if (col >= SCREEN_WIDTH || (func_02030758(ch) && col > SCREEN_WIDTH - 2)) {
+            y++;
+            col = -1;
+        }
+        if (col < 0) {
+            switch (align) {
+                case 1:
+                    startX = x - (func_020306c0(str, length) >> 1);
+                    if (startX < 0) {
+                        startX = 0;
+                    }
+                    break;
+                case 2:
+                    startX = x - func_020306c0(str, length);
+                    if (startX < 0) {
+                        startX = 0;
+                    }
+                    break;
+                case 0:
+                    startX = x;
+                    break;
+            }
+            col = startX;
+        }
+
+        ch = *s++;
+        length++;
+        if (ch >= 0x80 && *s != 0) {
+            ch = ch << 8 | *s;
+            s++;
+            length++;
+        }
+
+        if (ch == '\n') {
+            y++;
+            col = -1;
+        } else {
+            if (func_020305ac(col, y, palette, ch, bottomScreen) == 1) {
+                col++;
+            }
+            col++;
+        }
+    } while (*s != 0);
+}
+
+extern "C" THUMB s32 func_020305ac(s32 x, s32 y, s32 palette, s32 ch, unk32 bottomScreen) {
+    s32 result = 0;
+    s32 second = 0;
+
+    if (ch >= 0x8000) {
+        if (func_02030758(ch)) {
+            ch--;
+            second = 0x814a;
+        } else if (func_020307dc(ch)) {
+            second = 0x814b;
+            ch -= 2;
+        }
+        ch = func_02030730(ch);
+    }
+
+    for (s32 i = 0; i < 2; i++) {
+        ch -= 32;
+        func_02030420(&data_0206322c, x, y, ch, bottomScreen, palette);
+        if (i != 0 || second == 0) {
+            break;
+        }
+        ch     = func_02030730(second);
+        result = 1;
+        x++;
+    }
+    return result;
+}
 
 THUMB void DisplayDebugTextFormat(unk32 param1, unk32 x, unk32 y, unk32 unkVal1, unk32 unkVal2, char *fmt, va_list args) {
     char buffer[0x100];
