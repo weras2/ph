@@ -1,56 +1,189 @@
 #include "Player/EquipBoomerang.hpp"
 #include "Actor/ActorManager.hpp"
 #include "Actor/ActorSpawner.hpp"
+#include "Actor/FilterActorBase.hpp"
 #include "DTCM/UnkStruct_027e0de4.hpp"
+#include "DTCM/UnkStruct_027e0f64.hpp"
 #include "DTCM/UnkStruct_027e0ffc.hpp"
 #include "Map/MapManager.hpp"
+#include "Physics/Cylinder.hpp"
+#include "Player/LinkStateItem.hpp"
+#include "Player/PlayerBase.hpp"
 #include "Player/PlayerControl.hpp"
 #include "Unknown/UnkStruct_020ee6f8.hpp"
+#include "Unknown/UnkStruct_ov000_020beba8.hpp"
 #include "nds/g3d/sbc.h"
 
 // Tiles hit by the boomerang
-struct UnkStruct_ov053_0219a5bc {
-    /* 00 */ unk32 mUnk_00;
+class EquipBoomerang_TileList : public SysObject {
+public:
+    /* 00 (vtable) */
     /* 04 */ u16 mCount;
     /* 06 */ u16 mIndex;
     /* 08 */ TilePos mTiles[16];
     /* 28 */
+
+    /* 00 */ virtual ~EquipBoomerang_TileList() {
+        ((UnkStruct_ov000_020beba8 *) this)->UnkStruct_ov000_020beba8::~UnkStruct_ov000_020beba8();
+    }
+    /* 08 */ virtual bool vfunc_08(UnkStruct_ov000_020beba8_08 *param1);
+    /* 0c */ virtual bool vfunc_0c(unk16 *param1);
+    /* 10 */ virtual bool vfunc_10(s32 *param1);
+    /* 14 */ virtual bool vfunc_14(u16 *param1);
+    /* 18 */
+
+    inline EquipBoomerang_TileList() {
+        mIndex = 0;
+        mCount = 0;
+    }
+
+    bool func_ov053_02198de4(TilePos tile);
 };
 
 // Actors hit by the boomerang
-struct UnkStruct_ov053_0219a5e4 {
-    /* 00 */ unk32 mUnk_00;
-    /* 04 */ Sphere *mSphere;
+class EquipBoomerang_ActorList {
+public:
+    /* 00 (vtable) */
+    /* 04 */ Cylinder *mHitbox;
     /* 08 */ u16 mCount;
     /* 0a */ u16 mIndex;
     /* 0c */ ActorRef mActors[16];
     /* 8c */
+
+    /* 00 */ virtual bool Filter(Actor *actor);
+    /* 04 */
+
+    inline EquipBoomerang_ActorList() {
+        this->Reset();
+    }
+
+    void Reset();
+    bool func_ov053_02198f88(ActorRef *ref);
+    void func_ov053_02198fd4(ActorRef *ref);
 };
 
-struct UnkStruct_ov053_0219a580 {
-    /* 00 */ unk8 mUnk_00[0x3c];
-    /* 3c */ UnkStruct_ov053_0219a5bc mTiles;
-    /* 64 */ UnkStruct_ov053_0219a5e4 mActors;
-    /* f0 */
+struct EquipBoomerang_MapObject {
+    /* 00 (vtable) */
+    /* 04 */ u32 mFlags;
+    /* 08 */ unk8 mUnk_08[0xc];
+    /* 14 */ TilePos mTile;
 };
 
-extern Mat4x3p data_ov053_0219a180;
-extern EquipBoomerang_Point data_ov053_0219a1b0[];
-extern UnkStruct_ov053_0219a580 data_ov053_0219a580;
-extern UnkStruct_ov053_0219a5bc data_ov053_0219a5bc;
-extern UnkStruct_ov053_0219a5e4 data_ov053_0219a5e4;
-extern const Vec3p data_ov053_02199fb8;
+struct EquipBoomerang_Throw {
+    /* 0 */ s16 mAngle;
+    /* 4 */ unk32 mUnk_4;
+};
+
+static char *gShipParts[8] = {"anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg"};
+
+Mat4x3p EquipBoomerang::sMtx;
+EquipBoomerang_Point EquipBoomerang::sPoints[64];
+
+static const Vec3p data_ov053_02199fb8 = {-0x199, 0x800, -0x7a};
 
 extern "C" {
 void func_ov000_020b17ec(Mat4x3p *param1, Vec3p param2, s32 param3, s32 param4, s32 param5);
 void func_ov000_020b41c4(ModelRender *param1);
-void func_ov053_02198f38(UnkStruct_ov053_0219a5e4 *param1);
-bool func_ov053_02198de4(UnkStruct_ov053_0219a5bc *param1, TilePos param2);
-bool func_ov053_02198f88(UnkStruct_ov053_0219a5e4 *param1, s32 *param2);
 void func_ov000_020bd958(unk32 *param1, unk32 param2, unk32 param3, unk32 param4, unk32 param5, unk32 param6, unk32 param7);
 void func_ov000_020bdeb4(unk32 *param1, Vec3p *param2, s32 *param3, s32 *param4);
 void func_ov000_020d61b0(UnkStruct_020ee6f8 *param1, s32 param2, s32 param3, unk32 param4);
 void func_ov014_02123134(Sphere *param1);
+bool func_ov000_02087f08(UnkStruct_027e0f64_04 *param1, unk32 param2);
+void func_ov000_0208967c(UnkStruct_027e0f64_04 *param1, unk32 param2, Vec3p *param3, const Vec3p *param4, unk32 param5,
+                         unk32 param6);
+void func_0202b4e4(Vec3p *param1, Vec3p *param2, q20 param3, s32 param4, s32 param5);
+}
+
+EquipBoomerang *GetEquipBoomerang();
+
+ARM bool EquipBoomerang_TileList::vfunc_08(UnkStruct_ov000_020beba8_08 *param1) {
+    return false;
+}
+
+ARM bool EquipBoomerang_TileList::vfunc_0c(unk16 *param1) {
+    return false;
+}
+
+ARM bool EquipBoomerang_TileList::vfunc_14(u16 *param1) {
+    return false;
+}
+
+ARM bool EquipBoomerang_TileList::vfunc_10(s32 *param1) {
+    EquipBoomerang_MapObject *obj = (EquipBoomerang_MapObject *) param1;
+    if (!(obj->mFlags & 0x400)) {
+        return false;
+    }
+    if (mCount >= 16) {
+        return false;
+    }
+    TilePos tile = obj->mTile;
+    for (s32 i = 0; i < mCount; i++) {
+        if (mTiles[i] == tile) {
+            return false;
+        }
+    }
+    mTiles[mCount] = tile;
+    mCount++;
+    return false;
+}
+
+ARM bool EquipBoomerang_TileList::func_ov053_02198de4(TilePos tile) {
+    if (mIndex < mCount && mTiles[mIndex] == tile) {
+        mIndex++;
+        return true;
+    }
+    return false;
+}
+
+ARM bool EquipBoomerang_ActorList::Filter(Actor *actor) {
+    if (mCount >= 16) {
+        return false;
+    }
+    for (s32 i = 0; i < mCount; i++) {
+        if (actor->mRef.id == mActors[i].id) {
+            return false;
+        }
+    }
+    Cylinder hitbox;
+    actor->GetHitbox(&hitbox);
+    if (hitbox.Overlaps(mHitbox)) {
+        if (!actor->vfunc_60()) {
+            return false;
+        }
+        mActors[mCount] = actor->mRef;
+        mCount++;
+        return true;
+    }
+    return false;
+}
+
+ARM void EquipBoomerang_ActorList::Reset() {
+    for (s32 i = 0; i < mCount; i++) {
+        this->func_ov053_02198fd4(&mActors[i]);
+    }
+    mCount  = 0;
+    mIndex  = 0;
+    mHitbox = NULL;
+}
+
+ARM bool EquipBoomerang_ActorList::func_ov053_02198f88(ActorRef *ref) {
+    if (mIndex < mCount && mActors[mIndex].id == ref->id) {
+        this->func_ov053_02198fd4(ref);
+        mIndex++;
+        return true;
+    }
+    return false;
+}
+
+ARM void EquipBoomerang_ActorList::func_ov053_02198fd4(ActorRef *ref) {
+    Actor *actor = gActorManager->GetActor(ref);
+    if (actor == NULL) {
+        return;
+    }
+    if (actor->mType != 'FBS1') {
+        return;
+    }
+    actor->vfunc_64();
 }
 
 ARM void EquipBoomerang::func_ov053_02199014(void *param1) {
@@ -65,16 +198,19 @@ ARM EquipBoomerang_Point *EquipBoomerang::func_ov053_0219902c(s32 param1) {
     return &mUnk_28[param1];
 }
 
+static EquipBoomerang_TileList sTiles;
+static EquipBoomerang_ActorList sActors;
+
 ARM void EquipBoomerang::func_ov053_02199038() {
     this->func_ov014_0213d1b0();
-    data_ov053_0219a580.mTiles.mIndex = 0;
-    data_ov053_0219a580.mTiles.mCount = 0;
-    func_ov053_02198f38(&data_ov053_0219a5e4);
+    sTiles.mIndex = 0;
+    sTiles.mCount = 0;
+    sActors.Reset();
 }
 
 ARM void EquipBoomerang::vfunc_18() {
-    func_ov000_020b17ec(&data_ov053_0219a180, data_ov053_02199fb8, -0x39f5, -0x38e, -0x2aab);
-    mUnk_28 = data_ov053_0219a1b0;
+    func_ov000_020b17ec(&sMtx, data_ov053_02199fb8, -0x39f5, -0x38e, -0x2aab);
+    mUnk_28 = sPoints;
     mUnk_24 = 64;
     this->func_ov053_02199038();
 }
@@ -86,11 +222,11 @@ ARM void EquipBoomerang::vfunc_1c() {
 }
 
 ARM void EquipBoomerang::func_ov053_021990f0(TilePos param1) {
-    func_ov053_02198de4(&data_ov053_0219a5bc, param1);
+    sTiles.func_ov053_02198de4(param1);
 }
 
 ARM bool EquipBoomerang::func_ov053_02199128(s32 *param1) {
-    return func_ov053_02198f88(&data_ov053_0219a5e4, param1);
+    return sActors.func_ov053_02198f88((ActorRef *) param1);
 }
 
 ARM void EquipBoomerang::vfunc_30() {
@@ -109,8 +245,8 @@ ARM void EquipBoomerang::func_ov053_02199168() {
 }
 
 ARM void EquipBoomerang::func_ov053_021991ec() {
-    for (s32 i = data_ov053_0219a580.mTiles.mIndex; i < data_ov053_0219a580.mTiles.mCount; i++) {
-        TilePos tile                  = data_ov053_0219a5bc.mTiles[i];
+    for (s32 i = sTiles.mIndex; i < sTiles.mCount; i++) {
+        TilePos tile                  = sTiles.mTiles[i];
         UnkStruct_ov000_020beba8 *obj = (UnkStruct_ov000_020beba8 *) gMapManager->MapData_vfunc_78(&tile);
         if (obj != NULL) {
             Vec3p pos;
@@ -118,8 +254,8 @@ ARM void EquipBoomerang::func_ov053_021991ec() {
             this->func_ov000_020be9e4(pos, mUnk_2c);
         }
     }
-    for (s32 i = data_ov053_0219a580.mActors.mIndex; i < data_ov053_0219a580.mActors.mCount; i++) {
-        ActorRef ref = data_ov053_0219a5e4.mActors[i];
+    for (s32 i = sActors.mIndex; i < sActors.mCount; i++) {
+        ActorRef ref = sActors.mActors[i];
         Actor *actor = gActorManager->GetActor(&ref);
         if (actor != NULL) {
             Cylinder hitbox;
@@ -132,7 +268,7 @@ ARM void EquipBoomerang::func_ov053_021991ec() {
 ARM void EquipBoomerang::vfunc_38(unk32 param1) {
     if (this->IsInUse()) {
         G3d_RestoreMtx_inline(29);
-        G3d_MtxMult43_inline(&data_ov053_0219a180);
+        G3d_MtxMult43_inline(&sMtx);
         func_ov000_020b41c4(mUnk_0c);
     }
     if (param1 != 0) {
@@ -201,16 +337,80 @@ ARM bool EquipBoomerang::func_ov053_021994cc(Vec3p *param1) {
             prev.y   = p->y;
             prev.z   = p->z;
 
-            s32 prevHits = data_ov053_0219a580.mTiles.mCount + data_ov053_0219a580.mActors.mCount;
-            gMapManager->func_01ffbe78(&hit, &cur, &prev, &sphere, 1, 4, (unk32) &data_ov053_0219a5bc, 0);
+            s32 prevHits = sTiles.mCount + sActors.mCount;
+            gMapManager->func_01ffbe78(&hit, &cur, &prev, &sphere, 1, 4, (unk32) &sTiles, 0);
             hitSphere = sphere;
             Vec3p_Add(&cur, &hitSphere.pos, &hitSphere.pos);
-            data_ov053_0219a5e4.mSphere = &hitSphere;
-            gActorManager->FilterActors((FilterActorBase *) &data_ov053_0219a5e4, NULL);
-            if (data_ov053_0219a580.mTiles.mCount + data_ov053_0219a580.mActors.mCount > prevHits) {
+            sActors.mHitbox = (Cylinder *) &hitSphere;
+            gActorManager->FilterActors((FilterActorBase *) &sActors, NULL);
+            if (sTiles.mCount + sActors.mCount > prevHits) {
                 data_027e0ffc.func_ov000_020ceacc(0x1a0, &cur, 0);
             }
         }
     }
     return true;
+}
+
+static EquipBoomerang_Throw data_ov053_0219a0ec     = {0x2000, 0x7000};
+static LinkStateBase_UnkStruct1 data_ov053_0219a0f4 = {0x30, {FLOAT_TO_Q20(1.0), 0, FLOAT_TO_Q20(30.0)}};
+static LinkStateBase_UnkStruct1 data_ov053_0219a104 = {0x31, {FLOAT_TO_Q20(1.5), 0, FLOAT_TO_Q20(12.0)}};
+
+ARM void LinkStateItem::func_ov053_02199730() {
+    this->func_ov00_020a89bc(&data_ov053_0219a0f4, 1);
+    mUnk_44 = gVec3p_ZERO;
+    gPlayerControl->ResetAim();
+}
+
+ARM void LinkStateItem::func_ov053_0219977c() {
+    EquipBoomerang *boomerang = GetEquipBoomerang();
+    if (data_ov053_0219a0f4.mUnk_00 == this->Get_PlayerControlData_Unk100()) {
+        Vec3p aim;
+        if (gPlayerControl->func_ov00_020b0f88(&aim, 0x800, &mUnk_44)) {
+            if (boomerang->mUnk_1c == 0) {
+                mUnk_38 = aim;
+            }
+            boomerang->func_ov053_021994cc(&aim);
+            this->func_ov00_020a81fc(&aim, 0x800);
+        } else if (gPlayerControl->IsUntouchedNow() && boomerang->mUnk_1c > 0) {
+            this->func_ov00_020a89bc(&data_ov053_0219a104, 1);
+            this->LookAt(&mUnk_38);
+            return;
+        }
+        if (!func_ov000_02087f08(data_027e0f64->mUnk_4, 2)) {
+            return;
+        }
+        Vec3p pos;
+        Vec3p_Add(&mUnk_44, &gPlayerPos, &pos);
+        func_ov000_0208967c(data_027e0f64->mUnk_4, 2, &pos, &gVec3p_ZERO, 0, 0);
+        return;
+    }
+
+    if (data_ov053_0219a104.mUnk_00 != this->Get_PlayerControlData_Unk100()) {
+        return;
+    }
+    if (this->func_ov00_020a8b04(data_ov053_0219a0ec.mUnk_4, false)) {
+        boomerang->mUnk_04 = *(s16 *) this->GetPlayerAngle();
+        boomerang->func_ov053_02199410(data_ov053_0219a0ec.mAngle);
+        return;
+    }
+    if (this->func_ov00_020a8b3c(0)) {
+        gPlayerControl->UpdateUsingEquipItem();
+        this->func_ov005_02105d94();
+        return;
+    }
+    if (!func_ov000_02087f08(data_027e0f64->mUnk_4, 2)) {
+        return;
+    }
+    Vec3p dir;
+    boomerang->func_ov014_0213d0bc(&dir);
+    func_0202b4e4(&dir, &boomerang->func_ov053_0219902c(0)->mPos, 0x800, 0, 0x7fffffff);
+    Vec3p_Sub(&dir, &gPlayerPos, &dir);
+    func_0202b4e4(&mUnk_44, &dir, 0x800, 0, 0x7fffffff);
+    Vec3p pos;
+    Vec3p_Add(&mUnk_44, &gPlayerPos, &pos);
+    func_ov000_0208967c(data_027e0f64->mUnk_4, 2, &pos, &gVec3p_ZERO, 0, 0);
+}
+
+ARM EquipBoomerang *GetEquipBoomerang() {
+    return (EquipBoomerang *) ItemManager::GetEquipItemUnchecked(ItemFlag_Boomerang);
 }

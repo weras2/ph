@@ -101,7 +101,7 @@ public:
     void func_ov00_020a8a90(unk32 param1);
     void func_ov00_020a8ab0(unk32 param1);
     void func_ov00_020a8ad0(unk32 param1);
-    void func_ov00_020a8b04(s32 param1, bool param2);
+    bool func_ov00_020a8b04(s32 param1, bool param2);
     unk32 func_ov00_020a8b3c(s32 param1);
     bool func_ov00_020a8b80();
     bool HasFlags_PlayerLinkBase_Unk48(u16 flags);

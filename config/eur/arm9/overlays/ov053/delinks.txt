@@ -6,4 +6,9 @@
     .bss        start:0x0219a180 end:0x0219a6a0 kind:bss align:32
 
 src/53_Boomerang/Player/EquipBoomerang.cpp:
-    .text       start:0x02199014 end:0x02199700
+    .text       start:0x02198d00 end:0x02199a20
+    .rodata     start:0x02199fb8 end:0x02199fc4
+    .init       start:0x02199fc4 end:0x0219a070
+    .ctor       start:0x0219a070 end:0x0219a074
+    .data       start:0x0219a080 end:0x0219a114
+    .bss        start:0x0219a180 end:0x0219a670

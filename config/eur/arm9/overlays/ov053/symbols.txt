@@ -1,12 +1,12 @@
-func_ov053_02198d00 kind:function(arm,size=0x8) addr:0x02198d00
-func_ov053_02198d08 kind:function(arm,size=0x8) addr:0x02198d08
-func_ov053_02198d10 kind:function(arm,size=0x8) addr:0x02198d10
-func_ov053_02198d18 kind:function(arm,size=0xcc) addr:0x02198d18
-func_ov053_02198de4 kind:function(arm,size=0x78) addr:0x02198de4
-func_ov053_02198e5c kind:function(arm,size=0xdc) addr:0x02198e5c
-func_ov053_02198f38 kind:function(arm,size=0x50) addr:0x02198f38
-func_ov053_02198f88 kind:function(arm,size=0x4c) addr:0x02198f88
-func_ov053_02198fd4 kind:function(arm,size=0x40) addr:0x02198fd4
+_ZN23EquipBoomerang_TileList8vfunc_08EP27UnkStruct_ov000_020beba8_08 kind:function(arm,size=0x8) addr:0x02198d00
+_ZN23EquipBoomerang_TileList8vfunc_0cEPs kind:function(arm,size=0x8) addr:0x02198d08
+_ZN23EquipBoomerang_TileList8vfunc_14EPt kind:function(arm,size=0x8) addr:0x02198d10
+_ZN23EquipBoomerang_TileList8vfunc_10EPi kind:function(arm,size=0xcc) addr:0x02198d18
+_ZN23EquipBoomerang_TileList19func_ov053_02198de4E7TilePos kind:function(arm,size=0x78) addr:0x02198de4
+_ZN24EquipBoomerang_ActorList6FilterEP5Actor kind:function(arm,size=0xdc) addr:0x02198e5c
+_ZN24EquipBoomerang_ActorList5ResetEv kind:function(arm,size=0x50) addr:0x02198f38
+_ZN24EquipBoomerang_ActorList19func_ov053_02198f88EP8ActorRef kind:function(arm,size=0x4c) addr:0x02198f88
+_ZN24EquipBoomerang_ActorList19func_ov053_02198fd4EP8ActorRef kind:function(arm,size=0x40) addr:0x02198fd4
 _ZN14EquipBoomerang19func_ov053_02199014EPv kind:function(arm,size=0xc) addr:0x02199014
 _ZN14EquipBoomerang19func_ov053_02199020EPv kind:function(arm,size=0xc) addr:0x02199020
 _ZN14EquipBoomerang19func_ov053_0219902cEi kind:function(arm,size=0xc) addr:0x0219902c
@@ -22,11 +22,11 @@ _ZN14EquipBoomerang8vfunc_38Ei kind:function(arm,size=0xd0) addr:0x02199318
 _ZNK14EquipBoomerang8IsUsableEi kind:function(arm,size=0x28) addr:0x021993e8
 _ZN14EquipBoomerang19func_ov053_02199410Ei kind:function(arm,size=0xbc) addr:0x02199410
 _ZN14EquipBoomerang19func_ov053_021994ccEP5Vec3p kind:function(arm,size=0x234) addr:0x021994cc
-func_ov053_02199700 kind:function(arm,size=0x1c) addr:0x02199700
-func_ov053_0219971c kind:function(arm,size=0x14) addr:0x0219971c
-func_ov053_02199730 kind:function(arm,size=0x4c) addr:0x02199730
-func_ov053_0219977c kind:function(arm,size=0x294) addr:0x0219977c
-func_ov053_02199a10 kind:function(arm,size=0x10) addr:0x02199a10
+_ZN23EquipBoomerang_TileListD0Ev kind:function(arm,size=0x1c) addr:0x02199700
+_ZN23EquipBoomerang_TileListD1Ev kind:function(arm,size=0x14) addr:0x0219971c
+_ZN13LinkStateItem19func_ov053_02199730Ev kind:function(arm,size=0x4c) addr:0x02199730
+_ZN13LinkStateItem19func_ov053_0219977cEv kind:function(arm,size=0x294) addr:0x0219977c
+_Z17GetEquipBoomerangv kind:function(arm,size=0x10) addr:0x02199a10
 func_ov053_02199a20 kind:function(arm,size=0xa8) addr:0x02199a20
 func_ov053_02199ac8 kind:function(arm,size=0xb0) addr:0x02199ac8
 func_ov053_02199b78 kind:function(arm,size=0x1c) addr:0x02199b78
@@ -36,23 +36,23 @@ func_ov053_02199c48 kind:function(arm,size=0x80) addr:0x02199c48
 func_ov053_02199cc8 kind:function(arm,size=0x2c0) addr:0x02199cc8
 func_ov053_02199f88 kind:function(arm,size=0x14) addr:0x02199f88
 func_ov053_02199f9c kind:function(arm,size=0x1c) addr:0x02199f9c
-data_ov053_02199fb8 kind:data(any) addr:0x02199fb8
-__sinit_ov053_02199fc4 kind:function(arm,size=0xac) addr:0x02199fc4
-.p__sinit_ov053_02199fc4 kind:data(word) addr:0x0219a070
-data_ov053_0219a080 kind:data(any) addr:0x0219a080
-data_ov053_0219a084 kind:data(any) addr:0x0219a084
-data_ov053_0219a088 kind:data(any) addr:0x0219a088
-data_ov053_0219a08c kind:data(any) addr:0x0219a08c
-data_ov053_0219a090 kind:data(any) addr:0x0219a090
-data_ov053_0219a094 kind:data(any) addr:0x0219a094
-data_ov053_0219a098 kind:data(any) addr:0x0219a098
-data_ov053_0219a09c kind:data(any) addr:0x0219a09c
-data_ov053_0219a0c8 kind:data(any) addr:0x0219a0c8
-data_ov053_0219a0d4 kind:data(any) addr:0x0219a0d4
-data_ov053_0219a0ec kind:data(any) addr:0x0219a0ec
-data_ov053_0219a0f4 kind:data(any) addr:0x0219a0f4
-data_ov053_0219a104 kind:data(any) addr:0x0219a104
-data_ov053_0219a10c kind:data(any) addr:0x0219a10c ambiguous
+data_ov053_02199fb8 kind:data(any) addr:0x02199fb8 local
+__sinit_EquipBoomerang.cpp kind:function(arm,size=0xac) addr:0x02199fc4 local
+.p__sinit_EquipBoomerang.cpp kind:data(word) addr:0x0219a070 local
+@2450 kind:data(any) addr:0x0219a080 local
+@2449 kind:data(any) addr:0x0219a084 local
+@2448 kind:data(any) addr:0x0219a088 local
+@2447 kind:data(any) addr:0x0219a08c local
+@2446 kind:data(any) addr:0x0219a090 local
+@2445 kind:data(any) addr:0x0219a094 local
+@2444 kind:data(any) addr:0x0219a098 local
+@2443 kind:data(any) addr:0x0219a09c local
+gShipParts kind:data(any) addr:0x0219a0a0 local
+_ZTV24EquipBoomerang_ActorList kind:data(any) addr:0x0219a0c0
+_ZTV23EquipBoomerang_TileList kind:data(any) addr:0x0219a0cc
+data_ov053_0219a0ec kind:data(any) addr:0x0219a0ec local
+data_ov053_0219a0f4 kind:data(any) addr:0x0219a0f4 local
+data_ov053_0219a104 kind:data(any) addr:0x0219a104 local
 data_ov053_0219a114 kind:data(any) addr:0x0219a114
 data_ov053_0219a118 kind:data(any) addr:0x0219a118
 data_ov053_0219a11c kind:data(any) addr:0x0219a11c
@@ -64,17 +64,11 @@ data_ov053_0219a130 kind:data(any) addr:0x0219a130
 data_ov053_0219a14c kind:data(any) addr:0x0219a14c ambiguous
 data_ov053_0219a15c kind:data(any) addr:0x0219a15c
 data_ov053_0219a16c kind:data(any) addr:0x0219a16c ambiguous
-data_ov053_0219a180 kind:bss addr:0x0219a180
-data_ov053_0219a18c kind:bss addr:0x0219a18c ambiguous
-data_ov053_0219a1b0 kind:bss addr:0x0219a1b0
-data_ov053_0219a47c kind:bss addr:0x0219a47c ambiguous
-data_ov053_0219a568 kind:bss addr:0x0219a568 ambiguous
-data_ov053_0219a580 kind:bss addr:0x0219a580
-data_ov053_0219a5b0 kind:bss addr:0x0219a5b0
-data_ov053_0219a5bc kind:bss addr:0x0219a5bc
-data_ov053_0219a5c4 kind:bss addr:0x0219a5c4
-data_ov053_0219a5e4 kind:bss addr:0x0219a5e4
-data_ov053_0219a5f0 kind:bss addr:0x0219a5f0
+_ZN14EquipBoomerang4sMtxE kind:bss addr:0x0219a180
+_ZN14EquipBoomerang7sPointsE kind:bss addr:0x0219a1b0
+@2679 kind:bss addr:0x0219a5b0 local
+sTiles kind:bss addr:0x0219a5bc local
+sActors kind:bss addr:0x0219a5e4 local
 data_ov053_0219a670 kind:bss addr:0x0219a670
 data_ov053_0219a674 kind:bss addr:0x0219a674
 data_ov053_0219a680 kind:bss addr:0x0219a680

@@ -17,7 +17,10 @@ struct EquipBoomerang_Point {
 };
 
 class EquipBoomerang : public EquipItem {
-private:
+public:
+    static Mat4x3p sMtx;
+    static EquipBoomerang_Point sPoints[64];
+
     /* 00 (base) */
     /* 09 */ u8 mUnk_09[3];
     /* 0c */ ModelRender *mUnk_0c;
