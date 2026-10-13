@@ -4794,8 +4794,8 @@ from:0x020a91f4 kind:arm_call to:0x020a9210 module:overlay(0)
 from:0x020a9208 kind:load to:0x027e0fb8 module:dtcm
 from:0x020a920c kind:load to:0x027e0e60 module:dtcm
 from:0x020a926c kind:arm_call to:0x020a7b8c module:overlay(0)
-from:0x020a92f4 kind:load to:0x020e5808 module:overlay(0)
-from:0x020a92f8 kind:load to:0x020e57f0 module:overlay(0)
+from:0x020a92f4 kind:load to:0x020e5800 add:0x8 module:overlay(0)
+from:0x020a92f8 kind:load to:0x020e57e8 add:0x8 module:overlay(0)
 from:0x020a9524 kind:load to:0x027e0d78 module:dtcm
 from:0x020a9538 kind:arm_call to:0x0202ea0c module:main
 from:0x020a9560 kind:arm_call to:0x0202ea0c module:main

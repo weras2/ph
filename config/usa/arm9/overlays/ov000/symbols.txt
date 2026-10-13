@@ -1981,11 +1981,11 @@ _ZN15LinkStateFollow18func_ov00_020a9210EP5Vec3pP5Actor kind:function(arm,size=0
 _ZN12TouchGestureC2Ev kind:function(arm,size=0x58) addr:0x020a9244
 _ZN12TouchGesture17ResetTouchHistoryEv kind:function(arm,size=0x38) addr:0x020a929c
 _ZN12TouchGesture6UpdateEPv kind:function(arm,size=0x1fc) addr:0x020a92d4
-_ZN12TouchGestureD1Ev kind:function(arm,size=0x14) addr:0x020a94d0
-_ZN12TouchGestureD2Ev kind:function(arm,size=0x4) addr:0x020a94e4
-_ZN16TouchGestureBaseD2Ev kind:function(arm,size=0x4) addr:0x020a94e8
+_ZN12TouchGestureD0Ev kind:function(arm,size=0x14) addr:0x020a94d0
+_ZN12TouchGestureD1Ev kind:function(arm,size=0x4) addr:0x020a94e4
+_ZN16TouchGestureBaseD1Ev kind:function(arm,size=0x4) addr:0x020a94e8
 _ZN16TouchGestureBase17ResetTouchHistoryEv kind:function(arm,size=0xc) addr:0x020a94ec
-_ZN16TouchGestureBaseD1Ev kind:function(arm,size=0x14) addr:0x020a94f8
+_ZN16TouchGestureBaseD0Ev kind:function(arm,size=0x14) addr:0x020a94f8
 _ZN11ModelRenderC2EP9ItemModel kind:function(thumb,size=0x1c) addr:0x020a950c
 _ZN11ModelRenderC1EP9ItemModel kind:function(thumb,size=0x1c) addr:0x020a9528
 _ZN11ModelRenderD1Ev kind:function(thumb,size=0x20) addr:0x020a9544
@@ -4795,8 +4795,8 @@ data_ov000_020e5770 kind:data(any) addr:0x020e5710
 data_ov000_020e5774 kind:data(any) addr:0x020e5714
 data_ov000_020e5778 kind:data(any) addr:0x020e5718
 _ZTV15LinkStateFollow kind:data(any) addr:0x020e5744
-data_ov000_020e57f0 kind:data(any) addr:0x020e5790
-data_ov000_020e5808 kind:data(any) addr:0x020e57a8
+_ZTV12TouchGesture kind:data(any) addr:0x020e5788
+_ZTV16TouchGestureBase kind:data(any) addr:0x020e57a0
 _ZTV11ModelRender kind:data(any) addr:0x020e57b8
 data_ov000_020e5868_pad kind:data(any) addr:0x020e5800
 data_ov000_020e5868 kind:data(any) addr:0x020e5808
