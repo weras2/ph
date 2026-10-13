@@ -8,7 +8,7 @@
 extern unk32 data_027e0dbc;
 extern "C" void func_ov000_0207ba94(unk32 *, u32);
 extern "C" void *func_ov040_021834cc();
-extern "C" void *func_ov035_02183200();
+extern "C" void *func_ov035_02183200(void *param1, s32 param2);
 
 extern FlagsUnk data_ov000_020e310c[];
 extern FlagsData data_ov000_020eaac4;
@@ -75,34 +75,53 @@ ARM void AdventureFlags::Set(AdventureFlag flag, bool value) {
     }
 }
 
-ARM unk32 AdventureFlags::func_ov00_02097810(UnkStruct_ov000_0209a50c *param2) {}
+extern "C" unk32 func_ov000_02098d34(AdventureFlags_44 *param1, UnkStruct_ov000_0209a50c *param2);
 
-// non-matching
+ARM unk32 AdventureFlags::func_ov00_02097810(UnkStruct_ov000_0209a50c *param2) {
+    UnkStruct_ov000_0209a50c local = *param2;
+    local.mUnk_00                  = -1;
+    local.mUnk_08                  = 0;
+    return func_ov000_02098d34(mUnk_44, &local);
+}
+
 ARM unk32 AdventureFlags::func_ov00_02097968(unk32 param1) {
     if (this->Get_FlagsUnk_30_Flag(param1)) {
         return -1;
     }
 
-    UnkStruct_ov000_0209a50c aStack_c0;
-    aStack_c0.mUnk_16 = data_027e0db0.mUnk_04 > 0;
+    UnkStruct_ov000_0209a50c local;
+    if (data_027e0db0.mUnk_04 > 0) {
+        local.mUnk_16 = true;
+    } else {
+        local.mUnk_16 = false;
+    }
+    local.mUnk_09 = 15;
+    local.mUnk_08 = 0;
+    local.mUnk_0a = 0;
 
-    FlagsUnk2 FStack_d8;
-    FStack_d8.mUnk_00.mUnk_00   = 0x47;
-    FStack_d8.mUnk_04.mUnk_00.x = 0;
-    FStack_d8.mUnk_04.mUnk_00.y = 0;
-    FStack_d8.mUnk_04.mUnk_00.z = -2;
-    FStack_d8.mUnk_04.mUnk_0c   = 0;
-    FStack_d8.mUnk_04.mUnk_0e   = -1;
-    FStack_d8.mUnk_04.mUnk_0f   = 0;
-    FStack_d8.mUnk_04.mUnk_10   = 0;
-    FStack_d8.mUnk_04.mUnk_11   = 0;
-    aStack_c0.mUnk_00           = param1;
+    FlagsUnk2 flags;
+    flags.mUnk_00.mUnk_00   = 0x47;
+    flags.mUnk_04.mUnk_00.x = 0;
+    flags.mUnk_04.mUnk_00.y = 0;
+    flags.mUnk_04.mUnk_00.z = -2;
+    flags.mUnk_04.mUnk_0c   = 0;
+    flags.mUnk_04.mUnk_0e   = -1;
+    flags.mUnk_04.mUnk_0f   = 0;
+    flags.mUnk_04.mUnk_10   = 0;
+    flags.mUnk_04.mUnk_11   = 0;
+    local.mUnk_00           = param1;
 
-    aStack_c0.mUnk_0c = AdventureFlags::Get_FlagsUnk_00(param1, &FStack_d8);
-    gMapManager->func_ov000_02098d34(&FStack_d8);
+    AdventureFlags::Get_FlagsUnk_00(param1, &flags);
+    local.mUnk_0e = gMapManager->func_ov00_020838f8((Exit *) &flags);
+    return func_ov000_02098d34(mUnk_44, &local);
 }
 
-ARM unk32 AdventureFlags::func_ov00_02097a44(unk32 param1, s32 param2) {}
+ARM unk32 AdventureFlags::func_ov00_02097a44(unk32 param1, s32 param2) {
+    UnkStruct_ov000_0209a50c local = *(UnkStruct_ov000_0209a50c *) param2;
+    local.mUnk_00                  = param1;
+    local.mUnk_08                  = 1;
+    return func_ov000_02098d34(mUnk_44, &local);
+}
 
 ARM bool AdventureFlags::func_ov00_02097b9c(s32 param1) {
     return this->mUnk_44->func_ov000_02098c48(param1);
@@ -268,20 +287,18 @@ ARM void *AdventureFlags::func_ov00_02097f8c() {
 }
 
 // non-matching
-ARM void *AdventureFlags::func_ov00_02097fac() {
+ARM void *AdventureFlags::func_ov00_02097fac(s32 param1, s32 param2) {
     void *piVar1 = this->func_ov00_02097f8c();
 
-    if (piVar1 != NULL) {
-        return func_ov035_02183200();
+    if (piVar1 == NULL) {
+        return NULL;
     }
 
-    return NULL;
+    return func_ov035_02183200(piVar1, param2);
 }
 
-// non-matching
-ARM void *AdventureFlags::func_ov00_02097fd0() {
-    this->func_ov00_02097c08();
-    this->func_ov00_02097fac();
+ARM void *AdventureFlags::func_ov00_02097fd0(s32 param1) {
+    return this->func_ov00_02097fac(this->func_ov00_02097c08(), param1);
 }
 
 ARM void AdventureFlags::func_ov00_02097ff4(bool param1, bool param2) {

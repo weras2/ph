@@ -117,46 +117,43 @@ struct FlagsData {
     /* 40 */
 };
 
+struct UnkStruct_ov000_0209a50c_2c {
+    /* 00 */ unk32 mUnk_00[26];
+    /* 68 */
+};
+
 struct UnkStruct_ov000_0209a50c {
     /* 00 */ unk32 mUnk_00;
     /* 04 */ unk32 mUnk_04;
-    /* 08 */ unk8 mUnk_08;
-    /* 09 */ unk8 mUnk_09;
-    /* 0a */ unk8 mUnk_0a;
-    /* 0b */ unk8 mUnk_0b;
-    /* 0c */ unk8 mUnk_0c;
-    /* 0d */ unk8 mUnk_0d;
-    /* 0e */ unk8 mUnk_0e;
-    /* 0f */ unk8 mUnk_0f;
-    /* 10 */ unk8 mUnk_10;
-    /* 11 */ unk8 mUnk_11;
-    /* 12 */ unk8 mUnk_12;
-    /* 13 */ unk8 mUnk_13;
-    /* 14 */ unk8 mUnk_14;
-    /* 15 */ unk8 mUnk_15;
+    /* 08 */ u8 mUnk_08;
+    /* 09 */ u8 mUnk_09;
+    /* 0a */ u8 mUnk_0a;
+    /* 0b */ u8 mUnk_0b;
+    /* 0c */ u8 mUnk_0c;
+    /* 0d */ u8 mUnk_0d;
+    /* 0e */ u8 mUnk_0e;
+    /* 0f */ u8 mUnk_0f;
+    /* 10 */ u8 mUnk_10;
+    /* 11 */ u8 mUnk_11;
+    /* 12 */ u8 mUnk_12;
+    /* 13 */ u8 mUnk_13;
+    /* 14 */ u8 mUnk_14;
+    /* 15 */ u8 mUnk_15;
     /* 16 */ bool mUnk_16;
-    /* 17 */ unk8 mUnk_17;
-    /* 18 */ unk8 mUnk_18;
-    /* 19 */ unk8 mUnk_19;
-    /* 1a */ unk16 mUnk_1a;
-    /* 1c */ unk16 mUnk_1c;
-    /* 1e */ unk8 mUnk_1e;
-    /* 1f */ unk8 mUnk_1f;
-    /* 20 */ unk32 mUnk_20;
-    /* 24 */ unk32 mUnk_24;
-    /* 28 */ unk32 mUnk_28;
-    /* 2c */ PAD(0x2c, 0x34);
-    /* 34 */ unk32 mUnk_34;
-    /* 38 */ PAD(0x38, 0x94);
+    /* 17 */ u8 mUnk_17;
+    /* 18 */ u8 mUnk_18;
+    /* 19 (padding) */
+    /* 1a */ s16 mUnk_1a;
+    /* 1c */ s16 mUnk_1c;
+    /* 1e (padding) */
+    /* 20 */ Vec3p mUnk_20;
+    /* 2c */ UnkStruct_ov000_0209a50c_2c mUnk_2c;
     /* 94 */ unk32 mUnk_94;
-    /* 98 */ unk16 mUnk_98;
-    /* 9a */ unk16 mUnk_9a;
-    /* 9c */ unk16 mUnk_9c;
-    /* 9e */ unk8 mUnk_9e;
-    /* 9f */ unk8 mUnk_9f;
-    /* a0 */ unk32 mUnk_a0;
-    /* a4 */ unk32 mUnk_a4;
-    /* a8 */ unk32 mUnk_a8;
+    /* 98 */ s16 mUnk_98;
+    /* 9a */ s16 mUnk_9a;
+    /* 9c */ s16 mUnk_9c;
+    /* 9e (padding) */
+    /* a0 */ Vec3p mUnk_a0;
     /* ac */ unk32 mUnk_ac;
     /* b0 */
 
@@ -219,8 +216,8 @@ public:
     bool func_ov00_02097ea4();
     static unk32 func_ov00_02097ecc();
     void *func_ov00_02097f8c();
-    void *func_ov00_02097fac();
-    void *func_ov00_02097fd0();
+    void *func_ov00_02097fac(s32 param1, s32 param2);
+    void *func_ov00_02097fd0(s32 param1);
     void func_ov00_02097ff4(bool param1, bool param2);
     unk32 func_ov00_02098058();
     bool func_ov00_02098064(unk32 param1);
