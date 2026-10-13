@@ -27,6 +27,15 @@ public:
         UnkStruct_ov000_020beba8(3) {}
 };
 
+class EquipBombchu_Unk1 : public SysObject {
+public:
+    /* 0 */ u8 mUnk_0;
+    /* 1 */ u8 mUnk_1;
+    /* 2 */
+
+    EquipBombchu_Unk1();
+};
+
 class EquipBombchu : public EquipItem {
 public:
     static ModelRender gModelRenderBombchu;
@@ -48,8 +57,8 @@ public:
     /* 49 */ unk8 mUnk_49[3];
     /* 4c */
 
-    /* 00 */ virtual void vfunc_00() override;
     /* 04 */ virtual ~EquipBombchu() override;
+    /* 00 */ virtual void vfunc_00() override;
     /* 0c */ virtual ItemFlag GetId() const override;
     /* 14 */ virtual bool IsUsable(unk32 param1) const override;
     /* 18 */ virtual void vfunc_18() override;

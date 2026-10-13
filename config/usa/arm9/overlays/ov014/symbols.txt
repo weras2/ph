@@ -2037,8 +2037,8 @@ data_ov014_02158eb8 kind:data(any) addr:0x02158e18
 data_ov014_02158ed0 kind:data(any) addr:0x02158e30 ambiguous
 _ZTV9EquipRope kind:data(any) addr:0x02158e44
 _ZTV8EquipBow kind:data(any) addr:0x02158e9c
-_ZTV17EquipBombchu kind:data(any) addr:0x02158ef4
-_ZTV11EquipHammer kind:data(any) addr:0x02158f4c
+_ZTV12EquipBombchu kind:data(any) addr:0x02158eec
+_ZTV11EquipHammer kind:data(any) addr:0x02158f44
 data_ov014_0215903c kind:data(any) addr:0x02158f9c
 data_ov014_02159040 kind:data(any) addr:0x02158fa0
 data_ov014_02159044 kind:data(any) addr:0x02158fa4
