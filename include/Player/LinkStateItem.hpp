@@ -25,9 +25,7 @@ public:
     /* 30 */ void *mUnk_30;
     /* 34 */ unk32 mUnk_34;
     /* 38 */ Vec3p mUnk_38;
-    /* 44 */ unk32 mUnk_44;
-    /* 48 */ void *mUnk_48;
-    /* 4c */ unk32 mUnk_4c;
+    /* 44 */ Vec3p mUnk_44;
     /* 50 */ unk32 mUnk_50[2];
     /* 58 */ unk32 mUnk_58;
     /* 5c */ s32 mUnk_5c;

@@ -11,16 +11,17 @@ public:
     static ModelRender gModelRenderArrow;
 
     /* 00 (base) */
-    /* 09 */ unk8 mUnk_09;
-    /* 0a */ unk8 mUnk_0a;
-    /* 0b */ unk8 mUnk_0b;
-    /* 0c */ unk8 mUnk_0c;
+    /* 09 */ u8 mUnk_09;
+    /* 0a */ bool mUnk_0a;
+    /* 0b */ bool mUnk_0b;
+    /* 0c */ bool mUnk_0c;
     /* 0d */ unk8 mUnk_0d[3];
     /* 10 */
 
-    /* 00 */ virtual void vfunc_00() override;
+    // The destructor is declared first so that the vtable is emitted with it (in ov014)
     /* 04 */ virtual ~EquipBow() override;
     /* 0c */ virtual ItemFlag GetId() const override;
+    /* 00 */ virtual void vfunc_00() override;
     /* 14 */ virtual bool IsUsable(unk32 param1) const override;
     /* 18 */ virtual void vfunc_18() override;
     /* 30 */ virtual void vfunc_30() override;

@@ -4,3 +4,12 @@
     .ctor       start:0x021992dc end:0x021992e0 kind:rodata align:4
     .data       start:0x02199300 end:0x02199360 kind:data align:32
     .bss        start:0x02199360 end:0x02199460 kind:bss align:32
+
+src/56_Bow/Player/EquipBow.cpp:
+    complete
+    .text       start:0x02198c60 end:0x0219927c
+    .rodata     start:0x0219927c end:0x02199288
+    .init       start:0x02199288 end:0x021992dc
+    .ctor       start:0x021992dc end:0x021992e0
+    .data       start:0x02199300 end:0x02199360
+    .bss        start:0x02199360 end:0x02199460

@@ -10,23 +10,22 @@ _ZN13LinkStateItem19func_ov056_021990c0Ev kind:function(arm,size=0x5c) addr:0x02
 _ZN13LinkStateItem19func_ov056_0219911cEv kind:function(arm,size=0x1cc) addr:0x0219911c
 _Z11GetEquipBowv kind:function(arm,size=0x10) addr:0x021992e8
 _ZN13LinkStateItem19func_ov056_021992f8Ev kind:function(arm,size=0x24) addr:0x021992f8
-data_ov056_0219931c kind:data(any) addr:0x0219931c
-__sinit_EquipBow.cpp kind:function(arm,size=0x54) addr:0x02199328
-.p__sinit_ov056_02199328 kind:data(word) addr:0x0219937c
-data_ov056_021993a0 kind:data(any) addr:0x021993a0
-data_ov056_021993a4 kind:data(any) addr:0x021993a4
-data_ov056_021993a8 kind:data(any) addr:0x021993a8
-data_ov056_021993ac kind:data(any) addr:0x021993ac
-data_ov056_021993b0 kind:data(any) addr:0x021993b0
-data_ov056_021993b4 kind:data(any) addr:0x021993b4
-data_ov056_021993b8 kind:data(any) addr:0x021993b8
-data_ov056_021993bc kind:data(any) addr:0x021993bc
-data_ov056_021993c0 kind:data(any) addr:0x021993c0
-data_ov056_021993e0 kind:data(any) addr:0x021993e0
-data_ov056_021993e8 kind:data(any) addr:0x021993e8 ambiguous
-data_ov056_021993f0 kind:data(any) addr:0x021993f0
-@867 kind:bss addr:0x02199400
+data_ov056_0219931c kind:data(any) addr:0x0219931c local
+__sinit_EquipBow.cpp kind:function(arm,size=0x54) addr:0x02199328 local
+.p__sinit_EquipBow.cpp kind:data(word) addr:0x0219937c local
+@1819 kind:data(any) addr:0x021993a0 local
+@1818 kind:data(any) addr:0x021993a4 local
+@1817 kind:data(any) addr:0x021993a8 local
+@1816 kind:data(any) addr:0x021993ac local
+@1815 kind:data(any) addr:0x021993b0 local
+@1814 kind:data(any) addr:0x021993b4 local
+@1813 kind:data(any) addr:0x021993b8 local
+@1812 kind:data(any) addr:0x021993bc local
+gShipParts kind:data(any) addr:0x021993c0 local
+data_ov056_021993e0 kind:data(any) addr:0x021993e0 local
+data_ov056_021993f0 kind:data(any) addr:0x021993f0 local
+@1827 kind:bss addr:0x02199400 local
 _ZN8EquipBow15gModelRenderBowE kind:bss addr:0x0219940c
-@866 kind:bss addr:0x02199468
+@1828 kind:bss addr:0x02199468 local
 _ZN8EquipBow17gModelRenderArrowE kind:bss addr:0x02199474
-data_ov056_021994d0 kind:bss addr:0x021994d0
+data_ov056_021994d0 kind:bss addr:0x021994d0 local
