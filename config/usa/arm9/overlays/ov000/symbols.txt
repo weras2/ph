@@ -2385,7 +2385,7 @@ _ZN13PlayerControl17InitTouchMovementEv kind:function(arm,size=0x3c) addr:0x020b
 _ZN13PlayerControl19func_ov000_020b7924Ei kind:function(arm,size=0x428) addr:0x020b78c4
 _ZN13PlayerControl15ApplyTouchWorldEP5Vec3pi kind:function(arm,size=0x20) addr:0x020b7cec
 _ZN13PlayerControl19func_ov000_020b7d6cEv kind:function(arm,size=0x8) addr:0x020b7d0c
-func_ov000_020b7d74 kind:function(arm,size=0x7c) addr:0x020b7d14
+_ZN24UnkStruct_ov000_020b7d74D1Ev kind:function(arm,size=0x7c) addr:0x020b7d14
 func_ov000_020b7df0 kind:function(arm,size=0x7c) addr:0x020b7d90
 _Z19func_ov000_020b7e6cPi kind:function(arm,size=0x38) addr:0x020b7e0c
 func_ov000_020b7ea4 kind:function(arm,size=0x20) addr:0x020b7e44
@@ -2492,7 +2492,7 @@ func_ov000_020bb150 kind:function(arm,size=0x14) addr:0x020bb0f0
 func_ov000_020bb164 kind:function(arm,size=0x94) addr:0x020bb104
 _ZN15ItemModelLoaderC1Ev kind:function(thumb,size=0xf4) addr:0x020bb198
 _ZN15ItemModelLoader19func_ov000_020bb2ecEv kind:function(thumb,size=0x60) addr:0x020bb28c
-_ZN15ItemModelLoader19func_ov000_020bb34cEv kind:function(thumb,size=0x2c) addr:0x020bb2ec
+_ZN15ItemModelLoader19func_ov000_020bb34cEi kind:function(thumb,size=0x2c) addr:0x020bb2ec
 _ZN15ItemModelLoader19func_ov000_020bb378Ei kind:function(thumb,size=0x18) addr:0x020bb318
 _ZN15ItemModelLoader19func_ov000_020bb390Ei kind:function(thumb,size=0x18) addr:0x020bb330
 _ZN15ItemModelLoader19func_ov000_020bb3a8Ei kind:function(thumb,size=0xc) addr:0x020bb348
@@ -4798,8 +4798,7 @@ _ZTV15LinkStateFollow kind:data(any) addr:0x020e5744
 data_ov000_020e57f0 kind:data(any) addr:0x020e5790
 data_ov000_020e5808 kind:data(any) addr:0x020e57a8
 _ZTV11ModelRender kind:data(any) addr:0x020e57b8
-data_ov000_020e5868_pad kind:data(any) addr:0x020e5800
-data_ov000_020e5868 kind:data(any) addr:0x020e5808
+_ZTV24UnkStruct_ov000_020e5868 kind:data(any) addr:0x020e5800
 data_ov000_020e5878 kind:data(any) addr:0x020e5818
 data_ov000_020e58e8 kind:data(any) addr:0x020e5888
 data_ov000_020e58ec kind:data(any) addr:0x020e588c

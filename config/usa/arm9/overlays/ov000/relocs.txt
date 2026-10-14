@@ -4298,11 +4298,11 @@ from:0x020a57b8 kind:load to:0x020dc294 module:overlay(0)
 from:0x020a57d0 kind:arm_call_thumb to:0x020c0ba8 module:overlay(0)
 from:0x020a57e8 kind:arm_call_thumb to:0x020a9a08 module:overlay(0)
 from:0x020a57f4 kind:arm_call to:0x020c0c3c module:overlay(0)
-from:0x020a5800 kind:load to:0x020e5808 module:overlay(0)
+from:0x020a5800 kind:load to:0x020e5800 add:0x8 module:overlay(0)
 from:0x020a5818 kind:arm_call_thumb to:0x020c0ba8 module:overlay(0)
 from:0x020a5830 kind:arm_call_thumb to:0x020a9a08 module:overlay(0)
 from:0x020a583c kind:arm_call to:0x020c0c10 module:overlay(0)
-from:0x020a5848 kind:load to:0x020e5808 module:overlay(0)
+from:0x020a5848 kind:load to:0x020e5800 add:0x8 module:overlay(0)
 from:0x020a5914 kind:arm_call to:0x020a5c6c module:overlay(0)
 from:0x020a5928 kind:arm_call to:0x0204f710 module:main
 from:0x020a5930 kind:arm_call_thumb to:0x02030058 module:main
@@ -4854,15 +4854,15 @@ from:0x020a9954 kind:arm_call to:0x02018c90 module:main
 from:0x020a995c kind:load to:0x020a9960 module:overlay(0)
 from:0x020a998c kind:thumb_call to:0x020c0ba8 module:overlay(0)
 from:0x020a99a4 kind:thumb_call_arm to:0x0202e9f0 module:main
-from:0x020a99b8 kind:load to:0x020e5808 module:overlay(0)
+from:0x020a99b8 kind:load to:0x020e5800 add:0x8 module:overlay(0)
 from:0x020a99bc kind:load to:0x027e0ce0 module:dtcm
 from:0x020a99ce kind:thumb_call_arm to:0x0202ea14 module:main
 from:0x020a99d4 kind:thumb_call to:0x020c0be0 module:overlay(0)
-from:0x020a99dc kind:load to:0x020e5808 module:overlay(0)
+from:0x020a99dc kind:load to:0x020e5800 add:0x8 module:overlay(0)
 from:0x020a99ee kind:thumb_call_arm to:0x0202ea14 module:main
 from:0x020a99f4 kind:thumb_call to:0x020c0be0 module:overlay(0)
 from:0x020a99fa kind:thumb_call_arm to:0x0202ea08 module:main
-from:0x020a9a04 kind:load to:0x020e5808 module:overlay(0)
+from:0x020a9a04 kind:load to:0x020e5800 add:0x8 module:overlay(0)
 from:0x020a9a12 kind:thumb_call_arm to:0x02018884 module:main
 from:0x020a9a1c kind:thumb_call_arm to:0x0202e9f0 module:main
 from:0x020a9a28 kind:load to:0x027e0ce0 module:dtcm

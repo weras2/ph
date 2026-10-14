@@ -4093,7 +4093,7 @@ from:0x02141e00 kind:load to:0x027e0e58 module:dtcm
 from:0x02141e18 kind:arm_call_thumb to:0x020c0ba8 module:overlay(0)
 from:0x02141e30 kind:arm_call_thumb to:0x020a9a08 module:overlay(0)
 from:0x02141e3c kind:arm_call to:0x020c0c3c module:overlay(0)
-from:0x02141e48 kind:load to:0x020e5808 module:overlay(0)
+from:0x02141e48 kind:load to:0x020e5800 add:0x8 module:overlay(0)
 from:0x02141ea4 kind:arm_call to:0x0214187c module:overlay(15)
 from:0x02141ebc kind:arm_call to:0x02093a90 module:overlay(0)
 from:0x02141ee0 kind:arm_call to:0x020b7e0c module:overlay(0)

@@ -6,6 +6,7 @@
 
 #include "Player/LinkStateBase.hpp"
 #include "Render/ModelRender.hpp"
+#include "Unknown/UnkStruct_ov000_020b7d74.hpp"
 
 class LinkStateDamage : public LinkStateBase {
 public:
@@ -31,12 +32,12 @@ public:
     /* 30 */ bool mUnk_30;
     /* 31 */ unk8 mUnk_31;
     /* 32 */ unk16 mUnk_32;
-    /* 34 */ unk32 mUnk_34[2];
+    /* 34 */ UnkStruct_ov000_020b7d74 mUnk_34[2];
     /* 3c */ ModelRender mUnk_3c;
     /* 98 */ UnkStruct_ov000_020c0c08 *mUnk_98;
-    /* 9c */ void *mUnk_9c;
-    /* a0 */ unk32 mUnk_a0[3];
-    /* ac */ unk32 mUnk_ac;
+    /* 9c */ UnkStruct_ov000_020b7d74 mUnk_9c;
+    /* a0 */ UnkStruct_ov000_020b7d74 mUnk_a0[3];
+    /* ac */ UnkStruct_ov000_020b7d74 mUnk_ac;
     /* b0 */ unk8 mUnk_b0[4];
     /* b4 */
 
