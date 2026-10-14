@@ -3827,7 +3827,7 @@ from:0x0212f988 kind:arm_call_thumb to:0x020bd618 module:overlay(0)
 from:0x0212f9f0 kind:arm_call to:0x0204f614 module:main
 from:0x0212fa10 kind:arm_call to:0x02035064 module:main
 from:0x0212fa28 kind:load to:0x020e26b4 module:overlay(0)
-from:0x0212fa2c kind:load to:0x020e2f04 module:overlay(0)
+from:0x0212fa2c kind:load to:0x020e2efc add:0x8 module:overlay(0)
 from:0x0212fa30 kind:load to:0x020e2dd8 module:overlay(0)
 from:0x0212fa34 kind:load to:0x021375ac module:overlay(12)
 from:0x0212fa38 kind:load to:0x027e0f68 module:dtcm

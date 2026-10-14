@@ -159,3 +159,7 @@ src/00_Core/Game/GameModePlay.cpp:
 src/00_Core/Render/ModelRender.cpp:
     .text       start:0x020a956c end:0x020a99e0
     .data       start:0x020e5818 end:0x020e5860
+
+src/00_Core/Unknown/UnkStruct_ov000_020e2f04.cpp:
+    .text       start:0x02094810 end:0x02094884
+    .data       start:0x020e2efc end:0x020e2f60

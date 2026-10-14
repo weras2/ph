@@ -57,7 +57,7 @@ from:0x02189dc8 kind:arm_call to:0x0204f614 module:main
 from:0x02189df8 kind:arm_call to:0x020c4588 module:overlay(0)
 from:0x02189e04 kind:arm_call_thumb to:0x020a9588 module:overlay(0)
 from:0x02189e14 kind:load to:0x0218e47c module:overlay(41)
-from:0x02189e18 kind:load to:0x020e2f04 module:overlay(0)
+from:0x02189e18 kind:load to:0x020e2efc add:0x8 module:overlay(0)
 from:0x02189e1c kind:load to:0x020e2dd8 module:overlay(0)
 from:0x02189e20 kind:load to:0x020b7d74 module:overlay(0)
 from:0x02189e24 kind:load to:0x02189eb8 module:overlay(41)

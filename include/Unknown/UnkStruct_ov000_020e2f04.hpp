@@ -3,10 +3,11 @@
 #include <nds/math.h>
 
 #include "Physics/AABB.hpp"
+#include "System/SysNew.hpp"
 #include "global.h"
 #include "types.h"
 
-class UnkStruct_ov000_020e2f04 {
+class UnkStruct_ov000_020e2f04 : public SysObject {
 public:
     /* 00 (vtable) */
     /* 04 */ unk8 mUnk_04;
@@ -37,7 +38,7 @@ public:
     /* 4c */ virtual bool Contains(Vec3p *pos)                               = 0;
     /* 50 */ virtual bool IntersectsCube(Cube *cube)                         = 0;
     /* 54 */ virtual void vfunc_54(Cube *param1, Vec3p *param2, u32 *param3) = 0;
-    /* 58 */ virtual void vfunc_58(unk32 param1, unk32 param2, s32 param3);
+    /* 58 */ virtual bool vfunc_58(unk32 param1, unk32 param2, s32 param3);
     /* 5c */
 
     inline UnkStruct_ov000_020e2f04() :

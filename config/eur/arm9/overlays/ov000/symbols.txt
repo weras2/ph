@@ -4135,8 +4135,8 @@ data_ov000_020e2cf4 kind:data(any) addr:0x020e2cf4
 data_ov000_020e2d44 kind:data(any) addr:0x020e2d44
 _ZTV21TriggerAABB_Unk2_Unk1 kind:data(any) addr:0x020e2dd8
 data_ov000_020e2e3c kind:data(any) addr:0x020e2e3c
-_ZTV24UnkStruct_ov000_020e2f04 kind:data(any) addr:0x020e2f04
-data_ov000_020e2f68 kind:data(any) addr:0x020e2f68
+_ZTV24UnkStruct_ov000_020e2f04 kind:data(any) addr:0x020e2efc
+data_ov000_020e2f68 kind:data(any) addr:0x020e2f60
 data_ov000_020e2f98 kind:data(any) addr:0x020e2f98
 data_ov000_020e2fa8 kind:data(any) addr:0x020e2fa8
 data_ov000_020e2fb4 kind:data(any) addr:0x020e2fb4

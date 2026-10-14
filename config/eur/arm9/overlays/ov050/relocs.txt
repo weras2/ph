@@ -6,7 +6,7 @@ from:0x021955d4 kind:arm_call to:0x020c4588 module:overlay(0)
 from:0x021955e8 kind:arm_call_thumb to:0x020bd618 module:overlay(0)
 from:0x02195604 kind:arm_call to:0x0204f614 module:main
 from:0x02195638 kind:load to:0x02198a04 module:overlay(50)
-from:0x0219563c kind:load to:0x020e2f04 module:overlay(0)
+from:0x0219563c kind:load to:0x020e2efc add:0x8 module:overlay(0)
 from:0x02195640 kind:load to:0x020e2dd8 module:overlay(0)
 from:0x02195644 kind:load to:0x020e2f98 module:overlay(0)
 from:0x02195648 kind:load to:0x027e0fec module:dtcm
