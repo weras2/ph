@@ -3508,20 +3508,20 @@ from:0x0213d1be kind:thumb_call to:0x0210b9e0 module:overlay(4)
 from:0x0213d1e2 kind:thumb_call_arm to:0x0204f5d0 module:main
 from:0x0213d216 kind:thumb_call_arm to:0x0202e9d8 module:main
 from:0x0213d224 kind:thumb_call to:0x020bd5b8 module:overlay(0)
-from:0x0213d234 kind:load to:0x02158e44 module:overlay(14)
+from:0x0213d234 kind:load to:0x02158e3c add:0x8 module:overlay(14)
 from:0x0213d238 kind:load to:0x0213d245 module:overlay(14)
 from:0x0213d23c kind:load to:0x0213d248 module:overlay(14)
 from:0x0213d240 kind:load to:0x027e0ce0 module:dtcm
 from:0x0213d28e kind:thumb_call_arm to:0x020b7d14 module:overlay(0)
 from:0x0213d29c kind:thumb_call_arm to:0x0204f710 module:main
 from:0x0213d2a2 kind:thumb_call to:0x0210ba04 module:overlay(4)
-from:0x0213d2ac kind:load to:0x02158e44 module:overlay(14)
+from:0x0213d2ac kind:load to:0x02158e3c add:0x8 module:overlay(14)
 from:0x0213d2b0 kind:load to:0x0213d245 module:overlay(14)
 from:0x0213d2d2 kind:thumb_call_arm to:0x020b7d14 module:overlay(0)
 from:0x0213d2e0 kind:thumb_call_arm to:0x0204f710 module:main
 from:0x0213d2e6 kind:thumb_call to:0x0210ba04 module:overlay(4)
 from:0x0213d2ec kind:thumb_call_arm to:0x0202ea08 module:main
-from:0x0213d2f4 kind:load to:0x02158e44 module:overlay(14)
+from:0x0213d2f4 kind:load to:0x02158e3c add:0x8 module:overlay(14)
 from:0x0213d2f8 kind:load to:0x0213d245 module:overlay(14)
 from:0x0213d30e kind:thumb_call_arm to:0x020ad4cc module:overlay(0)
 from:0x0213d320 kind:load to:0x027e0fc8 module:dtcm
@@ -3643,7 +3643,7 @@ from:0x0213ea00 kind:load to:0x027e0d0c module:dtcm
 from:0x0213ea04 kind:load to:0x027e0d44 module:dtcm
 from:0x0213ea10 kind:load to:0x02050f10 module:main
 from:0x0213ea18 kind:thumb_call to:0x0210b9e0 module:overlay(4)
-from:0x0213ea2c kind:load to:0x02158e9c module:overlay(14)
+from:0x0213ea2c kind:load to:0x02158e94 add:0x8 module:overlay(14)
 from:0x0213ea34 kind:thumb_call to:0x0210ba04 module:overlay(4)
 from:0x0213ea40 kind:thumb_call to:0x0210ba04 module:overlay(4)
 from:0x0213ea46 kind:thumb_call_arm to:0x0202ea08 module:main

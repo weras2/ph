@@ -8,6 +8,16 @@
 #include "Actor/ActorType.hpp"
 #include "Unknown/UnkStruct_ov000_020beba8.hpp"
 
+// List of points the rope is drawn through
+struct ActorRope_PointList {
+    /* 00 */ Vec3p *mPoints[8];
+    /* 20 */ s32 mCount;
+    /* 24 */
+};
+
+void func_ov014_0213e544(ActorRope_PointList *list, Vec3p *point);
+void func_ov014_0213e55c(ActorRope_PointList *list);
+
 class ActorRope_Unk_0219a3b0 : public UnkStruct_ov000_020beba8 {
 public:
     /* 0 (base) */

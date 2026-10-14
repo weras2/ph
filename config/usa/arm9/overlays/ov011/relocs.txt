@@ -452,8 +452,8 @@ from:0x02114c68 kind:thumb_call_arm to:0x02002bf4 module:main
 from:0x02114c80 kind:thumb_call_arm to:0x02002bf4 module:main
 from:0x02114c96 kind:thumb_call_arm to:0x021595f8 module:overlay(61)
 from:0x02114cae kind:thumb_call_arm to:0x02158f90 module:overlay(61)
-from:0x02114cbc kind:load to:0x02158e04 module:overlays(14,61)
-from:0x02114cc8 kind:load to:0x02158e30 module:overlays(14,61)
+from:0x02114cbc kind:load to:0x02158e04 module:overlay(61)
+from:0x02114cc8 kind:load to:0x02158e30 module:overlay(61)
 from:0x02114cd0 kind:load to:0x02159020 module:overlays(14,61)
 from:0x02114d7c kind:thumb_call to:0x02114c30 module:overlay(11)
 from:0x02114d82 kind:thumb_call to:0x02042690 module:main
