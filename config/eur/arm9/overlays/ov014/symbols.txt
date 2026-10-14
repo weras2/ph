@@ -1634,7 +1634,7 @@ data_ov014_021541d0 kind:data(any) addr:0x021541d0
 data_ov014_021541d4 kind:data(any) addr:0x021541d4
 __sinit_ActorArrow.cpp kind:function(arm,size=0x68) addr:0x021541ec
 __sinit_ActorBlast.cpp kind:function(arm,size=0x40) addr:0x02154254
-__sinit_ActorBomb.cpp kind:function(arm,size=0x60) addr:0x02154294
+__sinit_ActorBomb.cpp kind:function(arm,size=0x60) addr:0x02154294 local
 __sinit_ov014_021542f4 kind:function(arm,size=0x40) addr:0x021542f4
 __sinit_ActorRope.cpp kind:function(arm,size=0x40) addr:0x02154334
 __sinit_ov014_02154374 kind:function(arm,size=0x84) addr:0x02154374
@@ -1713,7 +1713,7 @@ __sinit_ov014_021557dc kind:function(arm,size=0x38) addr:0x021557dc
 __sinit_ov014_02155814 kind:function(arm,size=0x38) addr:0x02155814
 .p__sinit_ov014_021541ec kind:data(word) addr:0x0215584c
 .p__sinit_ov014_02154254 kind:data(word) addr:0x02155850
-.p__sinit_ov014_02154294 kind:data(word) addr:0x02155854
+.p__sinit_ActorBomb.cpp kind:data(word) addr:0x02155854 local
 .p__sinit_ov014_021542f4 kind:data(word) addr:0x02155858
 .p__sinit_ov014_02154334 kind:data(word) addr:0x0215585c
 .p__sinit_ov014_02154374 kind:data(word) addr:0x02155860
@@ -1801,17 +1801,18 @@ data_ov014_021559bc kind:data(any) addr:0x021559bc
 _ZTV10ActorArrow kind:data(any) addr:0x021559e8
 _ZTV15ActorBlast_Unk1 kind:data(any) addr:0x02155aa4
 _ZTV10ActorBlast kind:data(any) addr:0x02155ac8
-data_ov014_02155b7c kind:data(any) addr:0x02155b7c
-data_ov014_02155b80 kind:data(any) addr:0x02155b80
-data_ov014_02155b84 kind:data(any) addr:0x02155b84
-data_ov014_02155b88 kind:data(any) addr:0x02155b88
-data_ov014_02155b8c kind:data(any) addr:0x02155b8c
-data_ov014_02155b90 kind:data(any) addr:0x02155b90
-data_ov014_02155b94 kind:data(any) addr:0x02155b94
-data_ov014_02155b98 kind:data(any) addr:0x02155b98
-data_ov014_02155b9c kind:data(any) addr:0x02155b9c
-_ZTV14ActorBomb_Unk1 kind:data(any) addr:0x02155bcc
-_ZTV9ActorBomb kind:data(any) addr:0x02155bf0
+@2198 kind:data(any) addr:0x02155b7c local
+@2197 kind:data(any) addr:0x02155b80 local
+@2196 kind:data(any) addr:0x02155b84 local
+@2195 kind:data(any) addr:0x02155b88 local
+@2194 kind:data(any) addr:0x02155b8c local
+@2193 kind:data(any) addr:0x02155b90 local
+@2192 kind:data(any) addr:0x02155b94 local
+@2191 kind:data(any) addr:0x02155b98 local
+gShipParts kind:data(any) addr:0x02155b9c local
+_ZTV14ActorBomb_Unk1 kind:data(any) addr:0x02155bc4
+_ZTV9ActorBomb kind:data(any) addr:0x02155be8
+_ZTV24UnkStruct_ov000_020a9b2c kind:data(any) addr:0x02155ca4
 data_ov014_02155cac kind:data(any) addr:0x02155cac
 data_ov014_02155cb4 kind:data(any) addr:0x02155cb4
 data_ov014_02155cb8 kind:data(any) addr:0x02155cb8

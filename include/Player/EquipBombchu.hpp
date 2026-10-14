@@ -18,7 +18,7 @@ public:
     /* 20 */
 
     /* 08 */ virtual bool vfunc_08(UnkStruct_ov000_020beba8_08 *param1) override;
-    /* 0c */ virtual void vfunc_0c(unk16 *param1) override;
+    /* 0c */ virtual bool vfunc_0c(unk16 *param1) override;
     /* 10 */ virtual bool vfunc_10(s32 *param1) override;
     /* 14 */ virtual bool vfunc_14(u16 *param1, s32 param2) override;
     /* 1c */

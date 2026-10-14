@@ -445,17 +445,14 @@ ARM bool LinkStateInteract::vfunc_34(Vec3p *param1) {
         } else {
             var_r5 = CoDivide64By32(temp_r0 - 0x2000, 0x5000);
         }
-        s32 playerAngle = *this->GetPlayerAngle();
+        u16 playerAngle = *this->GetPlayerAngle();
         u16 var_r1      = ((((s64) var_r5) << 14) + 0x800) >> 12;
-        s32 var_r3      = ((s64) COS(var_r1)) * 0xb33;
-        s32 var_r9      = ((s64) SIN(var_r1)) * 0xb33;
-        s32 var_r2      = ((s64) SIN(playerAngle));
-        s32 var_ip      = ((s64) COS(playerAngle));
+        q20 horizontal  = MUL_Q20(COS(var_r1), 0xb33);
+        q20 vertical    = MUL_Q20(SIN(var_r1), 0xb33);
 
-        // WIP xyz values
-        param1->x += var_r3;
-        param1->y += var_r9;
-        param1->z += var_ip;
+        param1->x += MUL_Q20(SIN(playerAngle), horizontal);
+        param1->y += vertical;
+        param1->z += MUL_Q20(COS(playerAngle), horizontal);
     } else {
         param1->y += 0xB33;
     }

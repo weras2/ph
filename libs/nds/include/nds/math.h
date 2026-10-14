@@ -49,7 +49,7 @@ u32 CoRemainder(u32 a, u32 b);
 
 bool Approach(unk32 *src, unk32 dest, unk32 step);
 bool Approach_thunk(unk32 *src, unk32 dest, unk32 step);
-extern q4 FX_SinCosTable_[];
+extern const q4 FX_SinCosTable_[];
 
 typedef struct {
     /* 0 */ s16 x;
