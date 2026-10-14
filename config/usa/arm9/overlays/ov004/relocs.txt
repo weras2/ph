@@ -2382,7 +2382,7 @@ from:0x0210b9c8 kind:thumb_call to:0x0210ba04 module:overlay(4)
 from:0x0210b9ce kind:thumb_call_arm to:0x0202ea08 module:main
 from:0x0210b9d8 kind:load to:0x020e6f50 module:overlay(0)
 from:0x0210b9dc kind:load to:0x020b7d14 module:overlay(0)
-from:0x0210b9f0 kind:load to:0x020e6e74 module:overlay(0)
+from:0x0210b9f0 kind:load to:0x020e6e6c add:0x8 module:overlay(0)
 from:0x0210b9fc kind:thumb_call_arm to:0x0202ea08 module:main
 from:0x0210ba10 kind:thumb_call to:0x0210b9e0 module:overlay(4)
 from:0x0210ba34 kind:thumb_call_arm to:0x020ad4cc module:overlay(0)

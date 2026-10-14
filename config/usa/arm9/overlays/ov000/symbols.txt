@@ -5091,7 +5091,7 @@ data_ov000_020e6e9c kind:data(any) addr:0x020e6e3c
 data_ov000_020e6ea0 kind:data(any) addr:0x020e6e40
 data_ov000_020e6ea4 kind:data(any) addr:0x020e6e44
 data_ov000_020e6ea8 kind:data(any) addr:0x020e6e48
-data_ov000_020e6ed4 kind:data(any) addr:0x020e6e74
+_ZTV9EquipItem kind:data(any) addr:0x020e6e6c
 data_ov000_020e6f2c kind:data(any) addr:0x020e6ecc
 data_ov000_020e6f48 kind:data(any) addr:0x020e6ee8
 data_ov000_020e6f4c kind:data(any) addr:0x020e6eec
