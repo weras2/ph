@@ -90,3 +90,8 @@ libs/nds/src/heap.c:
     complete
     .text       start:0x02017034 end:0x020179ac
     .bss        start:0x0205ad84 end:0x0205ad94
+
+src/Main/Debug/BhioBase.cpp:
+    complete
+    .text       start:0x02030270 end:0x02030350
+    .data       start:0x02057844 end:0x0205788c

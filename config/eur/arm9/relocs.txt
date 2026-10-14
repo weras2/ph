@@ -3876,7 +3876,7 @@ from:0x0203020c kind:arm_call_thumb to:0x0203004c module:main
 from:0x02030214 kind:arm_call to:0x0202ea0c module:main
 from:0x02030228 kind:arm_call_thumb to:0x0203004c module:main
 from:0x02030240 kind:load to:0x020470ec module:main
-from:0x02030280 kind:load to:0x02057894 module:main
+from:0x02030280 kind:load to:0x0205788c add:0x8 module:main
 from:0x0203028c kind:thumb_call_arm to:0x0202ea0c module:main
 from:0x020302dc kind:thumb_call to:0x02030298 module:main
 from:0x020302f2 kind:thumb_call_arm to:0x02030234 module:main
