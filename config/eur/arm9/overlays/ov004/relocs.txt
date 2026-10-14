@@ -2169,7 +2169,7 @@ from:0x0210ab1c kind:load to:0x027e0f94 module:dtcm
 from:0x0210ab40 kind:load to:0x027e0fd8 module:dtcm
 from:0x0210ab48 kind:thumb_call to:0x0210add4 module:overlay(4)
 from:0x0210ab5e kind:thumb_call_arm to:0x02035064 module:main
-from:0x0210ab84 kind:load to:0x020e5974 module:overlay(0)
+from:0x0210ab84 kind:load to:0x020e596c add:0x8 module:overlay(0)
 from:0x0210ab8e kind:thumb_call_arm to:0x020350ac module:main
 from:0x0210ab94 kind:thumb_call to:0x0210adf4 module:overlay(4)
 from:0x0210aba2 kind:thumb_call_arm to:0x020350ac module:main

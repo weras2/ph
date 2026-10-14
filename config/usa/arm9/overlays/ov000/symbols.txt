@@ -4821,7 +4821,7 @@ data_ov000_020e595c kind:data(any) addr:0x020e58fc
 data_ov000_020e5960 kind:data(any) addr:0x020e5900
 data_ov000_020e5964 kind:data(any) addr:0x020e5904
 data_ov000_020e5968 kind:data(any) addr:0x020e5908
-_ZTV17LinkStateInteract kind:data(any) addr:0x020e5914
+_ZTV17LinkStateInteract kind:data(any) addr:0x020e590c
 @1235 kind:data(any) addr:0x020e5958 local
 @1236 kind:data(any) addr:0x020e596c local
 @1237 kind:data(any) addr:0x020e5984 local
