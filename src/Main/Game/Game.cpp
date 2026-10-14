@@ -504,6 +504,4 @@ ARM void Game::func_0202cf44(Game *game) {
     }
 }
 
-ARM Game::~Game() {
-    mFadeControl.Unregister();
-}
+ARM Game::~Game() {}

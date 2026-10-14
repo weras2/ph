@@ -3,7 +3,9 @@
 #include "global.h"
 #include "types.h"
 
-struct FadeControl {
+#include "System/SysNew.hpp"
+
+struct FadeControl : public SysObject {
     /* 00 */ unk32 mState;
     /* 04 */ unk32 mUnk_04;
     /* 08 */ s32 mCurrentBright;
@@ -23,9 +25,15 @@ struct FadeControl {
     void Register();
     void Unregister();
     FadeControl();
+    ~FadeControl() {
+        Unregister();
+    }
     void func_0202aba8(s32 fadeLength, unk32 param2, unk32 newState);
     bool func_0202abdc(s32 fadeLength, unk32 param2);
     bool func_0202abf4(s32 fadeLength, unk32 param2);
     bool func_0202ac0c(s32 currentFadeLength, u16 param2, s32 fadeLength, unk32 param4);
     void UpdateFade(s32 speed);
 };
+
+// Heap-allocated fade control; its implicit ctor ignores the base ctor result
+struct FadeControl_Unk : public FadeControl {};
