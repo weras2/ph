@@ -102,7 +102,7 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
     if (gPlayerControl->mUnk_80 != false) {
         gPlayerControl->StopFollowing();
     }
-    this->mUnk_25[1] = 0;
+    this->mUnk_26 = 0;
     return;
 }
 

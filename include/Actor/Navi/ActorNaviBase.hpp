@@ -4,6 +4,7 @@
 #include "types.h"
 
 #include "Actor/Actor.hpp"
+#include "Actor/Navi/ActorNaviBase_Unk1.hpp"
 #include "Player/EquipHammer.hpp"
 #include "Render/ModelRender.hpp"
 #include "Unknown/UnkStruct_ov000_020b7d74.hpp"
@@ -16,11 +17,6 @@ enum FairyId_ {
     FairyId_Power   = 1,
     FairyId_Wisdom  = 2,
     FairyId_COUNT   = 3,
-};
-
-class ActorNaviBase_Unk1 : public UnkStruct_ov000_020b7d74 {
-public:
-    ActorNaviBase_Unk1();
 };
 
 class ActorNaviBase_Unk2 : public UnkStruct_ov000_020c0c08 {

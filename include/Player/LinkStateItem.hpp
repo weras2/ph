@@ -3,23 +3,30 @@
 #include "global.h"
 #include "types.h"
 
+#include "Actor/Navi/ActorNaviBase_Unk1.hpp"
 #include "Item/Item.hpp"
 #include "Player/EquipBombchu.hpp"
 #include "Player/LinkStateBase.hpp"
 #include "Player/LinkStateMove.hpp"
+#include "Unknown/UnkStruct_02057200.hpp"
 
 class LinkStateItem : public LinkStateBase {
 public:
     /* 00 (base) */
-    /* 0c */ void *mUnk_0c;
-    /* 10 */ unk32 mUnk_10;
+    /* 0c */ UnkStruct_02057200 mUnk_0c;
     /* 14 */ ItemFlag mEquipId;
     /* 18 */ ItemFlag mNextEquip;
     /* 1c */ unk32 mUnk_1c;
     /* 20 */ unk16 mUnk_20;
     /* 22 */ unk8 mUnk_22[2];
     /* 24 */ s8 mUnk_24;
-    /* 25 */ u8 mUnk_25[7];
+    /* 25 */ u8 mUnk_25;
+    /* 26 */ u8 mUnk_26;
+    /* 27 */ u8 mUnk_27;
+    /* 28 */ u8 mUnk_28;
+    /* 29 */ u8 mUnk_29;
+    /* 2a */ u8 mUnk_2a;
+    /* 2b */ u8 mUnk_2b;
     /* 2c */ unk16 mUnk_2c;
     /* 2e */ unk8 mUnk_2e[2];
     /* 30 */ void *mUnk_30;
@@ -28,7 +35,7 @@ public:
     /* 44 */ unk32 mUnk_44;
     /* 48 */ void *mUnk_48;
     /* 4c */ unk32 mUnk_4c;
-    /* 50 */ unk32 mUnk_50[2];
+    /* 50 */ ActorNaviBase_Unk1 mUnk_50[2];
     /* 58 */ unk32 mUnk_58;
     /* 5c */ s32 mUnk_5c;
     /* 60 */

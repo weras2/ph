@@ -36,7 +36,7 @@ ARM bool EquipHammer::IsUsable(unk32 param1) const {
     if (param1 != 0) {
         LinkStateItem *pLVar4 = GetLinkStateItem();
 
-        if (pLVar4->mUnk_25[2] != 0 && pLVar4->mUnk_25[3] == 0) {
+        if (pLVar4->mUnk_27 != 0 && pLVar4->mUnk_28 == 0) {
             return false;
         }
 
@@ -167,8 +167,8 @@ ARM void LinkStateItem::func_ov059_02198ffc() {
 
 ARM void LinkStateItem::func_ov059_0219907c() {
     this->func_ov00_020a89bc(&data_ov059_0219b180, 1);
-    this->mUnk_25[2] = 0;
-    this->mUnk_25[3] = 0;
+    this->mUnk_27 = 0;
+    this->mUnk_28 = 0;
 }
 
 #define CHECK_0219b160(value) ((value) == this->Get_PlayerControlData_Unk100())
@@ -177,7 +177,7 @@ ARM void LinkStateItem::func_ov059_021990a4() {
     EquipHammer *pEVar4;
     ActorNavi *pAVar5;
 
-    if (this->mUnk_25[0x2] != 0 && this->mUnk_25[0x3] == 0) {
+    if (this->mUnk_27 != 0 && this->mUnk_28 == 0) {
         return;
     }
 
@@ -190,7 +190,7 @@ ARM void LinkStateItem::func_ov059_021990a4() {
         if (pAVar5->mUnk_3c0 != 0 && gPlayerControl->UpdateAimWorld(&this->mUnk_38) && pEVar4->GetState() <= 0) {
             pEVar4->func_ov059_02198e90();
 
-            if (this->mUnk_25[2] != 0 && this->mUnk_25[3] != 0) {
+            if (this->mUnk_27 != 0 && this->mUnk_28 != 0) {
                 this->LookAt(&this->mUnk_38);
             }
 
@@ -205,7 +205,7 @@ ARM void LinkStateItem::func_ov059_021990a4() {
             gPlayerControl->UpdateAimWorld(&this->mUnk_38);
             pEVar4->func_ov059_02198e90();
 
-            if (this->mUnk_25[0x2] != 0 && this->mUnk_25[0x3] != 0) {
+            if (this->mUnk_27 != 0 && this->mUnk_28 != 0) {
                 this->LookAt(&this->mUnk_38);
             }
 
@@ -222,7 +222,7 @@ ARM void LinkStateItem::func_ov059_021990a4() {
         }
     }
 
-    if (this->mUnk_25[0x2] == 0 || this->mUnk_25[0x3] == 0) {
+    if (this->mUnk_27 == 0 || this->mUnk_28 == 0) {
         this->func_ov059_02198ffc();
     }
 }

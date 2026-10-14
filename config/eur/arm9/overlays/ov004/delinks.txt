@@ -15,3 +15,7 @@ src/04_Load/Actor/Navi/ActorNavi_04.cpp:
 src/04_Load/Actor/ActorManager_04.cpp:
     complete
     .text       start:0x021051e0 end:0x021056c8
+
+src/04_Load/Player/LinkStateItem_04.cpp:
+    complete
+    .text       start:0x02109a58 end:0x02109b2c
