@@ -26,9 +26,9 @@ _Z19func_ov014_02120774Pji kind:function(arm,size=0xc) addr:0x021206f4
 _ZN10ActorArrow8vfunc_18Ej kind:function(arm,size=0x20) addr:0x02120700
 _ZN10ActorArrow8vfunc_10Ej kind:function(arm,size=0x18) addr:0x02120720
 _ZN10ActorArrow19func_ov014_021207b8EP8ActorRefii kind:function(arm,size=0x1e0) addr:0x02120738
-_ZN10ActorArrow19func_ov014_02120998EP8ActorRefiiis kind:function(arm,size=0xe8) addr:0x02120918
+_ZN10ActorArrow19func_ov014_02120998EP8ActorRef5Vec3ps kind:function(arm,size=0xe8) addr:0x02120918
 _Z19func_ov014_02120a80iP10ActorArrow kind:function(arm,size=0x44) addr:0x02120a00
-_ZN10ActorArrow19func_ov014_02120ac4Eib kind:function(arm,size=0x1d4) addr:0x02120a44
+_ZN10ActorArrow19func_ov014_02120ac4Esb kind:function(arm,size=0x1d4) addr:0x02120a44
 _ZN10ActorArrow19func_ov014_02120c98EP5Vec3p kind:function(arm,size=0xc0) addr:0x02120c18
 _ZN10ActorArrow19func_ov014_02120d58Ev kind:function(arm,size=0x50) addr:0x02120cd8
 _ZN10ActorArrow19func_ov014_02120da8Ev kind:function(arm,size=0x44) addr:0x02120d28
@@ -1632,7 +1632,7 @@ data_ov014_02154199 kind:data(any) addr:0x021540f5
 data_ov014_0215419c kind:data(any) addr:0x021540f8
 data_ov014_021541d0 kind:data(any) addr:0x0215412c
 data_ov014_021541d4 kind:data(any) addr:0x02154130
-__sinit_ActorArrow.cpp kind:function(arm,size=0x68) addr:0x02154148
+__sinit_ActorArrow.cpp kind:function(arm,size=0x68) addr:0x02154148 local
 __sinit_ActorBlast.cpp kind:function(arm,size=0x40) addr:0x021541b0
 __sinit_ActorBomb.cpp kind:function(arm,size=0x60) addr:0x021541f0
 __sinit_ov014_021542f4 kind:function(arm,size=0x40) addr:0x02154250
@@ -1711,7 +1711,7 @@ __sinit_ov014_02155764 kind:function(arm,size=0x38) addr:0x021556c0
 __sinit_ov014_0215579c kind:function(arm,size=0x40) addr:0x021556f8
 __sinit_ov014_021557dc kind:function(arm,size=0x38) addr:0x02155738
 __sinit_ov014_02155814 kind:function(arm,size=0x38) addr:0x02155770
-.p__sinit_ActorArrow kind:data(word) addr:0x021557a8
+.p__sinit_ActorArrow.cpp kind:data(word) addr:0x021557a8 local
 .p__sinit_ActorBlast kind:data(word) addr:0x021557ac
 .p__sinit_ActorBomb kind:data(word) addr:0x021557b0
 .p__sinit_ov014_021542f4 kind:data(word) addr:0x021557b4
@@ -1790,17 +1790,18 @@ __sinit_ov014_02155814 kind:function(arm,size=0x38) addr:0x02155770
 .p__sinit_ov014_0215579c kind:data(word) addr:0x021558d8
 .p__sinit_ov014_021557dc kind:data(word) addr:0x021558dc
 .p__sinit_ov014_02155814 kind:data(word) addr:0x021558e0
-data_ov014_021559a0 kind:data(any) addr:0x02155900
-data_ov014_021559a4 kind:data(any) addr:0x02155904
-data_ov014_021559a8 kind:data(any) addr:0x02155908
-data_ov014_021559ac kind:data(any) addr:0x0215590c
-data_ov014_021559b0 kind:data(any) addr:0x02155910
-data_ov014_021559b4 kind:data(any) addr:0x02155914
-data_ov014_021559b8 kind:data(any) addr:0x02155918
-data_ov014_021559bc kind:data(any) addr:0x0215591c
-_ZTV10ActorArrow kind:data(any) addr:0x02155948
-_ZTV15ActorBlast_Unk1 kind:data(any) addr:0x02155a04
-_ZTV10ActorBlast kind:data(any) addr:0x02155a28
+@1546 kind:data(any) addr:0x02155900 local
+@1545 kind:data(any) addr:0x02155904 local
+@1544 kind:data(any) addr:0x02155908 local
+@1543 kind:data(any) addr:0x0215590c local
+@1542 kind:data(any) addr:0x02155910 local
+@1541 kind:data(any) addr:0x02155914 local
+@1540 kind:data(any) addr:0x02155918 local
+@1539 kind:data(any) addr:0x0215591c local
+gShipParts kind:data(any) addr:0x02155920 local
+_ZTV10ActorArrow kind:data(any) addr:0x02155940
+_ZTV15ActorBlast_Unk1 kind:data(any) addr:0x021559fc
+_ZTV10ActorBlast kind:data(any) addr:0x02155a20
 data_ov014_02155b7c kind:data(any) addr:0x02155adc
 data_ov014_02155b80 kind:data(any) addr:0x02155ae0
 data_ov014_02155b84 kind:data(any) addr:0x02155ae4
