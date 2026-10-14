@@ -1000,7 +1000,7 @@ ARM void ItemManager::SetPotion(u32 index, Potion potion) {
     }
 }
 
-ARM bool ItemManager::HasPotion(u32 index) const {
+ARM unk32 ItemManager::HasPotion(u32 index) const {
     switch (mPotions[index]) {
         case Potion_Red:
         case Potion_Purple:

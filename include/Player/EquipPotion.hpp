@@ -12,8 +12,8 @@ private:
     /* 10 */
 
 public:
-    /* 00 */ virtual void vfunc_00() override;
     /* 04 */ virtual ~EquipPotion() override;
+    /* 00 */ virtual void vfunc_00() override;
     /* 14 */ virtual bool IsUsable(unk32 param1) const override;
     /* 18 */ virtual void vfunc_18() override;
     /* 1c */ virtual void vfunc_1c() override;
@@ -21,7 +21,7 @@ public:
     /* 38 */ virtual void vfunc_38(unk32 param1) override;
     /* 50 */
 
-    EquipPotion();
+    EquipPotion(s32 index);
 };
 
 class EquipPotionA : public EquipPotion {

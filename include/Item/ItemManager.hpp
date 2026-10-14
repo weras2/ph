@@ -205,7 +205,7 @@ public:
 
     // Potion
     void SetPotion(u32 index, Potion potion);
-    bool HasPotion(u32 index) const;
+    unk32 HasPotion(u32 index) const;
     bool HasAllPotions() const;
     bool HasPurplePotion() const;
     void UnequipPotion();

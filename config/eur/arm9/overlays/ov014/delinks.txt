@@ -33,3 +33,8 @@ src/14_Land/Actor/Character/ActorCharacter.cpp:
 
 src/14_Land/Actor/Character/ActorGenericCharacter.cpp:
     .text       start:0x021476d0 end:0x02148234
+
+src/14_Land/Player/EquipPotion_14.cpp:
+    complete
+    .text       start:0x0215154c end:0x0215168c
+    .data       start:0x0215a780 end:0x0215a8c8

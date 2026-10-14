@@ -1456,7 +1456,7 @@ func_ov014_021513d4 kind:function(arm,size=0x28) addr:0x021513d4
 func_ov014_021513fc kind:function(arm,size=0x20) addr:0x021513fc
 func_ov014_0215141c kind:function(arm,size=0x110) addr:0x0215141c
 func_ov014_0215152c kind:function(arm,size=0x20) addr:0x0215152c
-_ZN11EquipPotionC2Ev kind:function(thumb,size=0x18) addr:0x0215154c
+_ZN11EquipPotionC2Ei kind:function(thumb,size=0x18) addr:0x0215154c
 _ZN11EquipPotionD1Ev kind:function(thumb,size=0xc) addr:0x02151564
 _ZN11EquipPotionD0Ev kind:function(thumb,size=0x12) addr:0x02151570
 _ZN11EquipPotionD2Ev kind:function(thumb,size=0xc) addr:0x02151584
@@ -2137,18 +2137,19 @@ data_ov014_0215a5dc kind:data(any) addr:0x0215a5dc
 data_ov014_0215a608 kind:data(any) addr:0x0215a608
 data_ov014_0215a628 kind:data(any) addr:0x0215a628
 data_ov014_0215a6cc kind:data(any) addr:0x0215a6cc
-data_ov014_0215a780 kind:data(any) addr:0x0215a780
-data_ov014_0215a784 kind:data(any) addr:0x0215a784
-data_ov014_0215a788 kind:data(any) addr:0x0215a788
-data_ov014_0215a78c kind:data(any) addr:0x0215a78c
-data_ov014_0215a790 kind:data(any) addr:0x0215a790
-data_ov014_0215a794 kind:data(any) addr:0x0215a794
-data_ov014_0215a798 kind:data(any) addr:0x0215a798
-data_ov014_0215a79c kind:data(any) addr:0x0215a79c
-_ZTV12EquipPotionB kind:data(any) addr:0x0215a7c8
-_ZTV12EquipPotionA kind:data(any) addr:0x0215a820
-_ZTV11EquipPotion kind:data(any) addr:0x0215a878
-data_ov014_0215a8d0 kind:data(any) addr:0x0215a8d0
+@1490 kind:data(any) addr:0x0215a780 local
+@1489 kind:data(any) addr:0x0215a784 local
+@1488 kind:data(any) addr:0x0215a788 local
+@1487 kind:data(any) addr:0x0215a78c local
+@1486 kind:data(any) addr:0x0215a790 local
+@1485 kind:data(any) addr:0x0215a794 local
+@1484 kind:data(any) addr:0x0215a798 local
+@1483 kind:data(any) addr:0x0215a79c local
+gShipParts kind:data(any) addr:0x0215a7a0 local
+_ZTV12EquipPotionB kind:data(any) addr:0x0215a7c0
+_ZTV12EquipPotionA kind:data(any) addr:0x0215a818
+_ZTV11EquipPotion kind:data(any) addr:0x0215a870
+data_ov014_0215a8d0 kind:data(any) addr:0x0215a8c8
 data_ov014_0215a95c kind:data(any) addr:0x0215a95c
 data_ov014_0215a960 kind:data(any) addr:0x0215a960
 data_ov014_0215a964 kind:data(any) addr:0x0215a964
