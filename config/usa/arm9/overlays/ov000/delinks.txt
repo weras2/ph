@@ -159,3 +159,7 @@ src/00_Core/Game/GameModePlay.cpp:
 src/00_Core/Render/ModelRender.cpp:
     .text       start:0x020a950c end:0x020a9980
     .data       start:0x020e57b8 end:0x020e5800
+
+src/00_Core/Map/Trigger.cpp:
+    .text       start:0x0209539c end:0x02095eac
+    .data       start:0x020e2f6c end:0x020e3020

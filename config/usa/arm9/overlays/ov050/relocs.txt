@@ -6,8 +6,8 @@ from:0x02195534 kind:arm_call to:0x020c4528 module:overlay(0)
 from:0x02195548 kind:arm_call_thumb to:0x020bd5b8 module:overlay(0)
 from:0x02195564 kind:arm_call to:0x0204f5d0 module:main
 from:0x02195598 kind:load to:0x02198964 module:overlay(50)
-from:0x0219559c kind:load to:0x020e2ea4 module:overlay(0)
-from:0x021955a0 kind:load to:0x020e2d78 module:overlay(0)
+from:0x0219559c kind:load to:0x020e2e9c add:0x8 module:overlay(0)
+from:0x021955a0 kind:load to:0x020e2d70 add:0x8 module:overlay(0)
 from:0x021955a4 kind:load to:0x020e2f38 module:overlay(0)
 from:0x021955a8 kind:load to:0x027e0fec module:dtcm
 from:0x021955ac kind:load to:0x020b7d14 module:overlay(0)

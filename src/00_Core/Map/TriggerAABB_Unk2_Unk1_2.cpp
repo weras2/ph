@@ -9,4 +9,3 @@ void TriggerAABB_Unk2_Unk1::vfunc_38() {}
 void TriggerAABB_Unk2_Unk1::GetPosition(Vec3p *pos) {}
 q20 TriggerAABB_Unk2_Unk1::GetSizeXZ() {}
 q20 TriggerAABB_Unk2_Unk1::GetHeight() {}
-TriggerAABB_Unk2_Unk1::~TriggerAABB_Unk2_Unk1() {}

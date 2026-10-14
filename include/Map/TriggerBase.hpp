@@ -9,15 +9,15 @@
 #include "System/SysNew.hpp"
 
 struct TriggerParams {
-    /* 0 */ s8 id;
-    /* 1 */ unk8 zMin;
-    /* 2 */ unk8 zMax;
-    /* 3 */ unk8 xMin;
-    /* 4 */ unk8 xMax;
+    /* 0 */ u8 id;
+    /* 1 */ u8 zMin;
+    /* 2 */ u8 xMin;
+    /* 3 */ u8 zMax; // high byte of the radius for spheres
+    /* 4 */ u8 xMax; // low byte of the radius for spheres
     /* 5 */ bool isAABB_Unk1;
-    /* 6 */ s8 mUnk_6;
-    /* 7 */ s8 mUnk_7;
-    /* 8 */ s8 mUnk_8;
+    /* 6 */ u8 mUnk_6;
+    /* 7 */ u8 mUnk_7;
+    /* 8 */ u8 mUnk_8;
     /* 9 */ bool isAABB_Unk2;
     /* a */ bool isSphere;
     /* b */
@@ -35,7 +35,7 @@ public:
     /* 05 */ u8 mId;
     /* 06 */ unk8 mUnk_06[2];
     /* 08 */ u32 mUnk_08;
-    /* 0c */ u32 mUnk_0c;
+    /* 0c */ s32 mUnk_0c;
     /* 10 */ u32 mUnk_10;
     /* 14 */
 

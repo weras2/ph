@@ -14,7 +14,8 @@ public:
     /* 06 */ unk8 mUnk_06[0x2];
     /* 08 */ unk32 mUnk_08;
     /* 0c */ unk32 mUnk_0c;
-    /* 10 */
+    /* 10 */ unk32 mUnk_10;
+    /* 14 */
 
     /* 00 */ virtual ~UnkStruct_ov000_020e2f04();
     /* 08 */ virtual unk32 vfunc_08() = 0;
@@ -44,5 +45,6 @@ public:
         mUnk_04(1),
         mUnk_05(0),
         mUnk_08(0),
-        mUnk_0c(0) {}
+        mUnk_0c(0),
+        mUnk_10(0) {}
 };
