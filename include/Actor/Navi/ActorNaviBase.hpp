@@ -18,10 +18,7 @@ enum FairyId_ {
     FairyId_COUNT   = 3,
 };
 
-class ActorNaviBase_Unk1 : public UnkStruct_ov000_020b7d74 {
-public:
-    ActorNaviBase_Unk1();
-};
+typedef UnkStruct_ov000_020b7d74 ActorNaviBase_Unk1;
 
 class ActorNaviBase_Unk2 : public UnkStruct_ov000_020c0c08 {
 public:

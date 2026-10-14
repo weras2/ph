@@ -4,6 +4,7 @@
 #include "types.h"
 
 #include "Player/LinkStateBase.hpp"
+#include "Unknown/UnkStruct_ov000_020b7d74.hpp"
 
 class LinkStateRoll : public LinkStateBase {
 public:
@@ -20,12 +21,14 @@ public:
     /* 20 */ unk32 mUnk_20;
     /* 24 */ unk8 mUnk_24[2];
     /* 26 */ unk16 mUnk_26;
-    /* 28 */ unk8 mUnk_28[4];
-    /* 2c */ unk32 mUnk_2c[5];
-    /* 40 */ unk32 mUnk_40;
+    /* 28 */ unk8 mUnk_28;
+    /* 29 */ unk8 mUnk_29;
+    /* 2a */ unk8 mUnk_2a;
+    /* 2b */ unk8 mUnk_2b;
+    /* 2c */ UnkStruct_ov000_020b7d74 mUnk_2c[5];
+    /* 40 */ UnkStruct_ov000_020b7d74 mUnk_40;
     /* 44 */ ActorRef mUnk_44[0x8];
-    /* 84 */ void *mUnk_84;
-    /* 88 */ unk32 mUnk_88;
+    /* 84 */ ActorRef mUnk_84;
     /* 8c */ unk8 mUnk_8c[0xc];
     /* 98 */
 
