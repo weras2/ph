@@ -203,7 +203,7 @@ from:0x0219a3f8 kind:arm_call_thumb to:0x020bd5b8 module:overlay(0)
 from:0x0219a420 kind:arm_call_thumb to:0x0207a128 module:overlay(0)
 from:0x0219a428 kind:arm_call to:0x021237ac module:overlay(14)
 from:0x0219a42c kind:arm_call to:0x021237cc module:overlay(14)
-from:0x0219a4bc kind:load to:0x02155d58 module:overlay(14)
+from:0x0219a4bc kind:load to:0x02155d50 add:0x8 module:overlay(14)
 from:0x0219a4c0 kind:load to:0x027e0fb4 module:dtcm
 from:0x0219a4c4 kind:load to:0x027e0d0c module:dtcm
 from:0x0219a4d4 kind:arm_call to:0x02123dc8 module:overlay(14)

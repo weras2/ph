@@ -36,5 +36,5 @@ bool EquipRope::func_ov014_0213dfbc(Cylinder *cylinder, s32 param2, Vec3p *vec) 
 void EquipRope::func_ov014_0213e144(Vec3p *param1, Vec3p *param2, s32 param3) {}
 bool EquipRope::func_ov014_0213e20c(s32 param1, Vec3p *param2) {}
 bool EquipRope::func_ov014_0213e328() {}
-void func_ov014_0213e544(s32 param1, unk32 param2) {}
-void func_ov014_0213e55c(unk32 *param1) {}
+void func_ov014_0213e544(ActorRope_PointList *list, Vec3p *point) {}
+void func_ov014_0213e55c(ActorRope_PointList *list) {}

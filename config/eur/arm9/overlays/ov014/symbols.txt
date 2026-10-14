@@ -87,8 +87,8 @@ func_ov014_021237ec kind:function(arm,size=0x10) addr:0x021237ec
 _ZN9ActorRope6CreateEv kind:function(arm,size=0x30) addr:0x021237fc
 _ZN9ActorRope19func_ov014_0212382cEP5Vec4p kind:function(arm,size=0x20) addr:0x0212382c
 _ZN9ActorRope19func_ov014_0212384cEv kind:function(arm,size=0xc) addr:0x0212384c
-_ZN9ActorRopeD1Ev kind:function(arm,size=0x50) addr:0x02123858
-_ZN9ActorRopeD0Ev kind:function(arm,size=0x48) addr:0x021238a8
+_ZN9ActorRopeD0Ev kind:function(arm,size=0x50) addr:0x02123858
+_ZN9ActorRopeD1Ev kind:function(arm,size=0x48) addr:0x021238a8
 _ZN9ActorRope19func_ov014_021238f0Ev kind:function(arm,size=0x14) addr:0x021238f0
 _ZN9ActorRope19func_ov014_02123904Ev kind:function(arm,size=0x5c) addr:0x02123904
 _ZN9ActorRope19func_ov014_02123960Ev kind:function(arm,size=0x34) addr:0x02123960
@@ -96,7 +96,7 @@ _ZN9ActorRope8vfunc_14Ej kind:function(arm,size=0x214) addr:0x02123994
 _ZN9ActorRope8vfunc_18Ej kind:function(arm,size=0xac) addr:0x02123ba8
 _ZN9ActorRope19func_ov014_02123c54Ei kind:function(arm,size=0x7c) addr:0x02123c54
 _ZN9ActorRope19func_ov014_02123cd0EP5Vec3pi kind:function(arm,size=0x14c) addr:0x02123cd0
-_ZN9ActorRope19func_ov014_02123e1cEv kind:function(arm,size=0x2c) addr:0x02123e1c
+_ZN9ActorRope19func_ov014_02123e1cEi kind:function(arm,size=0x2c) addr:0x02123e1c
 _ZN9ActorRope19func_ov014_02123e48Ei kind:function(arm,size=0xbc) addr:0x02123e48
 _ZN9ActorRope8vfunc_20Eb kind:function(arm,size=0xec) addr:0x02123f04
 _ZN9ActorRope8vfunc_10Ej kind:function(thumb,size=0x12) addr:0x02123ff0
@@ -905,8 +905,8 @@ _ZN9EquipRope19func_ov014_0213dfbcEP8CylinderiP5Vec3p kind:function(arm,size=0x1
 _ZN9EquipRope19func_ov014_0213e144EP5Vec3pS1_i kind:function(arm,size=0xc8) addr:0x0213e144
 _ZN9EquipRope19func_ov014_0213e20cEiP5Vec3p kind:function(arm,size=0x11c) addr:0x0213e20c
 _ZN9EquipRope19func_ov014_0213e328Ev kind:function(arm,size=0x21c) addr:0x0213e328
-_Z19func_ov014_0213e544ii kind:function(arm,size=0x18) addr:0x0213e544
-_Z19func_ov014_0213e55cPi kind:function(arm,size=0x55c) addr:0x0213e55c
+_Z19func_ov014_0213e544P19ActorRope_PointListP5Vec3p kind:function(arm,size=0x18) addr:0x0213e544
+_Z19func_ov014_0213e55cP19ActorRope_PointList kind:function(arm,size=0x55c) addr:0x0213e55c
 _ZN8EquipBowC2Ev kind:function(thumb,size=0x1c) addr:0x0213eab8
 _ZN8EquipBowD1Ev kind:function(thumb,size=0xc) addr:0x0213ead4
 _ZN8EquipBowD0Ev kind:function(thumb,size=0x12) addr:0x0213eae0
@@ -1636,7 +1636,7 @@ __sinit_ActorArrow.cpp kind:function(arm,size=0x68) addr:0x021541ec
 __sinit_ActorBlast.cpp kind:function(arm,size=0x40) addr:0x02154254
 __sinit_ActorBomb.cpp kind:function(arm,size=0x60) addr:0x02154294
 __sinit_ov014_021542f4 kind:function(arm,size=0x40) addr:0x021542f4
-__sinit_ActorRope.cpp kind:function(arm,size=0x40) addr:0x02154334
+__sinit_ActorRope_14.cpp kind:function(arm,size=0x40) addr:0x02154334 local
 __sinit_ov014_02154374 kind:function(arm,size=0x84) addr:0x02154374
 __sinit_ov014_021543f8 kind:function(arm,size=0x38) addr:0x021543f8
 __sinit_ov014_02154430 kind:function(arm,size=0x38) addr:0x02154430
@@ -1715,7 +1715,7 @@ __sinit_ov014_02155814 kind:function(arm,size=0x38) addr:0x02155814
 .p__sinit_ov014_02154254 kind:data(word) addr:0x02155850
 .p__sinit_ov014_02154294 kind:data(word) addr:0x02155854
 .p__sinit_ov014_021542f4 kind:data(word) addr:0x02155858
-.p__sinit_ov014_02154334 kind:data(word) addr:0x0215585c
+.p__sinit_ActorRope_14.cpp kind:data(word) addr:0x0215585c local
 .p__sinit_ov014_02154374 kind:data(word) addr:0x02155860
 .p__sinit_ov014_021543f8 kind:data(word) addr:0x02155864
 .p__sinit_ov014_02154430 kind:data(word) addr:0x02155868
@@ -1822,15 +1822,16 @@ data_ov014_02155cc8 kind:data(any) addr:0x02155cc8
 data_ov014_02155ccc kind:data(any) addr:0x02155ccc
 data_ov014_02155cd0 kind:data(any) addr:0x02155cd0
 data_ov014_02155cfc kind:data(any) addr:0x02155cfc
-data_ov014_02155db0 kind:data(any) addr:0x02155db0
-data_ov014_02155db4 kind:data(any) addr:0x02155db4
-data_ov014_02155db8 kind:data(any) addr:0x02155db8
-data_ov014_02155dbc kind:data(any) addr:0x02155dbc
-data_ov014_02155dc0 kind:data(any) addr:0x02155dc0
-data_ov014_02155dc4 kind:data(any) addr:0x02155dc4
-data_ov014_02155dc8 kind:data(any) addr:0x02155dc8
-data_ov014_02155dcc kind:data(any) addr:0x02155dcc
-_ZTV9ActorRope kind:data(any) addr:0x02155df8
+@1633 kind:data(any) addr:0x02155db0 local
+@1632 kind:data(any) addr:0x02155db4 local
+@1631 kind:data(any) addr:0x02155db8 local
+@1630 kind:data(any) addr:0x02155dbc local
+@1629 kind:data(any) addr:0x02155dc0 local
+@1628 kind:data(any) addr:0x02155dc4 local
+@1627 kind:data(any) addr:0x02155dc8 local
+@1626 kind:data(any) addr:0x02155dcc local
+gShipParts kind:data(any) addr:0x02155dd0 local
+_ZTV9ActorRope kind:data(any) addr:0x02155df0
 data_ov014_02155eac kind:data(any) addr:0x02155eac
 data_ov014_02155eb0 kind:data(any) addr:0x02155eb0
 data_ov014_02155eb4 kind:data(any) addr:0x02155eb4
@@ -2200,7 +2201,7 @@ data_ov014_0215ac40 kind:bss addr:0x0215ac40
 data_ov014_0215ac4c kind:bss addr:0x0215ac4c
 data_ov014_0215ac5c kind:bss addr:0x0215ac5c
 data_ov014_0215ac68 kind:bss addr:0x0215ac68
-@366 kind:bss addr:0x0215ac7c
+@1654 kind:bss addr:0x0215ac7c local
 _ZN9ActorRope5gTypeE kind:bss addr:0x0215ac88
 data_ov014_0215ac9c kind:bss addr:0x0215ac9c
 data_ov014_0215aca8 kind:bss addr:0x0215aca8

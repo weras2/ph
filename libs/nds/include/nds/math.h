@@ -121,7 +121,7 @@ bool Vec3p_TryNormalize(Vec3p *vec);
 q20 Vec3p_DistanceSquared(Vec3p *a, Vec3p *b);
 void Vec3p_Scale(Vec3p *vec, q20 scale);
 bool Vec3p_CalculateNormal(Vec3p *vec, Vec3p *a, Vec3p *b, Vec3p *c);
-void Vec3p_SetLength(Vec3p *vec, q20 len, Vec3p *out);
+bool Vec3p_SetLength(Vec3p *vec, q20 len, Vec3p *out);
 
 inline void Vec3p_Rotate(Vec3p *vec, q20 sin, q20 cos, Vec3p *out) {
     out->x += MUL_Q20(vec->z, sin);

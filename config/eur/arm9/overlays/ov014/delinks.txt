@@ -33,3 +33,10 @@ src/14_Land/Actor/Character/ActorCharacter.cpp:
 
 src/14_Land/Actor/Character/ActorGenericCharacter.cpp:
     .text       start:0x021476d0 end:0x02148234
+
+src/14_Land/Actor/Player/ActorRope_14.cpp:
+    .text       start:0x021237fc end:0x02124004
+    .init       start:0x02154334 end:0x02154374
+    .ctor       start:0x0215585c end:0x02155860
+    .data       start:0x02155db0 end:0x02155eac
+    .bss        start:0x0215ac7c end:0x0215ac9c

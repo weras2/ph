@@ -11,7 +11,9 @@
 
 struct EquipRope_Unk_18 {
     /* 00 */ Vec3p vec;
-    /* 0c */ unk8 mUnk_0c[0x10];
+    /* 0c */ unk8 mUnk_0c[0xd];
+    /* 19 */ s8 mUnk_19;
+    /* 1a */ unk8 mUnk_1a[0x2];
     /* 1c */
 
     bool func_ov057_02198e80();
@@ -53,7 +55,9 @@ public:
     /* 6c */ unk16 mUnk_6c;
     /* 6e */ unk8 mUnk_6e[2];
     /* 70 */ unk16 mUnk_70;
-    /* 72 */ unk8 mUnk_72[0x12];
+    /* 72 */ unk8 mUnk_72[0x2];
+    /* 74 */ q20 mUnk_74;
+    /* 78 */ unk8 mUnk_78[0xc];
     /* 84 */ void *mUnk_84;
     /* 88 */ unk8 mUnk_88[0x18];
     /* a0 */ unk32 mUnk_a0;

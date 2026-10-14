@@ -4,7 +4,8 @@ ActorRope_Unk_0219a3b0 gUnk_0219a3b0;
 
 bool ActorRope_Unk_0219a3b0::vfunc_08(UnkStruct_ov000_020beba8_08 *param1) {}
 bool ActorRope_Unk_0219a3b0::vfunc_10(s32 *param1) {}
-ActorRope::ActorRope() {}
+ActorRope::ActorRope() :
+    mUnk_18c(0, 0, 0, 0) {}
 bool ActorRope::Init() {}
 q20 ActorRope::func_ov057_0219a5ac() {}
 void ActorRope::func_ov057_0219a6b8() {}

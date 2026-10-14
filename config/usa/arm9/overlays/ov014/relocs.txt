@@ -507,13 +507,13 @@ from:0x021237fc kind:arm_call_thumb to:0x0213da90 module:overlay(14)
 from:0x02123804 kind:arm_call_thumb to:0x020b3e48 module:overlay(0)
 from:0x0212380c kind:arm_call to:0x020c16d0 module:overlay(0)
 from:0x02123814 kind:arm_call to:0x0202ea08 module:main
-from:0x02123820 kind:load to:0x02155d58 module:overlay(14)
+from:0x02123820 kind:load to:0x02155d50 add:0x8 module:overlay(14)
 from:0x02123824 kind:load to:0x027e0fc8 module:dtcm
 from:0x02123848 kind:arm_call to:0x02120270 module:overlay(14)
 from:0x0212384c kind:arm_call_thumb to:0x0213da90 module:overlay(14)
 from:0x02123854 kind:arm_call_thumb to:0x020b3e48 module:overlay(0)
 from:0x0212385c kind:arm_call to:0x020c16d0 module:overlay(0)
-from:0x02123868 kind:load to:0x02155d58 module:overlay(14)
+from:0x02123868 kind:load to:0x02155d50 add:0x8 module:overlay(14)
 from:0x0212386c kind:load to:0x027e0fc8 module:dtcm
 from:0x021238a0 kind:arm_call to:0x020cea6c module:overlay(0)
 from:0x021238c4 kind:arm_call to:0x0207c150 module:overlay(0)
