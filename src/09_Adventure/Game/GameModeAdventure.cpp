@@ -89,10 +89,7 @@ THUMB GameModeAdventure::~GameModeAdventure() {
     func_ov003_020f4534();
     data_027e1044 = 0;
 
-    if (this->mUnk_014 != NULL) {
-        this->mUnk_014->mUnk_04.Unregister();
-        delete this->mUnk_014;
-    }
+    delete this->mUnk_014;
 
     delete this->mUnk_010;
     delete this->mUnk_00c;

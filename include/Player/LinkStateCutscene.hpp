@@ -6,13 +6,17 @@
 
 #include "Item/Item.hpp"
 #include "Player/LinkStateBase.hpp"
+#include "Render/FadeControl.hpp"
 #include "Unknown/UnkStruct_02037750.hpp"
+#include "Unknown/UnkStruct_ov000_020b7d74.hpp"
 
 class UnkStruct_ov004_0210abb8 : public UnkStruct_02037750 {
 public:
     /* 00 (base) */
     /* 20 */ unk32 mUnk_20;
     /* 24 */
+
+    UnkStruct_ov004_0210abb8(unk32 param1);
 
     /* 00 */ virtual ~UnkStruct_ov004_0210abb8() override;
     /* 08 */ virtual void vfunc_08(unk32 param1) override;
@@ -21,11 +25,13 @@ public:
     /* 34 */
 };
 
+class LinkStateCutscene_Fade : public FadeControl {};
+
 class LinkStateCutscene : public LinkStateBase {
 public:
     /* 00 (base) */
-    /* 0c */ unk8 mUnk_08[0x24]; // non-documented struct
-    /* 30 */ void *mUnk_30;
+    /* 0c */ UnkStruct_ov004_0210abb8 mUnk_0c;
+    /* 30 */ LinkStateCutscene_Fade *mUnk_30;
     /* 34 */ s16 mUnk_34;
     /* 36 */ unk8 mUnk_36[2];
     /* 38 */ s32 mUnk_38;
@@ -49,14 +55,18 @@ public:
     /* 80 */ unk16 mUnk_80;
     /* 82 */ unk8 mUnk_82[2];
     /* 84 */ void *mUnk_84;
-    /* 88 */ unk32 mUnk_88[4];
+    /* 88 */ UnkStruct_ov000_020b7d74 mUnk_88[4];
     /* 98 */ unk32 mUnk_98;
     /* 9c */ void *mUnk_9c;
     /* a0 */ unk32 mUnk_a0;
     /* a4 */ bool mUnk_a4;
     /* a5 */ s8 mUnk_a5;
     /* a6 */ bool mUnk_a6;
-    /* a7 */ unk8 mUnk_a7[5];
+    /* a7 */ unk8 mUnk_a7;
+    /* a8 */ unk8 mUnk_a8;
+    /* a9 */ unk8 mUnk_a9;
+    /* aa */ unk8 mUnk_aa;
+    /* ab */ unk8 mUnk_ab;
     /* ac */
 
     /* 00 */ virtual void vfunc_00() override;
