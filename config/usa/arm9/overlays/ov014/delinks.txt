@@ -33,3 +33,8 @@ src/14_Land/Actor/Character/ActorCharacter.cpp:
 
 src/14_Land/Actor/Character/ActorGenericCharacter.cpp:
     .text       start:0x0214762c end:0x02148190
+
+src/14_Land/Player/EquipBow_14.cpp:
+    complete
+    .text       start:0x0213ea14 end:0x0213ea58
+    .data       start:0x02158e94 end:0x02158eec

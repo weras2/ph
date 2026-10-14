@@ -18,8 +18,8 @@ public:
     /* 0d */ unk8 mUnk_0d[3];
     /* 10 */
 
-    /* 00 */ virtual void vfunc_00() override;
     /* 04 */ virtual ~EquipBow() override;
+    /* 00 */ virtual void vfunc_00() override;
     /* 0c */ virtual ItemFlag GetId() const override;
     /* 14 */ virtual bool IsUsable(unk32 param1) const override;
     /* 18 */ virtual void vfunc_18() override;
