@@ -587,7 +587,7 @@ data_ov004_02110468 kind:data(any) addr:0x021103e8
 data_ov004_0211047c kind:data(any) addr:0x021103fc
 data_ov004_02110484 kind:data(any) addr:0x02110404
 data_ov004_0211048c kind:data(any) addr:0x0211040c
-_ZTV4Bhio kind:data(any) addr:0x02110420
+_ZTV4Bhio kind:data(any) addr:0x02110418
 data_ov004_021104e0 kind:data(any) addr:0x02110460
 data_ov004_021104f0 kind:data(any) addr:0x02110470
 data_ov004_021104f8 kind:data(any) addr:0x02110478

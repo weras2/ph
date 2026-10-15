@@ -1,3 +1,3 @@
 #include "Player/Bhio.hpp"
 
-Bhio::~Bhio() {}
+ARM Bhio::~Bhio() {}
