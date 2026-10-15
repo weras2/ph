@@ -11,7 +11,7 @@ THUMB UnkStruct_027e05f8::UnkStruct_027e05f8() :
     mUnk_2(0),
     mUnk_4(0) {}
 
-ARM void UnkStruct_027e05f8::func_02037458(u16 param1) {
+ARM void UnkStruct_027e05f8::func_02037458(u16 param1, unk32 param2) {
     mUnk_2 = param1 & (param1 ^ mUnk_0);
     mUnk_4 = mUnk_0 & (param1 ^ mUnk_0);
     mUnk_0 = param1;

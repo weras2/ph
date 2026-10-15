@@ -14,7 +14,7 @@ struct UnkStruct_027e05f8 {
 
     // Big gap to next TU
     UnkStruct_027e05f8();
-    void func_02037458(u16 param1);
+    void func_02037458(u16 param1, unk32 param2);
     void func_02037480();
     static bool func_02037490();
 };
