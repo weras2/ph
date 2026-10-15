@@ -4,7 +4,42 @@
 #include "nds/math.h"
 #include "types.h"
 
+#include "Actor/Actor.hpp"
 #include "System/SysNew.hpp"
+
+// 0x20 bytes; ctor/dtor live in overlay 4 next to PlayerBase
+class PlayerControlData_Unk0 {
+public:
+    /* 00 */ unk8 mUnk_00[0x20];
+    /* 20 */
+
+    PlayerControlData_Unk0();
+    ~PlayerControlData_Unk0();
+};
+
+class PlayerControlData_Unk1 {
+public:
+    /* 0 */ unk32 mUnk_0;
+    /* 4 */ s32 mUnk_4;
+    /* 8 */ unk32 mUnk_8;
+    /* c */
+
+    PlayerControlData_Unk1() :
+        mUnk_0(0),
+        mUnk_4(-1),
+        mUnk_8(0) {}
+    ~PlayerControlData_Unk1();
+
+    void Set(s32 param1, unk32 param2) {
+        mUnk_4 = param1;
+        mUnk_8 = param2;
+    }
+};
+
+class PlayerControlData_Unk2 : public SysObject {
+public:
+    /* 00 */ virtual ~PlayerControlData_Unk2();
+};
 
 class PlayerControlData : public SysObject {
 public:
@@ -23,34 +58,25 @@ public:
     /* 030 */ unk16 mUnk_030;
     /* 032 */ unk16 mUnk_032;
     /* 034 */ Vec3p mFairyVector; // shortened vector from link to fairy?
-    /* 040 */ unk8 mUnk_040[0xc0];
-    /* 100 */ unk32 mUnk_100;
-    /* 104 */ unk8 mUnk_104[0x14];
-    /* 118 */ unk32 mUnk_118;
-    /* 11c */ unk8 mUnk_11c[4];
-    /* 120 */ unk32 mUnk_120;
-    /* 124 */ unk8 mUnk_124[0x14];
-    /* 138 */ unk32 mUnk_138;
-    /* 13c */ unk8 mUnk_13c[4];
-    /* 140 */ unk32 mUnk_140;
+    /* 040 */ Mat4x3p mUnk_040[3];
+    /* 0d0 */ Vec3p mUnk_0d0[2];
+    /* 0e8 */ Vec3p mUnk_0e8[2];
+    /* 100 */ PlayerControlData_Unk0 mUnk_100;
+    /* 120 */ PlayerControlData_Unk0 mUnk_120;
+    /* 140 */ PlayerControlData_Unk2 *mUnk_140;
     /* 144 */ unk32 mUnk_144;
-    /* 148 */ unk8 mUnk_148[8];
+    /* 148 */ unk8 mUnk_148;
+    /* 149 */ unk8 mUnk_149;
+    /* 14a */ unk8 mUnk_14a;
+    /* 14b */ unk8 mUnk_14b;
+    /* 14c */ unk8 mUnk_14c;
+    /* 14d */ unk8 mUnk_14d;
+    /* 14e */ unk8 mUnk_14e;
+    /* 14f */ unk8 mUnk_14f;
     /* 150 */ unk16 mUnk_150;
     /* 152 */ unk8 mUnk_152[2];
-    /* 154 */ unk32 mUnk_154;
-    /* 158 */ unk32 mUnk_158;
-    /* 15c */ s32 mUnk_15c;
-    /* 160 */ unk32 mUnk_160;
-    /* 164 */ s32 mUnk_164;
-    /* 168 */ unk32 mUnk_168;
-    /* 16c */ unk32 mUnk_16c;
-    /* 170 */ unk32 mUnk_170;
-    /* 174 */ unk8 mUnk_174[4];
-    /* 178 */ unk32 mUnk_178;
-    /* 17c */ unk32 mUnk_17c;
-    /* 180 */ unk8 mUnk_180[4];
-    /* 184 */ unk32 mUnk_184;
-    /* 184 */ unk32 mUnk_188;
+    /* 154 */ Actor_UnkStruct_0a4 mUnk_154;
+    /* 168 */ PlayerControlData_Unk1 mUnk_168[3];
     /* 18c */ unk32 mUnk_18c;
     /* 190 */ unk32 mUnk_190;
     /* 194 */ unk32 mUnk_194;
