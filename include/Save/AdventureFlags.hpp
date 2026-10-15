@@ -71,7 +71,7 @@ struct UnkStruct_027e0d38_UnkC {
 class UnkStruct_02082348_04 {
 public:
     /* 00 */ Vec3p mUnk_00; // pos?
-    /* 0c */ unk16 mUnk_0c; // angle?
+    /* 0c */ s16 mUnk_0c; // angle?
     /* 0e */ u8 mUnk_0e; // some id?
     /* 0f */ u8 mUnk_0f;
     /* 10 */ u8 mUnk_10;
@@ -164,7 +164,14 @@ struct UnkStruct_ov000_0209a50c {
     ~UnkStruct_ov000_0209a50c();
 };
 
-struct AdventureFlags_44 {
+struct AdventureFlags_44 : public SysObject {
+    /* 000 */ unk8 mUnk_000[0x14c];
+    /* 14c */
+
+    AdventureFlags_44(CutsceneHandler *cutsceneHandler);
+    ~AdventureFlags_44();
+    void func_ov000_0209906c();
+    void func_ov000_02099070();
     void func_ov000_02099024();
     bool func_ov000_02098c48(s32 param1);
     bool func_ov000_02098c68();
@@ -236,8 +243,8 @@ public:
     void func_ov004_021044f8(s32 param1);
     void func_ov004_0210453c();
     bool func_ov004_0210455c(s32 param1);
-    void func_ov004_021046c8(unk32 param1);
-    void func_ov004_021046d4(s32 param1);
+    void func_ov004_021046c8(s32 param1);
+    void func_ov004_021046d4();
 };
 
 extern AdventureFlags *gAdventureFlags;

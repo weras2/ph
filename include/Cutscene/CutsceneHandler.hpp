@@ -3,11 +3,13 @@
 #include "global.h"
 #include "types.h"
 
+#include "System/SysNew.hpp"
+
 #include <nds/math.h>
 
 #include "Render/FadeControl.hpp"
 
-class CutsceneHandler {
+class CutsceneHandler : public SysObject {
 public:
     /* 00 */ u32 mFlags1;
     /* 04 */ u32 mFlags2;
