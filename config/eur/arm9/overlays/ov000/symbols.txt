@@ -2385,7 +2385,7 @@ _ZN13PlayerControl17InitTouchMovementEv kind:function(arm,size=0x3c) addr:0x020b
 _ZN13PlayerControl19func_ov000_020b7924Ei kind:function(arm,size=0x428) addr:0x020b7924
 _ZN13PlayerControl15ApplyTouchWorldEP5Vec3pi kind:function(arm,size=0x20) addr:0x020b7d4c
 _ZN13PlayerControl19func_ov000_020b7d6cEv kind:function(arm,size=0x8) addr:0x020b7d6c
-func_ov000_020b7d74 kind:function(arm,size=0x7c) addr:0x020b7d74
+_ZN24UnkStruct_ov000_020b7d74D1Ev kind:function(arm,size=0x7c) addr:0x020b7d74
 func_ov000_020b7df0 kind:function(arm,size=0x7c) addr:0x020b7df0
 _Z19func_ov000_020b7e6cPi kind:function(arm,size=0x38) addr:0x020b7e6c
 func_ov000_020b7ea4 kind:function(arm,size=0x20) addr:0x020b7ea4
@@ -5102,7 +5102,7 @@ data_ov000_020e6f5c kind:data(any) addr:0x020e6f5c
 data_ov000_020e6f60 kind:data(any) addr:0x020e6f60
 data_ov000_020e6f64 kind:data(any) addr:0x020e6f64
 data_ov000_020e6f90 kind:data(any) addr:0x020e6f90
-data_ov000_020e6fb0 kind:data(any) addr:0x020e6fb0
+_ZTV10EquipSword kind:data(any) addr:0x020e6fa8
 data_ov000_020e7000 kind:data(any) addr:0x020e7000
 data_ov000_020e7004 kind:data(any) addr:0x020e7004
 data_ov000_020e7008 kind:data(any) addr:0x020e7008

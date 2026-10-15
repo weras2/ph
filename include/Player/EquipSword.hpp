@@ -4,24 +4,26 @@
 
 #include "Player/EquipItem.hpp"
 #include "Player/EquipRope.hpp"
+#include "Render/ModelRender.hpp"
+#include "Unknown/UnkStruct_ov000_020b7d74.hpp"
 
 class EquipSword : public EquipItem {
 public:
     /* 00 (base) */
     /* 09 */ unk8 mUnk_09[3]; // padding?
-    /* 0c */ void *mUnk_0c;
-    /* 10 */ void *mUnk_10;
-    /* 14 */ void *mUnk_14;
-    /* 18 */ void *mUnk_18;
-    /* 1c */ void *mUnk_1c;
-    /* 20 */ void *mUnk_20;
-    /* 24 */ void *mUnk_24;
-    /* 28 */ void *mUnk_28;
-    /* 2c */ unk32 mUnk_2c;
-    /* 30 */ unk32 mUnk_30;
-    /* 34 */ unk32 mUnk_34;
-    /* 38 */ unk8 mUnk_38[8];
-    /* 40 */ void *mUnk_40;
+    /* 0c */ ModelRender *mUnk_0c;
+    /* 10 */ ModelRender *mUnk_10;
+    /* 14 */ ModelRender *mUnk_14;
+    /* 18 */ ModelRender *mUnk_18;
+    /* 1c */ UnkStruct_ov000_020c0c08 *mUnk_1c;
+    /* 20 */ UnkStruct_ov000_020c0c08 *mUnk_20;
+    /* 24 */ UnkStruct_ov000_020c0c08 *mUnk_24;
+    /* 28 */ UnkStruct_ov000_020c0c08 *mUnk_28;
+    /* 2c */ UnkStruct_ov000_020b7d74 mUnk_2c;
+    /* 30 */ UnkStruct_ov000_020b7d74 mUnk_30[2];
+    /* 38 */ s32 mUnk_38;
+    /* 3c */ s32 mUnk_3c;
+    /* 40 */ s32 mUnk_40;
     /* 44 */ unk32 mUnk_44;
     /* 48 */ unk32 mUnk_48;
     /* 4c */ unk32 mUnk_4c;

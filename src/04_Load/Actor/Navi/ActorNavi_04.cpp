@@ -27,8 +27,6 @@ THUMB ActorNaviBase::ActorNaviBase() :
 
 THUMB ActorNaviBase::~ActorNaviBase() {}
 
-THUMB ActorNaviBase_Unk1::ActorNaviBase_Unk1() {}
-
 THUMB bool ActorNaviBase::Init() {
     mGravity = 0;
     mHitbox.MakeEmpty();
