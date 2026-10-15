@@ -3,11 +3,55 @@
 #include "global.h"
 #include "types.h"
 
+#include "System/SysNew.hpp"
+
 #include <nds/math.h>
 
 #include "Render/FadeControl.hpp"
 
-class CutsceneHandler {
+class CutsceneHandler;
+
+// Allocated by CutsceneHandler::func_ov004_0210f3e4; ctor/dtor live in overlay 40
+class CutsceneHandler_Unk80 : public SysObject {
+public:
+    /* 00 */ unk8 mUnk_00[0xc];
+    /* 0c */
+
+    CutsceneHandler_Unk80();
+    ~CutsceneHandler_Unk80();
+};
+
+class CutsceneHandler_UnkBase : public SysObject {
+public:
+    /* 00 (vtable) */
+    /* 04 */
+
+    /* 00 */ virtual ~CutsceneHandler_UnkBase();
+};
+
+class CutsceneHandler_Unk84 : public CutsceneHandler_UnkBase {
+public:
+    /* 00 (base) */
+    /* 04 */ unk32 mUnk_04;
+    /* 08 */
+
+    /* 00 */ virtual ~CutsceneHandler_Unk84() override;
+
+    CutsceneHandler_Unk84(CutsceneHandler *handler);
+};
+
+class CutsceneHandler_Unk88 : public CutsceneHandler_UnkBase {
+public:
+    /* 00 (base) */
+    /* 04 */ unk8 mUnk_04[0x18];
+    /* 1c */
+
+    /* 00 */ virtual ~CutsceneHandler_Unk88() override;
+
+    CutsceneHandler_Unk88(CutsceneHandler *handler);
+};
+
+class CutsceneHandler : public SysObject {
 public:
     /* 00 */ u32 mFlags1;
     /* 04 */ u32 mFlags2;
@@ -38,9 +82,8 @@ public:
     /* 4a */ unk8 mUnk_4a[0x2];
     /* 4c */ Mat4x3p mUnk_4c;
     /* 7c */ FadeControl *mFadeControl;
-    /* 80 */ s32 **mUnk_80;
-    /* 84 */ s32 *mUnk_84;
-    /* 88 */ s32 mUnk_88;
+    /* 80 */ CutsceneHandler_Unk80 *mUnk_80;
+    /* 84 */ CutsceneHandler_UnkBase *mUnk_84[2];
     /* 8c */
 
     void SetFlags(s32 value) {
