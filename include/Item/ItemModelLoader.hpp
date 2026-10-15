@@ -3,12 +3,16 @@
 #include "global.h"
 #include "types.h"
 
+class ItemModel;
+
 class ItemModelLoader {
 public:
     /* 00 */ unk32 mItems;
     /* 04 */ unk32 mDungeonItems;
     /* 08 */ unk32 mUnk_08;
-    /* 0c */ unk8 mUnk_0c[0x14];
+    /* 0c */ unk8 mUnk_0c[0xc];
+    /* 18 */ unk32 mUnk_18;
+    /* 1c */ unk8 mUnk_1c[4];
     /* 20 */
 
     ItemModelLoader();
@@ -19,10 +23,14 @@ public:
     unk32 func_ov000_020bb3a8(s32 param1);
     s32 func_ov000_020bb3b4(s32 param1, char *param2);
     unk32 func_ov000_020bb3d4(s32 param1, unk32 param2);
-    void func_ov000_020bb3f4(char *param2);
-    void func_ov000_020bb414(unk32 param1);
-    void func_ov000_020bb420(unk32 param1);
-    void func_ov000_020bb42c(unk32 param1);
+    ItemModel *func_ov000_020bb3f4(char *param2);
+    unk32 func_ov000_020bb414(unk32 param1);
+    unk32 func_ov000_020bb420(unk32 param1);
+    unk32 func_ov000_020bb42c(unk32 param1);
+
+    bool HasUnk_18() {
+        return mUnk_18 != 0;
+    }
 
     static void Create();
     static void Destroy();

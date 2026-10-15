@@ -5111,7 +5111,7 @@ data_ov000_020e7010 kind:data(any) addr:0x020e7010
 data_ov000_020e7014 kind:data(any) addr:0x020e7014
 data_ov000_020e7018 kind:data(any) addr:0x020e7018
 data_ov000_020e701c kind:data(any) addr:0x020e701c
-data_ov000_020e7048 kind:data(any) addr:0x020e7048
+_ZTV11EquipShield kind:data(any) addr:0x020e7040
 _ZTV15ActorWisdomNavi kind:data(any) addr:0x020e7098
 vtable_ov000_020e7198 kind:data(any) addr:0x020e7190
 data_ov000_020e71a0 kind:data(any) addr:0x020e71a0
