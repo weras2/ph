@@ -159,3 +159,7 @@ src/00_Core/Game/GameModePlay.cpp:
 src/00_Core/Render/ModelRender.cpp:
     .text       start:0x020a950c end:0x020a9980
     .data       start:0x020e57b8 end:0x020e5800
+
+src/00_Core/Map/TriggerAABB_Unk2_Unk1_1.cpp:
+    complete
+    .text       start:0x020948c8 end:0x02094908
