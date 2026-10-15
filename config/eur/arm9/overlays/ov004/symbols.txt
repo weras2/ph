@@ -328,7 +328,7 @@ _ZN17PlayerControlData8vfunc_18Ev kind:function(thumb,size=0x38) addr:0x0210b640
 _ZN17PlayerControlData8vfunc_1cEv kind:function(thumb,size=0x2) addr:0x0210b678
 func_ov004_0210b67c kind:function(thumb,size=0x2c) addr:0x0210b67c
 func_ov004_0210b6a8 kind:function(thumb,size=0x2c) addr:0x0210b6a8
-_ZN10EquipSwordC2Ev kind:function(thumb,size=0x244) addr:0x0210b6d4
+_ZN10EquipSwordC1Ev kind:function(thumb,size=0x244) addr:0x0210b6d4
 _ZN10EquipSwordD1Ev kind:function(thumb,size=0xa0) addr:0x0210b918
 _ZN10EquipSwordD0Ev kind:function(thumb,size=0xa8) addr:0x0210b9b8
 _ZN9EquipItemC2Ev kind:function(thumb,size=0x14) addr:0x0210ba60
@@ -336,7 +336,7 @@ _ZN9EquipItemD1Ev kind:function(thumb,size=0x2) addr:0x0210ba74
 _ZN9EquipItemD0Ev kind:function(thumb,size=0xc) addr:0x0210ba78
 _ZN9EquipItemD2Ev kind:function(thumb,size=0x2) addr:0x0210ba84
 _ZN9EquipItem8vfunc_10Ev kind:function(thumb,size=0x2) addr:0x0210ba88
-_ZN11EquipShieldC2Ev kind:function(thumb,size=0x19c) addr:0x0210ba8c
+_ZN11EquipShieldC1Ev kind:function(thumb,size=0x19c) addr:0x0210ba8c
 _ZN11EquipShieldD1Ev kind:function(thumb,size=0x6c) addr:0x0210bc28
 _ZN11EquipShieldD0Ev kind:function(thumb,size=0x70) addr:0x0210bc94
 func_ov004_0210bd04 kind:function(thumb,size=0x24) addr:0x0210bd04
@@ -587,7 +587,7 @@ data_ov004_02110468 kind:data(any) addr:0x02110468
 data_ov004_0211047c kind:data(any) addr:0x0211047c
 data_ov004_02110484 kind:data(any) addr:0x02110484
 data_ov004_0211048c kind:data(any) addr:0x0211048c
-_ZTV4Bhio kind:data(any) addr:0x021104a0
+_ZTV4Bhio kind:data(any) addr:0x02110498
 data_ov004_021104e0 kind:data(any) addr:0x021104e0
 data_ov004_021104f0 kind:data(any) addr:0x021104f0
 data_ov004_021104f8 kind:data(any) addr:0x021104f8

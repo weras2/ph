@@ -89,8 +89,8 @@ public:
     /* 114 */ ModelRender *mUnk_114;
     /* 118 */ ItemId mFanfareItem;
     /* 11c */ SfxId mFanfareSfx;
-    /* 120 */ void *mFanfareItemModel;
-    /* 124 */ void *mUnk_124;
+    /* 120 */ struct ActorShopItemCollectable_Unk1 *mFanfareItemModel;
+    /* 124 */ class Bhio *mUnk_124;
     /* 128 */ ItemFlags mItemFlags;
     /* 138 */ u32 mSalvagedTreasureFlags;
     /* 13c */ ShipPartPricesShown mShipPartPricesShown;

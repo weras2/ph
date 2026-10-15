@@ -270,6 +270,7 @@ struct ActorShopItemCollectable_Unk1 : public SysObject {
     /* 28 */
 
     ActorShopItemCollectable_Unk1();
+    ActorShopItemCollectable_Unk1(unk32 param1, unk32 param2, unk32 param3, unk32 param4, u8 param5, unk32 param6);
     ~ActorShopItemCollectable_Unk1();
 
     void func_ov000_02079f5c(unk32, unk32, unk32, unk32, u8, unk32);
