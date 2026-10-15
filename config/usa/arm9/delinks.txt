@@ -90,3 +90,6 @@ libs/nds/src/heap.c:
     complete
     .text       start:0x02017034 end:0x020179ac
     .bss        start:0x0205ad84 end:0x0205ad94
+src/Main/System/SysNew.cpp:
+    complete
+    .text       start:0x0202e890 end:0x0202ea20
