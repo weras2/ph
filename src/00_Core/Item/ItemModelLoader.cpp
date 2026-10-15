@@ -1,7 +1,7 @@
 #include "Item/ItemModelLoader.hpp"
 
 ItemModelLoader::ItemModelLoader() {}
-ItemModelLoader *ItemModelLoader::func_ov000_020bb2ec() {}
+ItemModelLoader::~ItemModelLoader() {}
 unk32 ItemModelLoader::func_ov000_020bb34c() {}
 void ItemModelLoader::func_ov000_020bb378(s32 param1) {}
 unk32 ItemModelLoader::func_ov000_020bb390(s32 equipId) {}

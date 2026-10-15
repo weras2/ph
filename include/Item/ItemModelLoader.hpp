@@ -3,7 +3,9 @@
 #include "global.h"
 #include "types.h"
 
-class ItemModelLoader {
+#include "System/SysNew.hpp"
+
+class ItemModelLoader : public SysObject {
 public:
     /* 00 */ unk32 mItems;
     /* 04 */ unk32 mDungeonItems;
@@ -12,7 +14,7 @@ public:
     /* 20 */
 
     ItemModelLoader();
-    ItemModelLoader *func_ov000_020bb2ec();
+    ~ItemModelLoader();
     unk32 func_ov000_020bb34c();
     void func_ov000_020bb378(s32 param1);
     unk32 func_ov000_020bb390(s32 equipId);

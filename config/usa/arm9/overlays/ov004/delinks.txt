@@ -15,3 +15,7 @@ src/04_Load/Actor/Navi/ActorNavi_04.cpp:
 src/04_Load/Actor/ActorManager_04.cpp:
     complete
     .text       start:0x02105160 end:0x02105648
+
+src/04_Load/Item/ItemModelLoader_04.cpp:
+    complete
+    .text       start:0x0210ae94 end:0x0210aedc
