@@ -8,8 +8,8 @@
 
 class PlayerManager : public SysObject {
 public:
-    /* 00 */ u16 mMaxHealth;
-    /* 02 */ u16 mHealth;
+    /* 00 */ s16 mMaxHealth;
+    /* 02 */ s16 mHealth;
     /* 04 */ s16 mMaxShipHealth;
     /* 06 */ s16 mShipHealth;
     /* 08 */ u16 mSalvageArmHealth;
