@@ -40,9 +40,9 @@ public:
     /* 38 */ virtual bool TeleportToEntrance(unk32 entranceId, bool param2);
     /* 3c */ virtual bool TeleportToLastEntrance(bool param1);
     /* 40 */ virtual void AddHealth(s16 amount);
-    /* 44 */ virtual void vfunc_44() = 0;
-    /* 48 */ virtual void vfunc_48() = 0;
-    /* 4c */ virtual void vfunc_4c() = 0;
+    /* 44 */ virtual bool vfunc_44(Vec3p *param1) = 0;
+    /* 48 */ virtual void vfunc_48(Vec3p *param1) = 0;
+    /* 4c */ virtual void vfunc_4c()              = 0;
     /* 50 */ virtual ~PlayerBase();
     /* 58 */
 

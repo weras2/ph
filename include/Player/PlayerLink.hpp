@@ -27,8 +27,8 @@ public:
     /* 24 */ virtual void UpdatePos() override;
     /* 2c */ virtual void vfunc_2c(s32 param1, unk8 param2) override;
     /* 40 */ virtual void AddHealth(s16 amount) override;
-    /* 44 */ virtual void vfunc_44() override;
-    /* 48 */ virtual void vfunc_48() override;
+    /* 44 */ virtual bool vfunc_44(Vec3p *param1) override;
+    /* 48 */ virtual void vfunc_48(Vec3p *param1) override;
     /* 4c */ virtual void vfunc_4c() override;
     /* 50 */ virtual ~PlayerLink() override;
     /* 68 */ virtual void vfunc_68() override;

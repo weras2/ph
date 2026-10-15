@@ -30,7 +30,7 @@ void PlayerControlData::vfunc_48(unk32 param1, unk32 param2, unk32 param3, s16 p
 void PlayerControlData::vfunc_4c(unk32 param1, Vec3p *param2) {}
 void PlayerControlData::vfunc_70(s32 param1) {}
 void PlayerControlData::vfunc_50() {}
-void PlayerControlData::vfunc_54() {}
+void PlayerControlData::vfunc_54(Vec3p *param1) {}
 void PlayerControlData::vfunc_58() {}
 void PlayerControlData::func_ov000_020b4944(unk32 param1, u32 param2, s32 param3) {}
 void PlayerControlData::func_ov000_020b4a00(s32 *param1, s32 *param2, s32 *param3, s32 param4) {}

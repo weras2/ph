@@ -4,3 +4,6 @@
     .ctor       start:0x02188604 end:0x0218862c kind:rodata align:4
     .data       start:0x02188640 end:0x02189ac0 kind:data align:32
     .bss        start:0x02189ac0 end:0x0219a1a0 kind:bss align:32
+
+src/40/Player/PlayerLink_40.cpp:
+    .text       start:0x021835e8 end:0x021836c0
