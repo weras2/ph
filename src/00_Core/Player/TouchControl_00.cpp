@@ -155,5 +155,3 @@ ARM void TouchControl::func_ov00_0207af38(u16 speedIncrease, bool shouldIncrease
 
     this->UpdateWithStateFlags(&touchState, speedIncrease);
 }
-
-ARM TouchControl::~TouchControl() {}

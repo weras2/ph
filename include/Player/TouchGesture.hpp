@@ -38,3 +38,15 @@ public:
 
     TouchGesture();
 };
+
+// Allocated by PlayerControl::Init when overlay 29 is loaded; ctor lives in overlay 24
+class TouchGesture_Unk1 : public TouchGestureBase {
+public:
+    /* 00 (base) */
+    /* 08 */ unk32 mUnk_08;
+    /* 0c */
+
+    /* 0c */ virtual void Update(void *param1) override;
+
+    TouchGesture_Unk1();
+};

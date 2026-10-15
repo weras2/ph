@@ -5,6 +5,8 @@
 #include "nds/math.h"
 #include "types.h"
 
+#include "System/SysNew.hpp"
+
 extern u16 *data_0207aecc;
 
 typedef u16 TouchFlags;
@@ -15,7 +17,7 @@ enum TouchFlag_ {
     TouchFlag_Repeat       = 0x0004,
 };
 
-class TouchControl {
+class TouchControl : public SysObject {
 public:
     /* 00 */ u16 mSpeed;
     /* 02 */ u16 mTimeBetweenTouches; // gets set to mTimeSinceTouch when touching the screen
@@ -39,8 +41,11 @@ public:
     /* 36 */
 
     TouchControl();
-    TouchControl(unk32 param_1);
-    ~TouchControl();
+    // Only resets the touch state (used by PlayerControl)
+    TouchControl(unk32 param_1) {
+        Init();
+    }
+    ~TouchControl() {}
 
     void Init();
     void IncreaseSpeed(u16 increase);
